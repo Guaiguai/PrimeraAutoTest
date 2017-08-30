@@ -1,0 +1,13 @@
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\pages\LoginPage.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\wait\AndroidDriverWait.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\base\InitAppium.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\pages\RegisterPage.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\base\AssertionListener.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\base\Builder.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\base\PageAppium.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\wait\_WaitAutoDriver.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\wait\ExpectedCondition.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\operation\RegisterOperate.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\operation\LoginOperate.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\base\OperateAppium.java
+E:\eclipse-workspace\PrimeraAutoTest\src\main\java\com\yiibai\primera\testng\base\Assertion.java
