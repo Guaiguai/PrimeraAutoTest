@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [test suite]">
+  <test name="register(failed)">
+    <classes>
+      <class name="com.yiibai.primera.testng.cases.RegisterTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="RegisterOk"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.RegisterTest -->
+    </classes>
+  </test> <!-- register(failed) -->
+</suite> <!-- Failed suite [test suite] -->

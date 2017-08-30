@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>TestNG:  register</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>register</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Aug 28 16:07:42 CST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>103 seconds (103626 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.RegisterOk()'><b>RegisterOk</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td><div><pre>java.lang.Throwable
+	at 
+报错信息: 邮箱和密码均符合规则的情况下是否注册成功 expected [true] but found [false].
+报错方法名:RegisterOk(
+报错类:RegisterTest
+报错行号:36)
+	at com.yiibai.primera.testng.cases.RegisterTest.RegisterOk(RegisterTest.java:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1273143001", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1273143001'><pre>java.lang.Throwable
+	at 
+报错信息: 邮箱和密码均符合规则的情况下是否注册成功 expected [true] but found [false].
+报错方法名:RegisterOk(
+报错类:RegisterTest
+报错行号:36)
+	at com.yiibai.primera.testng.cases.RegisterTest.RegisterOk(RegisterTest.java:36)
+</pre></div></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailAitEnd()'><b>EmailAitEnd</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyCharAit()'><b>EmailMissKeyCharAit</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>5</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyCharSpot()'><b>EmailMissKeyCharSpot</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyChars()'><b>EmailMissKeyChars</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>42</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailOnlyCharAitEnd()'><b>EmailOnlyCharAitEnd</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailOnlyCharSpotEnd()'><b>EmailOnlyCharSpotEnd</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailSpotEnd()'><b>EmailSpotEnd</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.EmailWrong()'><b>EmailWrong</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>6</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.PwdIsChinese()'><b>PwdIsChinese</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.PwdIsNull()'><b>PwdIsNull</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>5</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.PwdLessThanSix()'><b>PwdLessThanSix</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.PwdMoreThanTwentyFive()'><b>PwdMoreThanTwentyFive</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.RegisterTest.RegisterExited()'><b>RegisterExited</b><br>Test class: com.yiibai.primera.testng.cases.RegisterTest</td>
+<td></td>
+<td>4</td>
+<td>com.yiibai.primera.testng.cases.RegisterTest@6a41eaa2</td></tr>
+</table><p>
+</body>
+</html>

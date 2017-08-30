@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="46.517">
+  <properties />
+  
+  
+            <testcase name="loginErrorNum" time="4.015" classname="com.yiibai.primera.testng.cases.LoginTest" />
+                <testcase name="loginErrorUser" time="42.502" classname="com.yiibai.primera.testng.cases.LoginTest" />
+      
+</testsuite>

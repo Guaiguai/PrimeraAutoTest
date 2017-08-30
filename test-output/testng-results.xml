@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="46614" started-at="2017-08-29T08:28:04Z" finished-at="2017-08-29T08:28:51Z">
+    <groups>
+    </groups>
+    <test name="Index" duration-ms="46614" started-at="2017-08-29T08:28:04Z" finished-at="2017-08-29T08:28:51Z">
+      <class name="com.yiibai.primera.testng.cases.HomeTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="beforeSuite" is-config="true" duration-ms="22269" started-at="2017-08-29T16:27:42Z" finished-at="2017-08-29T16:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="initDriver" is-config="true" duration-ms="17" started-at="2017-08-29T16:28:04Z" finished-at="2017-08-29T16:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="menusEdit()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="menusEdit" duration-ms="45211" started-at="2017-08-29T16:28:04Z" finished-at="2017-08-29T16:28:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menusEdit -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-08-29T16:28:50Z" finished-at="2017-08-29T16:28:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="afterTest" is-config="true" duration-ms="1376" started-at="2017-08-29T16:28:50Z" finished-at="2017-08-29T16:28:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
+    </test> <!-- Index -->
+  </suite> <!-- Suite -->
+</testng-results>
