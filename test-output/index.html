@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>E:\eclipse-workspace\PrimeraAutoTest\xmlfile\testng_home.xml</span>
+                    <span>E:\workspace\PrimeraAutoTest\xmlfile\testng_login.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LoginTest" hash-for-method="loginConfim">loginConfim</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +115,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.HomeTest" hash-for-method="menusEdit">menusEdit</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LoginTest" hash-for-method="loginChinese">loginChinese</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LoginTest" hash-for-method="loginEmpty">loginEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LoginTest" hash-for-method="loginErrorNum">loginErrorNum</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LoginTest" hash-for-method="loginErrorUser">loginErrorUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -116,17 +145,57 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.yiibai.primera.testng.cases.HomeTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.yiibai.primera.testng.cases.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="menusEdit">
-                  </a> <!-- menusEdit -->
-                  <span class="method-name">menusEdit</span>
+                  <a name="loginConfim">
+                  </a> <!-- loginConfim -->
+                  <span class="method-name">loginConfim</span>
+                  <div class="stack-trace">java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]
+	at com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:76)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.yiibai.primera.testng.cases.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginChinese">
+                  </a> <!-- loginChinese -->
+                  <span class="method-name">loginChinese</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginEmpty">
+                  </a> <!-- loginEmpty -->
+                  <span class="method-name">loginEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginErrorNum">
+                  </a> <!-- loginErrorNum -->
+                  <span class="method-name">loginErrorNum</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginErrorUser">
+                  </a> <!-- loginErrorUser -->
+                  <span class="method-name">loginErrorUser</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +203,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\eclipse-workspace\PrimeraAutoTest\xmlfile\testng_home.xml</span>
+            <span class="header-content">E:\workspace\PrimeraAutoTest\xmlfile\testng_login.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,19 +214,11 @@
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;Index&quot;&gt;
+  &lt;test name=&quot;Login&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.yiibai.primera.testng.cases.HomeTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;menusEdit&quot;/&gt;
-          &lt;exclude name=&quot;morningPaper&quot;/&gt;
-          &lt;exclude name=&quot;refresh&quot;/&gt;
-          &lt;exclude name=&quot;search1&quot;/&gt;
-          &lt;exclude name=&quot;search2&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.yiibai.primera.testng.cases.HomeTest --&gt;
+      &lt;class name=&quot;com.yiibai.primera.testng.cases.LoginTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Index --&gt;
+  &lt;/test&gt; &lt;!-- Login --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -169,7 +230,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Index (1 class)</span>
+                <span class="test-name">Login (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,16 +256,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'menusEdit')
-data.setCell(0, 2, 'com.yiibai.primera.testng.cases.HomeTest')
-data.setCell(0, 3, 45211);
+data.setCell(0, 1, 'loginErrorUser')
+data.setCell(0, 2, 'com.yiibai.primera.testng.cases.LoginTest')
+data.setCell(0, 3, 39372);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginConfim')
+data.setCell(1, 2, 'com.yiibai.primera.testng.cases.LoginTest')
+data.setCell(1, 3, 4654);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginChinese')
+data.setCell(2, 2, 'com.yiibai.primera.testng.cases.LoginTest')
+data.setCell(2, 3, 4515);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginErrorNum')
+data.setCell(3, 2, 'com.yiibai.primera.testng.cases.LoginTest')
+data.setCell(3, 3, 4276);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginEmpty')
+data.setCell(4, 2, 'com.yiibai.primera.testng.cases.LoginTest')
+data.setCell(4, 3, 4218);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 57 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,22 +296,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.yiibai.primera.testng.cases.HomeTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">morningPaper</span>
-                <br/>
-                <span class="ignored-method-name">refresh</span>
-                <br/>
-                <span class="ignored-method-name">search2</span>
-                <br/>
-                <span class="ignored-method-name">search1</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -243,26 +307,44 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.yiibai.primera.testng.cases.HomeTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.yiibai.primera.testng.cases.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">22274 ms</span>
+                <span class="method-start">65545 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">menusEdit</span>
-                <span class="method-start">22293 ms</span>
+                <span class="method-name">loginErrorUser</span>
+                <span class="method-start">65582 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginErrorNum</span>
+                <span class="method-start">104955 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginChinese</span>
+                <span class="method-start">109232 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginEmpty</span>
+                <span class="method-start">113748 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginConfim</span>
+                <span class="method-start">117968 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">67506 ms</span>
+                <span class="method-start">122624 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">67507 ms</span>
+                <span class="method-start">122625 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

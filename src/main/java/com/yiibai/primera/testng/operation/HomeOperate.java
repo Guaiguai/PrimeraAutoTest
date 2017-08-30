@@ -5,15 +5,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.testng.Reporter;
 import org.testng.log4testng.Logger;
 
 import com.yiibai.primera.testng.base.OperateAppium;
+import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.HomePage;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 /**
  * APP欢迎界面逻辑 作为测试的基础 
@@ -37,9 +36,8 @@ public class HomeOperate extends OperateAppium {
 	 * @return
 	 */
 	public boolean menusEdit() {
-		Boolean flag = false;
 		if(!isHomePage()) {
-			return flag;
+			return Constant.assertFalse;
 		}
 		//进入菜单编辑主页面
 		clickView(homePage.getHomeMenuEditBtn());
@@ -65,7 +63,7 @@ public class HomeOperate extends OperateAppium {
 				//此时需要判断是否应该显示  加菜单，显示 /减菜单，不显示就OK，反之case失败  开发配合
 			}
 		}
-		return flag = true;
+		return Constant.assertTrue;
 	}
 	/**
 	 * 首页左上角新闻搜索
@@ -73,9 +71,8 @@ public class HomeOperate extends OperateAppium {
 	 * @return
 	 */
 	public boolean search(int type) {
-		Boolean flag = false;
 		if(!isHomePage()) {
-			return flag;
+			return Constant.assertFalse;
 		}
 		clickView(homePage.getHomeSearchBtn());
 		if(type == 1) {//方式一搜索直接输入框搜索
@@ -93,7 +90,9 @@ public class HomeOperate extends OperateAppium {
 		}else{
 			logger.info("没有搜索到结果");
 		}
-		return flag = true;
+		//操作完成之后返回主页
+		back();
+		return Constant.assertTrue;
 	}
 	
 	/**
@@ -101,13 +100,12 @@ public class HomeOperate extends OperateAppium {
 	 * @return
 	 */
 	public boolean refresh() {
-		Boolean flag = false;
 		if(!isHomePage()) {
-			return flag;
+			return Constant.assertFalse;
 		}
 //		boolean isDisplayed = swipAtTopUtilElementAppear(homePage.menuAuto(), "LEFT", 300,15);
 //		logger.info("isDisplayed:" + isDisplayed);
-		return false;
+		return Constant.assertFalse;
 	}
 	/**
 	 *  首页晨报的测试
@@ -117,7 +115,7 @@ public class HomeOperate extends OperateAppium {
 	public boolean MorningPaper() throws ParseException {
 		Boolean flag = false;
 		if(!isHomePage()) {
-			return flag;
+			return Constant.assertFalse;
 		}
 		//是否应该显示早报
 		Boolean morningPaper = false;
@@ -140,17 +138,13 @@ public class HomeOperate extends OperateAppium {
 		}
 		//如果正常显示早报，则点击进去，浏览一条早报信息
 		if(morningPaper && flag) {
-			flag = true;
+//			flag = true;
 			clickView(element);
 			//点击一条早报信息,进入新闻详情页面，此时可以依赖NewsDetails.java
 			press();
 		}
-		return flag;
-	}
-	
-	public void startService() {
-		AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-		service.start();
+		back();
+		return Constant.assertTrue;
 	}
 
 	/**

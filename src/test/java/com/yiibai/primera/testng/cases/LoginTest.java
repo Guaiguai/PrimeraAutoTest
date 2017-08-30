@@ -45,36 +45,36 @@ public class LoginTest extends InitAppium {
     }
 
 
-//    /**
-//     * 测试帐号密码为中文情况
-//     */
-//    @Test(priority = 2)
-//    public void loginChinese(){
-//        boolean flag = loginOperate.login("帐号","密码");
-//        Assertion.verifyEquals(flag,false,"帐号密码为中文是否登录成功");
-//        print("帐号密码为中文情况登录:"+ flag);
-//    }
-//
-//
-//
-//    /**
-//     * 测试帐号密码为空情况
-//     */
-//    @Test(priority = 3)
-//    public void loginEmpty(){
-//        boolean flag = loginOperate.login("","");
-//        Assertion.verifyEquals(flag,false,"帐号密码为空是否登录成功");
-//        print("帐号密码为空情况登录:"+ flag);
-//    }
-//    /**
-//     * 测试帐号密码正确情况
-//     */
-//    @Test(priority = 4)
-//    public void loginConfim() {
-//        boolean flag = loginOperate.login("18091969298","18091969298");
-//        print("帐号密码对的情况登录:"+ flag);
-//        Assert.assertTrue(flag,"帐号密码对的情况登录");
-//
-//    }
+    /**
+     * 测试帐号密码为中文情况
+     */
+    @Test(priority = 2)
+    public void loginChinese(){
+        boolean flag = loginOperate.login("帐号","密码");
+        Assertion.verifyEquals(flag,false,"帐号密码为中文是否登录成功");
+        print("帐号密码为中文情况登录:"+ flag);
+    }
+
+
+
+    /**
+     * 测试帐号密码为空情况
+     */
+    @Test(priority = 3)
+    public void loginEmpty(){
+        boolean flag = loginOperate.login("","");
+        Assertion.verifyEquals(flag,false,"帐号密码为空是否登录成功");
+        print("帐号密码为空情况登录:"+ flag);
+    }
+    /**
+     * 测试帐号密码正确情况
+     */
+    @Test(priority = 4)
+    public void loginConfim() {
+        boolean flag = loginOperate.login("18091969298","18091969298");
+        print("帐号密码对的情况登录:"+ flag);
+        Assert.assertTrue(flag,"帐号密码对的情况登录");
+
+    }
 
 }

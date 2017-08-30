@@ -31,8 +31,8 @@ public class InitAppium {
 	// app路径
 	// public static String appPath = "E:\\GuaiGuai\\work
 	// apps\\primera_1.4.0_0725.apk";
-	public static String appPath = System.getProperty("user.dir") + "/src/main/java/apps/primera_1.2.2_07052.apk";
-
+	public static String appPath = System.getProperty("user.dir") 
+			+ "/src/main/java/apps/PN_ADS.apk";
 	// 包名
 	public static String appPackage = "com.turbo.turbo.mexico";
 

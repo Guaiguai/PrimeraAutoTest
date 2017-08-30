@@ -30,7 +30,7 @@ public class HomeTest extends InitAppium {
     /**
      * 首页刷新验证
      */
-    @Test
+    @Test(enabled = false)
 	public void refresh(){
         boolean flag = homeOperate.refresh();
         Assertion.verifyEquals(flag,false,"首页刷新验证");
@@ -39,7 +39,7 @@ public class HomeTest extends InitAppium {
     /**
      * 首页菜单编辑验证
      */
-    @Test
+    @Test(priority = 1)
 	public void menusEdit(){
         boolean flag = homeOperate.menusEdit();
         Assertion.verifyEquals(flag,true,"首页菜单编辑验证");
@@ -48,7 +48,7 @@ public class HomeTest extends InitAppium {
     /**
      * 首页搜索验证
      */
-    @Test
+    @Test(priority = 2)
 	public void search1(){
         boolean flag = homeOperate.search(1);
         Assertion.verifyEquals(flag,true,"首页搜索验证");
@@ -57,7 +57,7 @@ public class HomeTest extends InitAppium {
     /**
      * 首页搜索验证
      */
-    @Test
+    @Test(priority = 3)
 	public void search2(){
         boolean flag = homeOperate.search(2);
         Assertion.verifyEquals(flag,true,"首页搜索验证");
@@ -67,7 +67,7 @@ public class HomeTest extends InitAppium {
      * 首页是否显示晨报
      * @throws ParseException 
      */
-    @Test
+    @Test(priority = 4)
 	public void morningPaper() throws ParseException{
         boolean flag = homeOperate.MorningPaper();
         Assertion.verifyEquals(flag,false,"首页是否显示晨报");

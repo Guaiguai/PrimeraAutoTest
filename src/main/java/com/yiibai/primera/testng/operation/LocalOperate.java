@@ -13,12 +13,15 @@ import io.appium.java_client.android.AndroidElement;
 public class LocalOperate extends OperateAppium {
 
 	private LoginPage loginPage;
+	
+	private HomeOperate homeOperate;
 
 	AndroidDriver<AndroidElement> driver;
 
 	public LocalOperate(AndroidDriver<AndroidElement> driver) {
 		super(driver);
 		loginPage = new LoginPage(driver);
+		homeOperate = new HomeOperate(driver);
 		this.driver = driver;
 	}
 
@@ -34,21 +37,10 @@ public class LocalOperate extends OperateAppium {
 	public boolean login(String name, String pass) {
 
 		sleep(1000);
-		// 是否在欢迎页面---广告动态切换的SWIPE
-		if (loginPage.isWelcome()) {
-			print("app打开时广告动态切换的swipe...");
-			for (int i = 0; i < 4; i++) {
-				swipeToLeft(300);
-				sleep(500);
-			}
-		}
-		// 如果不在主页，直接退出
-		if (loginPage.isHomePage()) {
-			System.out.println("在APP主界面");
-			// 1、点击首页右下角的cuenta---进入个人中心
-			clickView(loginPage.getCuentaBtn(), "Cuenta Btn");
+		if(!homeOperate.isHomePage()) {
+			return false;
 		}else {
-			//TODU 退出APP
+			clickView(loginPage.getCuentaBtn(), "Cuenta Btn");
 		}
 		// 在个人中心界面， 验证用户是否已经登录，yes则退出重新登录
 		if (loginPage.getLogOutBtn() != null) {

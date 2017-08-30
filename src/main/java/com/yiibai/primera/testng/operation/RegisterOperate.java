@@ -1,6 +1,7 @@
 package com.yiibai.primera.testng.operation;
 
 import com.yiibai.primera.testng.base.OperateAppium;
+import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.RegisterPage;
 
@@ -37,7 +38,7 @@ public class RegisterOperate extends OperateAppium {
 		// 是否在欢迎页面---广告动态切换的SWIPE
 		sleep(1000);
 		if(!homePage.isHomePage()) {
-			return false;
+			return Constant.assertFalse;
 		}
 		// 1、点击首页右下角的cuenta---进入个人中心
 		clickView(registerPage.getCuentaBtn(), "Cuenta Btn");
@@ -59,7 +60,7 @@ public class RegisterOperate extends OperateAppium {
 		System.out.println("开始注册啦。。。。。。");
 		if (registerPage.getSingUpBtn() == null) {
 			System.out.println("没有在APP注册主界面");
-			return false;
+			return Constant.assertFalse;
 		}
 		// 输入内容
 		inputManyText(email, name, pass);

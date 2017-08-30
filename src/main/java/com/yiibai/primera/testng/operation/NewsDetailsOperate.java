@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 
 import com.yiibai.primera.testng.base.ImageAppium;
 import com.yiibai.primera.testng.base.OperateAppium;
+import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.NewsDetailsPage;
 
 import bsh.This;
@@ -58,7 +59,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		System.out.println("share....");
 		if (!isNewsDetailsPage()) {
 			System.out.println(This.class + ":share---没有在新闻详情页面！！！");
-			return flag;
+			return Constant.assertFalse;
 		}
 		// clickView(newsDetailsPage.shareBtn());
 		// System.out.println("page source is:" + driver.getPageSource());
@@ -85,7 +86,7 @@ public class NewsDetailsOperate extends OperateAppium {
 			Error.printStackTrace();
 		}
 		sleep(10000);
-		return flag = true;
+		return Constant.assertTrue;
 	}
 	
 	/**
@@ -166,7 +167,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		System.out.println("like....");
 		if (!isNewsDetailsPage()) {
 			System.out.println(This.class + ":like---没有在新闻详情页面！！！");
-			return false;
+			return Constant.assertFalse;
 		}
 		// 如果没有点赞则点赞
 		clickView(newsDetailsPage.likeBtn());
@@ -183,7 +184,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		System.out.println("collect.....");
 		if (!isNewsDetailsPage()) {
 			System.out.println(This.class + ":collect---没有在新闻详情页面！！！");
-			return false;
+			return Constant.assertFalse;
 		}
 		// 如果没有点赞则点赞
 		clickView(newsDetailsPage.collectBtn());
@@ -199,7 +200,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		System.out.println("comment.......");
 		if (!isNewsDetailsPage()) {
 			System.out.println(This.class + ":comment---没有在新闻详情页面！！！");
-			return false;
+			return Constant.assertFalse;
 		}
 		clickView(newsDetailsPage.commentBtn());
 		inputManyText(details);
