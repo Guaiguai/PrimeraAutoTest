@@ -10,7 +10,6 @@ import org.testng.log4testng.Logger;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.HomePage;
-import com.yiibai.primera.testng.pages.RegisterPage;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -160,7 +159,7 @@ public class HomeOperate extends OperateAppium {
 		// 是否在欢迎页面---广告动态切换的SWIPE
 		if (homePage.isWelcome()) {
 			print("app打开时广告动态切换的swipe...");
-			for (int i = 0; i < 4; i++) {
+			for (int i = 0; i < 3; i++) {
 				swipeToLeft(300);
 				sleep(500);
 			}

@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="testAll"
-           tests="9"
+           tests="8"
            failures="0"
            errors="0"
-           skipped="9"
+           skipped="8"
            time="0.002">
   <properties />
   
-            <testcase name="afterClass" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
-          <skipped />
-    </testcase>
             <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
           <skipped />
     </testcase>
-            <testcase name="afterTest" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
-          <skipped />
-    </testcase>
-            <testcase name="comment" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
-          <skipped />
-    </testcase>
-            <testcase name="like" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+            <testcase name="afterClass" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
           <skipped />
     </testcase>
             <testcase name="imageSwitch" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
           <skipped />
     </testcase>
+            <testcase name="comment" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
             <testcase name="collect" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
           <skipped />
     </testcase>
-            <testcase name="fontSize" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+            <testcase name="like" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
           <skipped />
     </testcase>
             <testcase name="share" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="fontSize" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
           <skipped />
     </testcase>
   

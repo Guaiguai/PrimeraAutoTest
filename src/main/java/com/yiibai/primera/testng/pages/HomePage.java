@@ -3,9 +3,6 @@ package com.yiibai.primera.testng.pages;
 
 import java.util.List;
 
-import javax.swing.table.TableStringConverter;
-
-import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 import org.openqa.selenium.By;
 
 import com.yiibai.primera.testng.base.PageAppium;
@@ -20,13 +17,12 @@ import io.appium.java_client.android.AndroidElement;
 public class HomePage extends PageAppium {
 
     //app打开时是否有可滑动的广告图
-    public final String APP_WELCOME_ELEMENTS_ID = "img_coopen";
+    public final String APP_WELCOME_ELEMENTS_ID = "myvi";
     //app主页的文字（主要是顶部显示的文字）
     public final String APP_HOME_PAGE_TEXT = "Para ti";
   //app主页 顶部显示的文字的id
     public final String HOME_TOP_ELEMENTS_ID = "txt_news_top";
     //首页有显示文字“Periódico Matutino” 则表示有晨报
-    private final String HOME_IMAGE_CLASS = "android.widget.ImageView";
     private final String HOME_TEXT_CLASS = "android.widget.TextView";
     private final String HOME_MORNING_PAPER_TEXT = "Periódico Matutino";
     
@@ -40,8 +36,6 @@ public class HomePage extends PageAppium {
     private final String HOME_MENUS_EDIT_BTN_ID = "img_rightchannel";
     //菜单编辑页面的编辑按钮
     private final String MENUS_EDIT_BTN_ID = "img_search";
-//    private final String MENUS_CLASS = "android.widget.LinearLayout";
-    private final String MENUS_TEXT_ID = "txt_name";
     private final String MENU_AUTO_TEXT = "Auto";
     private final String AUTO_BTN_XPATH = "//android.widget.TextView[@text='Auto']/following-sibling::android.widget.ImageView";
     private final String MENU_BACK_BTN_ID = "img_back";

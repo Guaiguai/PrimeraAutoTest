@@ -61,23 +61,6 @@ public class OperateAppium extends WaitAutoDriver{
 		}
 	}
 	/**
-	 * 获得测试APP的版本
-	 * 
-	 * @return
-	 */
-	public String getAppVersion() {
-		String appVersion = null;
-		if (driver == null) {
-			System.out.println("driver为空！");
-			return appVersion;
-		} else {
-			appVersion = driver.getCapabilities()
-				.getCapability(CapabilityType.VERSION).toString();
-		}
-		return appVersion;
-	}
-	
-	/**
 	 * Click点击空格键
 	 *
 	 * @param ae

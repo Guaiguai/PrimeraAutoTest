@@ -10,13 +10,17 @@ public class Builder {
     String device = InitAppium.device;
     String deviceName = InitAppium.deviceName;
     String platformVersion = InitAppium.platformVersion;
-	String path = System.getProperty("user.dir") + "/src/main/java/apps/";
-    String appPath = InitAppium.appPath;
-    String appPackage = InitAppium.appPackage;
+    String commandTimeout = InitAppium.commandTimeout;
+    String automationName = InitAppium.automationName;
+    
     String noReset = InitAppium.noReset;
     String noSign = InitAppium.noSign;
     String unicodeKeyboard = InitAppium.unicodeKeyboard;
     String resetKeyboard = InitAppium.resetKeyboard;
+    
+	String path = System.getProperty("user.dir") + "/src/main/java/apps/";
+    String appPath = InitAppium.appPath;
+    String appPackage = InitAppium.appPackage;
     String appActivity = InitAppium.appActivity;
 
     public Builder setAppPath(String appPath) {
@@ -26,6 +30,16 @@ public class Builder {
 
     public Builder setDeviceName(String deviceName) {
         this.deviceName = deviceName;
+        return this;
+    }
+    
+    public Builder setCommandTimeout(String commandTimeout) {
+        this.commandTimeout = commandTimeout;
+        return this;
+    }
+    
+    public Builder setAutomationName(String automationName) {
+        this.automationName = automationName;
         return this;
     }
 

@@ -1,106 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="0" total="5" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="19" started-at="2017-08-31T03:42:12Z" finished-at="2017-08-31T03:42:12Z">
+  <suite name="Suite" duration-ms="76977" started-at="2017-09-01T03:18:26Z" finished-at="2017-09-01T03:19:43Z">
     <groups>
     </groups>
-    <test name="Login" duration-ms="19" started-at="2017-08-31T03:42:12Z" finished-at="2017-08-31T03:42:12Z">
-      <class name="com.yiibai.primera.testng.cases.LoginTest">
-        <test-method status="FAIL" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="beforeSuite" is-config="true" duration-ms="0" started-at="2017-08-31T11:41:46Z" finished-at="2017-08-31T11:41:46Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[A new session could not be created. (Original error: Activity used to start app doesn't exist or cannot be launched! Make sure it exists and is a launchable activity) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'CPJ', ip: '10.20.22.184', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
-Driver info: driver.version: AndroidDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Activity used to start app doesn't exist or cannot be launched! Make sure it exists and is a launchable activity) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
-System info: host: 'CPJ', ip: '10.20.22.184', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_51'
-Driver info: driver.version: AndroidDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:367)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:113)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:36)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:92)
-	at com.yiibai.primera.testng.base.InitAppium.beforeSuite(InitAppium.java:110)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+    <test name="Index" duration-ms="76977" started-at="2017-09-01T03:18:26Z" finished-at="2017-09-01T03:19:43Z">
+      <class name="com.yiibai.primera.testng.cases.HomeTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="beforeSuite" is-config="true" duration-ms="40256" started-at="2017-09-01T11:17:46Z" finished-at="2017-09-01T11:18:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="SKIP" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="initDriver" is-config="true" duration-ms="0" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="initDriver" is-config="true" duration-ms="25" started-at="2017-09-01T11:18:26Z" finished-at="2017-09-01T11:18:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="SKIP" signature="loginErrorUser()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="loginErrorUser" duration-ms="2" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
+        <test-method status="PASS" signature="menusEdit()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="menusEdit" duration-ms="75562" started-at="2017-09-01T11:18:26Z" finished-at="2017-09-01T11:19:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginErrorUser -->
-        <test-method status="SKIP" signature="loginErrorNum()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="loginErrorNum" duration-ms="1" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginErrorNum -->
-        <test-method status="SKIP" signature="loginChinese()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="loginChinese" duration-ms="0" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginChinese -->
-        <test-method status="SKIP" signature="loginEmpty()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="loginEmpty" duration-ms="0" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginEmpty -->
-        <test-method status="SKIP" signature="loginConfim()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="loginConfim" duration-ms="1" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginConfim -->
-        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
+        </test-method> <!-- menusEdit -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="afterClass" is-config="true" duration-ms="1379" started-at="2017-09-01T11:19:42Z" finished-at="2017-09-01T11:19:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="SKIP" signature="afterTest()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@6737fd8f]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-08-31T11:42:12Z" finished-at="2017-08-31T11:42:12Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-09-01T11:19:43Z" finished-at="2017-09-01T11:19:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
-    </test> <!-- Login -->
+      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
+    </test> <!-- Index -->
   </suite> <!-- Suite -->
 </testng-results>
