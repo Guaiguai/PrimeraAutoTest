@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testAll"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="3"
+           time="0.001">
+  <properties />
+  
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+          <skipped />
+    </testcase>
+            <testcase name="myCollection" time="0.0" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

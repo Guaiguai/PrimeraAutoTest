@@ -15,7 +15,8 @@ import com.yiibai.primera.testng.operation.HomeOperate;
  * 登录测试用例
  * Created by ChenXiaoGuai on 2017/08/15.
  */
-@Listeners({com.yiibai.primera.testng.listener.ReportListener.class})
+//@Listeners({com.yiibai.primera.testng.listener.ReportListener.class})
+@Test(priority = 4)
 public class HomeTest extends InitAppium {
 
     private HomeOperate homeOperate;
@@ -24,6 +25,7 @@ public class HomeTest extends InitAppium {
     @BeforeClass
     public void initDriver(){
         Assert.assertNotNull(driver);
+    	System.out.println("driver is null:" + driver);
         homeOperate = new HomeOperate(driver);
     }
 

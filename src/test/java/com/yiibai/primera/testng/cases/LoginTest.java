@@ -12,7 +12,7 @@ import com.yiibai.primera.testng.operation.LoginOperate;
  * 登录测试用例
  * Created by ChenXiaoGuai on 2017/08/15.
  */
-
+@Test(priority = 2)
 public class LoginTest extends InitAppium {
 
     private LoginOperate loginOperate;

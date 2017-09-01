@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.Set;
 import org.apache.http.util.TextUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.CapabilityType;
+
 import com.yiibai.primera.testng.wait.WaitAutoDriver;
 
 import io.appium.java_client.MultiTouchAction;
@@ -58,7 +60,23 @@ public class OperateAppium extends WaitAutoDriver{
 			System.out.println("输出了空字符");
 		}
 	}
-
+	/**
+	 * 获得测试APP的版本
+	 * 
+	 * @return
+	 */
+	public String getAppVersion() {
+		String appVersion = null;
+		if (driver == null) {
+			System.out.println("driver为空！");
+			return appVersion;
+		} else {
+			appVersion = driver.getCapabilities()
+				.getCapability(CapabilityType.VERSION).toString();
+		}
+		return appVersion;
+	}
+	
 	/**
 	 * Click点击空格键
 	 *

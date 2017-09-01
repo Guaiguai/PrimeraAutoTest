@@ -16,7 +16,7 @@ import com.yiibai.primera.testng.operation.PersonalCenterOperate;
  * 
  * Created by ChenXiaoGuai on 2017/08/16.
  */
-
+@Test(priority = 3)
 public class PersonalCenterTest extends InitAppium {
 
     private PersonalCenterOperate personalCenterOperate;

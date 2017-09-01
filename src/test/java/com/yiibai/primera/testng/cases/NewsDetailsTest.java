@@ -14,6 +14,7 @@ import com.yiibai.primera.testng.operation.NewsDetailsOperate;
  * 
  * Created by ChenXiaoGuai on 2017/08/16.
  */
+@Test(priority = 5)
 public class NewsDetailsTest extends InitAppium {
 
 	private NewsDetailsOperate newsdetailsOperate;

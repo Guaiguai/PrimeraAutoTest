@@ -10,6 +10,7 @@ import org.testng.log4testng.Logger;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.HomePage;
+import com.yiibai.primera.testng.pages.RegisterPage;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -26,10 +27,11 @@ public class HomeOperate extends OperateAppium {
 
 	AndroidDriver<AndroidElement> driver;
 	
-	public HomeOperate(AndroidDriver<AndroidElement> driver) {
-		super(driver);
-		homePage = new HomePage(driver);
-		this.driver = driver;
+	public HomeOperate(AndroidDriver<AndroidElement> initdriver) {
+		super(initdriver);
+		System.out.println("----");
+		homePage = new HomePage(initdriver);
+		this.driver = initdriver;
 	}
 	/**
 	 * 首页右上角新闻菜单编辑

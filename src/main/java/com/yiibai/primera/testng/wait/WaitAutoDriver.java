@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 
+import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.wait.AndroidDriverWait;
 import com.yiibai.primera.testng.wait.ExpectedCondition;
 
@@ -15,7 +16,7 @@ import io.appium.java_client.android.AndroidElement;
  * 页面UI获取定位父类，供给Page层使用 Created by ChenXiaoGuai on 2017/08/24.
  */
 
-public class WaitAutoDriver {
+public class WaitAutoDriver{
 
 	AndroidDriver<AndroidElement> driver;
 

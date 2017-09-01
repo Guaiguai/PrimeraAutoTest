@@ -40,6 +40,7 @@ public class RegisterOperate extends OperateAppium {
 		if(!homePage.isHomePage()) {
 			return Constant.assertFalse;
 		}
+		System.out.println("app version is:" + getAppVersion());
 		// 1、点击首页右下角的cuenta---进入个人中心
 		clickView(registerPage.getCuentaBtn(), "Cuenta Btn");
 		// 在个人中心界面， 验证用户是否已经登录(注册)，yes则退出
@@ -71,7 +72,6 @@ public class RegisterOperate extends OperateAppium {
 			press();
 		}
 		// 返回是否成功到个人中心页面
-//		return true;
 		return registerPage.isRegistered();
 	}
 

@@ -1,0 +1,10 @@
+com.yiibai.primera.testng.cases.HomeTest initDriver 2017-08-31 09:10:18 0毫秒 FAILURE
+com.yiibai.primera.testng.cases.HomeTest menusEdit 2017-08-31 09:10:18 2毫秒 SKIP
+com.yiibai.primera.testng.cases.HomeTest search1 2017-08-31 09:10:18 1毫秒 SKIP
+com.yiibai.primera.testng.cases.HomeTest search2 2017-08-31 09:10:18 1毫秒 SKIP
+com.yiibai.primera.testng.cases.HomeTest morningPaper 2017-08-31 09:10:18 0毫秒 SKIP
+com.yiibai.primera.testng.cases.LoginTest loginErrorUser 2017-08-31 09:10:18 1毫秒 SKIP
+com.yiibai.primera.testng.cases.LoginTest loginErrorNum 2017-08-31 09:10:18 1毫秒 SKIP
+com.yiibai.primera.testng.cases.LoginTest loginChinese 2017-08-31 09:10:18 1毫秒 SKIP
+com.yiibai.primera.testng.cases.LoginTest loginEmpty 2017-08-31 09:10:18 1毫秒 SKIP
+com.yiibai.primera.testng.cases.LoginTest loginConfim 2017-08-31 09:10:18 3毫秒 SKIP

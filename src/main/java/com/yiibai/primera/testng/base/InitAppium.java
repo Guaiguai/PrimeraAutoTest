@@ -32,7 +32,7 @@ public class InitAppium {
 	// public static String appPath = "E:\\GuaiGuai\\work
 	// apps\\primera_1.4.0_0725.apk";
 	public static String appPath = System.getProperty("user.dir") 
-			+ "/src/main/java/apps/PN_ADS.apk";
+			+ "/src/main/java/apps/Pokdeng_v1.0.9_apkpure.com.apk";
 	// 包名
 	public static String appPackage = "com.turbo.turbo.mexico";
 
@@ -119,24 +119,7 @@ public class InitAppium {
 	@AfterClass
 	public void afterClass() {
 		// 每一个用例完毕结束这次测试
-		// driver.quit();
-	}
-
-	/**
-	 * 获得测试APP的版本
-	 * 
-	 * @return
-	 */
-	public String getAppVersion() {
-		String appVersion = null;
-		if (driver == null) {
-			System.out.println("driver为空！");
-			return appVersion;
-		} else {
-			appVersion = driver.getCapabilities()
-				.getCapability(CapabilityType.VERSION).toString();
-		}
-		return appVersion;
+		 driver.quit();
 	}
 	/**
 	 * 打印字符 未引用
