@@ -9,11 +9,12 @@
     <classes>
       <class name="com.yiibai.primera.testng.cases.LoginTest">
         <methods>
-          <include name="afterTest"/>
-          <include name="afterClass"/>
+          <include name="loginEmpty"/>
           <include name="beforeSuite"/>
+          <include name="loginChinese"/>
+          <include name="loginErrorUser"/>
           <include name="loginConfim"/>
-          <include name="initDriver"/>
+          <include name="loginErrorNum"/>
         </methods>
       </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
     </classes>

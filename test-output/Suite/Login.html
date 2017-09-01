@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Login</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/5</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 30 17:21:32 CST 2017</td>
+<td>Started on:</td><td>Thu Aug 31 11:42:12 CST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>58 seconds (58818 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (19 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,37 +68,74 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.yiibai.primera.testng.cases.LoginTest.loginConfim()'><b>loginConfim</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
-<td><div><pre>java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]
-	at com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:76)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace770010802", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace770010802'><pre>java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:76)
+<td title='com.yiibai.primera.testng.cases.LoginTest.beforeSuite()'><b>beforeSuite</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Activity used to start app doesn&apos;t exist or cannot be launched! Make sure it exists and is a launchable activity) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;CPJ&apos;, ip: &apos;10.20.22.184&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:367)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:113)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.yiibai.primera.testng.base.InitAppium.beforeSuite(InitAppium.java:110)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1833789138", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1833789138'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Activity used to start app doesn&apos;t exist or cannot be launched! Make sure it exists and is a launchable activity) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b325d5&apos;, time: &apos;2017-03-10 09:10:29 +0000&apos;
+System info: host: &apos;CPJ&apos;, ip: &apos;10.20.22.184&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_51&apos;
+Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:367)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:113)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at com.yiibai.primera.testng.base.InitAppium.beforeSuite(InitAppium.java:110)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:497)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)
 	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
@@ -109,11 +146,34 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 </pre></div></td>
-<td>4</td>
-<td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
+<td>0</td>
+<td>null</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.LoginTest.initDriver()'><b>initDriver</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.LoginTest.afterClass()'><b>afterClass</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.LoginTest.afterTest()'><b>afterTest</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -122,22 +182,27 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.yiibai.primera.testng.cases.LoginTest.loginChinese()'><b>loginChinese</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
 <td></td>
-<td>4</td>
+<td>0</td>
+<td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
+<tr>
+<td title='com.yiibai.primera.testng.cases.LoginTest.loginConfim()'><b>loginConfim</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
+<td></td>
+<td>0</td>
 <td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
 <tr>
 <td title='com.yiibai.primera.testng.cases.LoginTest.loginEmpty()'><b>loginEmpty</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
 <td></td>
-<td>4</td>
+<td>0</td>
 <td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
 <tr>
 <td title='com.yiibai.primera.testng.cases.LoginTest.loginErrorNum()'><b>loginErrorNum</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
 <td></td>
-<td>4</td>
+<td>0</td>
 <td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
 <tr>
 <td title='com.yiibai.primera.testng.cases.LoginTest.loginErrorUser()'><b>loginErrorUser</b><br>Test class: com.yiibai.primera.testng.cases.LoginTest</td>
 <td></td>
-<td>39</td>
+<td>0</td>
 <td>com.yiibai.primera.testng.cases.LoginTest@6737fd8f</td></tr>
 </table><p>
 </body>
