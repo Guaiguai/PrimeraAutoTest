@@ -5,17 +5,24 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="Index(failed)">
+  <test name="testAll(failed)">
     <classes>
+      <class name="com.yiibai.primera.testng.cases.LoginTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="loginConfim"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
       <class name="com.yiibai.primera.testng.cases.HomeTest">
         <methods>
-          <include name="afterTest"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
           <include name="initDriver"/>
-          <include name="menusEdit"/>
+          <include name="search2"/>
         </methods>
       </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
     </classes>
-  </test> <!-- Index(failed) -->
+  </test> <!-- testAll(failed) -->
 </suite> <!-- Failed suite [Suite] -->

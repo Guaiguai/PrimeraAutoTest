@@ -1,33 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" total="9" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="76977" started-at="2017-09-01T03:18:26Z" finished-at="2017-09-01T03:19:43Z">
+  <suite name="Suite" duration-ms="249824" started-at="2017-09-04T10:15:38Z" finished-at="2017-09-04T10:19:48Z">
     <groups>
     </groups>
-    <test name="Index" duration-ms="76977" started-at="2017-09-01T03:18:26Z" finished-at="2017-09-01T03:19:43Z">
-      <class name="com.yiibai.primera.testng.cases.HomeTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="beforeSuite" is-config="true" duration-ms="40256" started-at="2017-09-01T11:17:46Z" finished-at="2017-09-01T11:18:26Z">
+    <test name="testAll" duration-ms="249824" started-at="2017-09-04T10:15:38Z" finished-at="2017-09-04T10:19:48Z">
+      <class name="com.yiibai.primera.testng.cases.LoginTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="beforeSuite" is-config="true" duration-ms="38407" started-at="2017-09-04T18:18:12Z" finished-at="2017-09-04T18:18:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="initDriver" is-config="true" duration-ms="25" started-at="2017-09-01T11:18:26Z" finished-at="2017-09-01T11:18:26Z">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="initDriver" is-config="true" duration-ms="29" started-at="2017-09-04T18:18:50Z" finished-at="2017-09-04T18:18:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="menusEdit()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="menusEdit" duration-ms="75562" started-at="2017-09-01T11:18:26Z" finished-at="2017-09-01T11:19:42Z">
+        <test-method status="PASS" signature="loginErrorUser()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="loginErrorUser" duration-ms="4735" started-at="2017-09-04T18:18:50Z" finished-at="2017-09-04T18:18:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- menusEdit -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="afterClass" is-config="true" duration-ms="1379" started-at="2017-09-01T11:19:42Z" finished-at="2017-09-01T11:19:43Z">
+        </test-method> <!-- loginErrorUser -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="initDriver" is-config="true" duration-ms="24" started-at="2017-09-04T18:18:55Z" finished-at="2017-09-04T18:18:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="loginErrorNum()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="loginErrorNum" duration-ms="4134" started-at="2017-09-04T18:18:55Z" finished-at="2017-09-04T18:18:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorNum -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="initDriver" is-config="true" duration-ms="19" started-at="2017-09-04T18:18:59Z" finished-at="2017-09-04T18:18:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="loginChinese()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="loginChinese" duration-ms="38753" started-at="2017-09-04T18:18:59Z" finished-at="2017-09-04T18:19:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginChinese -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="initDriver" is-config="true" duration-ms="30" started-at="2017-09-04T18:19:38Z" finished-at="2017-09-04T18:19:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="loginEmpty()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="loginEmpty" duration-ms="4295" started-at="2017-09-04T18:19:38Z" finished-at="2017-09-04T18:19:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginEmpty -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="initDriver" is-config="true" duration-ms="20" started-at="2017-09-04T18:19:42Z" finished-at="2017-09-04T18:19:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="loginConfim()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="loginConfim" duration-ms="4232" started-at="2017-09-04T18:19:42Z" finished-at="2017-09-04T18:19:47Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[帐号密码对的情况登录 expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginConfim -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@72b6cbcc]" name="afterClass" is-config="true" duration-ms="1358" started-at="2017-09-04T18:19:47Z" finished-at="2017-09-04T18:19:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@30b8a058]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-09-01T11:19:43Z" finished-at="2017-09-01T11:19:43Z">
+      </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
+      <class name="com.yiibai.primera.testng.cases.HomeTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="beforeSuite" is-config="true" duration-ms="40538" started-at="2017-09-04T18:15:38Z" finished-at="2017-09-04T18:16:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="initDriver" is-config="true" duration-ms="24" started-at="2017-09-04T18:16:19Z" finished-at="2017-09-04T18:16:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="menusEdit()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="menusEdit" duration-ms="73698" started-at="2017-09-04T18:16:19Z" finished-at="2017-09-04T18:17:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menusEdit -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-04T18:17:32Z" finished-at="2017-09-04T18:17:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="search1()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="search1" duration-ms="21896" started-at="2017-09-04T18:17:32Z" finished-at="2017-09-04T18:17:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search1 -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="initDriver" is-config="true" duration-ms="19" started-at="2017-09-04T18:17:54Z" finished-at="2017-09-04T18:17:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="search2()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="search2" duration-ms="8362" started-at="2017-09-04T18:17:54Z" finished-at="2017-09-04T18:18:03Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 首页搜索验证 expected [true] but found [false].
+报错方法名:search2(
+报错类:HomeTest
+报错行号:67)
+	at com.yiibai.primera.testng.cases.HomeTest.search2(HomeTest.java:67)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search2 -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="initDriver" is-config="true" duration-ms="15" started-at="2017-09-04T18:18:03Z" finished-at="2017-09-04T18:18:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="morningPaper()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="morningPaper" duration-ms="7832" started-at="2017-09-04T18:18:03Z" finished-at="2017-09-04T18:18:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- morningPaper -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@76707e36]" name="afterClass" is-config="true" duration-ms="1363" started-at="2017-09-04T18:18:10Z" finished-at="2017-09-04T18:18:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
-    </test> <!-- Index -->
+    </test> <!-- testAll -->
   </suite> <!-- Suite -->
 </testng-results>

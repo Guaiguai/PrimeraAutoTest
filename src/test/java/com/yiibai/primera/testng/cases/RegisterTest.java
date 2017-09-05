@@ -1,7 +1,7 @@
 package com.yiibai.primera.testng.cases;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.yiibai.primera.testng.base.Assertion;
 
@@ -15,12 +15,11 @@ import com.yiibai.primera.testng.operation.RegisterOperate;
  * 邮箱没有验证其真实存在性
  * Created by ChenXiaoGuai on 2017/08/10.
  */
-@Test(priority = 1)
 public class RegisterTest extends InitAppium {
 
 	private RegisterOperate registerOperate;
 
-	@BeforeClass
+	@BeforeMethod
 	public void initDriver() {
 		Assert.assertNotNull(driver);
 		registerOperate = new RegisterOperate(driver);

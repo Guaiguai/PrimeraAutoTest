@@ -1,7 +1,7 @@
 package com.yiibai.primera.testng.cases;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.yiibai.primera.testng.base.InitAppium;
@@ -16,13 +16,12 @@ import com.yiibai.primera.testng.operation.PersonalCenterOperate;
  * 
  * Created by ChenXiaoGuai on 2017/08/16.
  */
-@Test(priority = 3)
 public class PersonalCenterTest extends InitAppium {
 
     private PersonalCenterOperate personalCenterOperate;
 
 
-    @BeforeClass
+    @BeforeMethod
     public void initDriver(){
         Assert.assertNotNull(driver);
         personalCenterOperate = new PersonalCenterOperate(driver);

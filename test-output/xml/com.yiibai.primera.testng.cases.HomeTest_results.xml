@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Index"
-           tests="1"
-           failures="0"
+<testsuite name="testAll"
+           tests="4"
+           failures="1"
            errors="0"
            skipped="0"
-           time="75.562">
+           time="111.788">
   <properties />
+            <testcase name="search2" time="8.362" classname="com.yiibai.primera.testng.cases.HomeTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: 首页搜索验证 expected [true] but found [false].
+报错方法名:search2(
+报错类:HomeTest
+报错行号:67)
+  com.yiibai.primera.testng.cases.HomeTest.search2(HomeTest.java:67)
+]]>
+      </failure>
+
+          </testcase>
   
   
-            <testcase name="menusEdit" time="75.562" classname="com.yiibai.primera.testng.cases.HomeTest" />
+            <testcase name="morningPaper" time="7.832" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="menusEdit" time="73.698" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="search1" time="21.896" classname="com.yiibai.primera.testng.cases.HomeTest" />
       
 </testsuite>

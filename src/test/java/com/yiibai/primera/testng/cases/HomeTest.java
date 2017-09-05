@@ -3,31 +3,30 @@ package com.yiibai.primera.testng.cases;
 import java.text.ParseException;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.HomeOperate;
 
+
 /**
  * 登录测试用例
  * Created by ChenXiaoGuai on 2017/08/15.
  */
 //@Listeners({com.yiibai.primera.testng.listener.ReportListener.class})
-@Test(priority = 4)
 public class HomeTest extends InitAppium {
 
     private HomeOperate homeOperate;
+    
+//    static AndroidDriver<AndroidElement> driver;
 
-
-    @BeforeClass
+    @BeforeMethod
     public void initDriver(){
-        Assert.assertNotNull(driver);
-    	System.out.println("driver is null:" + driver);
-        homeOperate = new HomeOperate(driver);
+    	Assert.assertNotNull(driver);
+    	homeOperate = new HomeOperate(driver);
     }
-
     /**
      * 首页刷新验证
      */
@@ -35,7 +34,7 @@ public class HomeTest extends InitAppium {
 	public void refresh(){
         boolean flag = homeOperate.refresh();
         Assertion.verifyEquals(flag,false,"首页刷新验证");
-        print("首页刷新验证:"+ flag);
+        System.out.println("首页刷新验证:"+ flag);
     }
     /**
      * 首页菜单编辑验证
@@ -44,7 +43,7 @@ public class HomeTest extends InitAppium {
 	public void menusEdit(){
         boolean flag = homeOperate.menusEdit();
         Assertion.verifyEquals(flag,true,"首页菜单编辑验证");
-        print("首页菜单编辑验证:"+ flag);
+        System.out.println("首页菜单编辑验证:"+ flag);
     }
     /**
      * 首页搜索验证
@@ -53,7 +52,7 @@ public class HomeTest extends InitAppium {
 	public void search1(){
         boolean flag = homeOperate.search(1);
         Assertion.verifyEquals(flag,true,"首页搜索验证");
-        print("首页搜索验证:"+ flag);
+        System.out.println("首页搜索验证:"+ flag);
     }
     /**
      * 首页搜索验证
@@ -62,7 +61,7 @@ public class HomeTest extends InitAppium {
 	public void search2(){
         boolean flag = homeOperate.search(2);
         Assertion.verifyEquals(flag,true,"首页搜索验证");
-        print("首页搜索验证:"+ flag);
+        System.out.println("首页搜索验证:"+ flag);
     }
     /**
      * 首页是否显示晨报
@@ -72,6 +71,6 @@ public class HomeTest extends InitAppium {
 	public void morningPaper() throws ParseException{
         boolean flag = homeOperate.MorningPaper();
         Assertion.verifyEquals(flag,false,"首页是否显示晨报");
-        print("首页是否显示晨报:"+ flag);
+        System.out.println("首页是否显示晨报:"+ flag);
     }
 }

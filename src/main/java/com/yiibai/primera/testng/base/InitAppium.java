@@ -3,13 +3,13 @@ package com.yiibai.primera.testng.base;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Driver;
 
-import org.apache.bcel.generic.NEW;
 import org.apache.http.util.TextUtils;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
@@ -27,6 +27,7 @@ public class InitAppium {
 	public static String device = "Android";
 	// 调试设备名字
 	public static String deviceName = "fd47af2d7d42";
+	public static String udid = deviceName;
 	// public static String deviceName = "X8QDU14A18000077";
 	// 调试设备系统版本
 	public static String platformVersion = "4.1";
@@ -34,7 +35,7 @@ public class InitAppium {
 	public static String commandTimeout = "6000";
 	//automationName表示appium使用的测试引擎，默认是appium，也可以是uiautomator
 	public static String automationName = "appium";
-	// 是否需要重新安装
+	// 不重置应用数据，如重新启动登录过的App时，仍然是登录状态，不需要重新登录
 	public static String noReset = "True";
 	
 	/*android特有的配置*/
@@ -44,6 +45,8 @@ public class InitAppium {
 	public static String unicodeKeyboard = "True";
 	// 在执行完测试之后，将手机的输入法从appium输入法还原成手机默认输入法
 	public static String resetKeyboard = "True";
+	//_当你的其实activity和真正启动后的activity不一致的时候，请把启动的activity放在这里
+	public static String waitActivity = "";
 
 	
 	// app路径
@@ -55,7 +58,7 @@ public class InitAppium {
 //	 public static String appActivity =".baiyi.jj.app.activity.LogoActivity";
 	public static String appActivity = "";
 
-	public AndroidDriver<AndroidElement> driver = null;
+	public static AndroidDriver<AndroidElement> driver;
 
 	// 构造方法
 	public InitAppium() {
@@ -66,6 +69,7 @@ public class InitAppium {
 
 		device = builder.device;
 		deviceName = builder.deviceName;
+		udid = builder.udid;
 		commandTimeout = builder.commandTimeout;
 		automationName = builder.automationName;
 		platformVersion = builder.platformVersion;
@@ -84,9 +88,11 @@ public class InitAppium {
 	 * appium启动参数
 	 *
 	 * @throws MalformedURLException
+	 * @throws InterruptedException 
 	 */
-	@BeforeSuite
-	public void beforeSuite() throws MalformedURLException {
+	@BeforeClass
+	public void beforeSuite() throws MalformedURLException, InterruptedException {
+		System.out.println("beforeSuite begin---");
 		//启动appium服务
 //		AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
 //		service.start();
@@ -95,6 +101,7 @@ public class InitAppium {
 		//共用参数区
 		capabilities.setCapability("device", device);
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
+		capabilities.setCapability(MobileCapabilityType.UDID, udid);
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion);
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, commandTimeout);
 		capabilities.setCapability(MobileCapabilityType.NO_RESET, noReset);
@@ -103,6 +110,7 @@ public class InitAppium {
 		capabilities.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, unicodeKeyboard);
 		capabilities.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD,resetKeyboard);
 		capabilities.setCapability(AndroidMobileCapabilityType.NO_SIGN, noSign);
+//		capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, waitActivity);
 		
 
 		capabilities.setCapability("app", new File(appPath).getAbsolutePath());
@@ -116,13 +124,16 @@ public class InitAppium {
 		// 启动Driver
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
 				capabilities);
-
+		System.out.println("driver is:" + driver);
+		System.out.println("beforeSuite over----");
+//		return new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
+//				capabilities);
 	}
 
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
+//	@AfterSuite
+//	public void afterTest() {
+//		driver.quit();
+//	}
 
 	@AfterClass
 	public void afterClass() {

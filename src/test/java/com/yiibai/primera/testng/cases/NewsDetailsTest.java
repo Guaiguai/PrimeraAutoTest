@@ -1,7 +1,7 @@
 package com.yiibai.primera.testng.cases;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.yiibai.primera.testng.base.InitAppium;
@@ -14,12 +14,11 @@ import com.yiibai.primera.testng.operation.NewsDetailsOperate;
  * 
  * Created by ChenXiaoGuai on 2017/08/16.
  */
-@Test(priority = 5)
 public class NewsDetailsTest extends InitAppium {
 
 	private NewsDetailsOperate newsdetailsOperate;
 
-	@BeforeClass
+	@BeforeMethod
 	public void initDriver() {
 		Assert.assertNotNull(driver);
 		newsdetailsOperate = new NewsDetailsOperate(driver);

@@ -1,6 +1,5 @@
 package com.yiibai.primera.testng.base;
 
-import com.yiibai.primera.testng.base.Builder;
 import com.yiibai.primera.testng.base.InitAppium;
 
 /**
@@ -9,6 +8,7 @@ import com.yiibai.primera.testng.base.InitAppium;
 public class Builder {
     String device = InitAppium.device;
     String deviceName = InitAppium.deviceName;
+    String udid = InitAppium.udid;
     String platformVersion = InitAppium.platformVersion;
     String commandTimeout = InitAppium.commandTimeout;
     String automationName = InitAppium.automationName;
@@ -30,6 +30,11 @@ public class Builder {
 
     public Builder setDeviceName(String deviceName) {
         this.deviceName = deviceName;
+        return this;
+    }
+    
+    public Builder setUdid(String udid) {
+        this.udid = udid;
         return this;
     }
     

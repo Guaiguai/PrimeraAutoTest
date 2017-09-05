@@ -4,8 +4,8 @@
 	<test name="testAll">
 		<classes>
 			<class name="com.yiibai.primera.testng.cases.HomeTest" />
-			<class name="com.yiibai.primera.testng.cases.RegisterTest" />
 			<class name="com.yiibai.primera.testng.cases.LoginTest" />
+			<class name="com.yiibai.primera.testng.cases.RegisterTest" />
 			<class name="com.yiibai.primera.testng.cases.PersonalCenterTest" />
 			<class name="com.yiibai.primera.testng.cases.NewsDetailsTest" />
 		</classes>
@@ -14,44 +14,4 @@
 			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 		</listeners>
 	</test><!--Test -->
-
-	<!-- <test name="testRegister">
-		<classes>
-			<class name="com.yiibai.primera.testng.cases.RegisterTest" />
-		</classes>
-		<listeners>
-			<listener class-name="org.uncommons.reportng.HTMLReporter" />
-			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-		</listeners>
-	</test>Test
-
-	<test name="testLogin">
-		<classes>
-			<class name="com.yiibai.primera.testng.cases.LoginTest" />
-		</classes>
-		<listeners>
-			<listener class-name="org.uncommons.reportng.HTMLReporter" />
-			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-		</listeners>
-	</test>Test
-
-	<test name="testPersonalCenter">
-		<classes>
-			<class name="com.yiibai.primera.testng.cases.PersonalCenterTest" />
-		</classes>
-		<listeners>
-			<listener class-name="org.uncommons.reportng.HTMLReporter" />
-			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-		</listeners>
-	</test>Test
-
-	<test name="testNewsDetails">
-		<classes>
-			<class name="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-		</classes>
-		<listeners>
-			<listener class-name="org.uncommons.reportng.HTMLReporter" />
-			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-		</listeners>
-	</test>Test -->
 </suite><!--Suite -->
