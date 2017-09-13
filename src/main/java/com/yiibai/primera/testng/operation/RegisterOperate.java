@@ -67,8 +67,11 @@ public class RegisterOperate extends OperateAppium {
 		// 4、点击注册
 		clickView(registerPage.getSingUpBtn(), "SignUp Btn");
 		//注册时如果出现错误提示弹框，则点击下隐藏掉
-		if(registerPage.isAlert()) {
-			press();
+//		if(registerPage.isAlert()) {
+//			press();
+//		}
+		while(!homePage.isHomePage()) {
+			back();
 		}
 		// 返回是否成功到个人中心页面
 		return registerPage.isRegistered();

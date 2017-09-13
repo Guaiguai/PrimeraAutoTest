@@ -3,6 +3,7 @@ package com.yiibai.primera.testng.operation;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.base.UiAutomatorAppium;
 import com.yiibai.primera.testng.constant.Constant;
+import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.LoginPage;
 import com.yiibai.primera.testng.pages.PersonalCenterPage;
 
@@ -17,14 +18,14 @@ public class PersonalCenterOperate extends OperateAppium {
 
 	private PersonalCenterPage personalCenterPage;
 	
-	private HomeOperate homeOperate;
+	private HomePage homePage;
 
 	AndroidDriver<AndroidElement> driver;
 
 	public PersonalCenterOperate(AndroidDriver<AndroidElement> driver) {
 		super(driver);
 		personalCenterPage = new PersonalCenterPage(driver);
-		homeOperate = new HomeOperate(driver);
+		homePage = new HomePage(driver);
 		this.driver = driver;
 	}
 	/**
@@ -56,19 +57,9 @@ public class PersonalCenterOperate extends OperateAppium {
 			System.out.println("我的收藏里面没有收藏的新闻列表");
 			return Constant.assertTrue;
 		}else {
-			System.out.println("chucuo ");
+			System.out.println("出错啦~~~ ");
 		}
-		
-//		clickView(personalCenterPage.getCollectionEditBtn());
-//		clickView(personalCenterPage.getCollectionDeleteBtn());
-//		clickView(personalCenterPage.getCollectionUpdateBtn());
-//		AndroidElement firstNews = personalCenterPage.getCollectionParent();
-//		if(firstNews != null && firstCollection.getText() == firstNews.getText()) {
-//			System.out.println("我的收藏---取消收藏的第一条新闻---结果失败");
-//			return false;
-//		}
-//		System.out.println("我的收藏---取消收藏的第一条新闻---结果成功");
-//		sleep(3000);
+		backHome();
 		return Constant.assertFalse;
 	}
 	
@@ -97,14 +88,23 @@ public class PersonalCenterOperate extends OperateAppium {
 		}
 		System.out.println("我的收藏---取消收藏的第一条新闻---结果成功");
 		sleep(3000);
+		backHome();
 		return Constant.assertTrue;
+	}
+	/**
+	 * 需要测试的case走完之后返回到首页，为下一次的测试准备
+	 */
+	private void backHome() {
+		while (!homePage.isHomePage()) {
+			back();
+		}
 	}
 	/**
 	 * 是否在个人中心主页面
 	 * @return
 	 */
 	private boolean isPersonalCenter() {
-		if(!homeOperate.isHomePage()) {
+		if(!homePage.isHomePage()) {
 			return Constant.assertFalse;
 		}
 		clickView(personalCenterPage.getCuentaBtn());

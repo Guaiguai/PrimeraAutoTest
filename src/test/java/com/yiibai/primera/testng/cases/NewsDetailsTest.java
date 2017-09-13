@@ -4,7 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
+import com.yiibai.primera.testng.constant.Result;
 import com.yiibai.primera.testng.operation.NewsDetailsOperate;
 
 /**
@@ -26,7 +28,7 @@ public class NewsDetailsTest extends InitAppium {
 	/**
 	 * 验证新闻详情页的字体的设置
 	 */
-	@Test(priority = 6)
+	@Test(priority = 6,enabled = false)
 	public void share() {
 		boolean flag = newsdetailsOperate.share();
 		Assert.assertTrue(flag);
@@ -36,7 +38,7 @@ public class NewsDetailsTest extends InitAppium {
 	/**
 	 * 验证新闻详情页的字体的设置
 	 */
-	@Test(priority = 4)
+	@Test(priority = 4,enabled = false)
 	public void fontSize() {
 		String msg = newsdetailsOperate.fontSize();
 		Assert.assertEquals(msg, null);
@@ -46,11 +48,14 @@ public class NewsDetailsTest extends InitAppium {
 	/**
 	 * 验证文章配图查看
 	 */
-	@Test(priority = 4)
+	@Test(priority = 1)
 	public void imageSwitch() {
-		String msg = newsdetailsOperate.imageSwitcher();
-		Assert.assertEquals(msg, null);
-		print("验证文章配图查看:" + msg);
+		Result result = newsdetailsOperate.imageSwitcher();
+		System.out.println("getActual is:" + result.getActual());
+		System.out.println("getExcepted is:" + result.getExcepted());
+		System.out.println("message is:" + result.getMessage());
+		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+		print("验证文章配图查看:" + result.getMessage());
 	}
 	/**
 	 * 验证文章评论

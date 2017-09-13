@@ -32,7 +32,7 @@ public class PersonalCenterTest extends InitAppium {
      */
     @Test(priority = 0)
     public void myCollection(){
-        boolean flag = personalCenterOperate.myCollectionNew();
+        boolean flag = personalCenterOperate.myCollection();
         Assert.assertTrue(flag, "测试我的收藏---取消第一条收藏的新闻是否成功");
         print("测试我的收藏---取消第一条收藏的新闻是否成功:"+ flag);
     }

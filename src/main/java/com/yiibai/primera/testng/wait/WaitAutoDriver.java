@@ -48,8 +48,8 @@ public class WaitAutoDriver{
 	public AndroidElement waitAuto(final By by, int time) {
 		
 		try {
-			System.out.println("定位的元素：" + by);
-			System.out.println("元素所在的driver：" + driver);
+//			System.out.println("定位的元素：" + by);
+//			System.out.println("元素所在的driver：" + driver);
 			return new AndroidDriverWait(driver, time)
 					.until(new ExpectedCondition<AndroidElement>() {
 						@Override

@@ -1,16 +1,14 @@
 package com.yiibai.primera.testng.operation;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.Set;
 
-import org.apache.commons.validator.util.Flags;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
 
 import com.yiibai.primera.testng.base.ImageAppium;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.constant.Constant;
+import com.yiibai.primera.testng.constant.Result;
+import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.NewsDetailsPage;
 
 import bsh.This;
@@ -25,24 +23,26 @@ public class NewsDetailsOperate extends OperateAppium {
 
 	private NewsDetailsPage newsDetailsPage;
 
-	private HomeOperate homeOperate;
+	private HomePage homePage;
 
 	AndroidDriver<AndroidElement> driver;
 
 	public NewsDetailsOperate(AndroidDriver<AndroidElement> driver) {
 		super(driver);
 		newsDetailsPage = new NewsDetailsPage(driver);
-		homeOperate = new HomeOperate(driver);
+		homePage = new HomePage(driver);
 		this.driver = driver;
 	}
 
 	public boolean isNewsDetailsPage() {
 		Boolean flag = false;
 		sleep(1000);
-		if (homeOperate.isHomePage()) {
+		if (homePage.isHomePage()) {
 			print("在App主页面..........");
-			press();
+			//在主页面定位新闻进去，而不是视频
+			clickView(newsDetailsPage.getNews());
 		}
+		//根据该Btn判定在新闻详情页面
 		if (newsDetailsPage.likeBtn() != null) {
 			flag = true;
 		}
@@ -73,13 +73,13 @@ public class NewsDetailsOperate extends OperateAppium {
 					driver.context("NATIVE_APP");
 					System.out.println("[-设备-] :  xxx"
 							+ " [-Success-]<<  步骤: 切换WEBVIEW  Url:"
-							+ driver.getCurrentUrl());
+							+ driver.getSessionId());
 				}
 				if (contextName.toString().toLowerCase().contains("webview")) {
 					driver.context(contextName);
 					System.out.println("[-设备-] :  xxx"
 							+ " [-Success-]<<  步骤: 切换NATIVE_APP  Url:"
-							+ driver.getCurrentUrl());
+							+ driver.getSessionId());
 				}
 			}
 		} catch (Exception Error) {
@@ -125,16 +125,18 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return 是否查看成功
 	 */
-	public String imageSwitcher() {
-		String msg = null;
+	public Result imageSwitcher() {
+		Result result = new Result();
+//		result.setExcepted(true);
 		System.out.println("imageSwitcher....");
 		if (!isNewsDetailsPage()) {
-			System.out.println(This.class + ":imageSwitcher---没有在新闻详情页面！！！");
-			return msg;
+			result.setActual(false);
+			result.setMessage("没有在新闻详情页面！！！");
 		}
 		// 如果有配图，则点击查看 如果有多张图片的话，则向左滑动  图片下载
 		if(newsDetailsPage.imageElement() == null) {
-			return msg = "新闻详情页面没有配图";
+			result.setActual(true);
+			result.setMessage("新闻详情页面没有配图！！！");
 		}
 		clickView(newsDetailsPage.imageElement());
 		if(newsDetailsPage.imageCount() > 1) {
@@ -142,13 +144,14 @@ public class NewsDetailsOperate extends OperateAppium {
 				swipeToLeft(300);
 			}
 		}else {
-			msg = "新闻详情页---新闻配图只有一张";
+			result.setMessage("新闻详情页---新闻配图只有一张,不能进行图片滑动");
 		}
 		ImageAppium.snapshot((TakesScreenshot) driver, "newsDetail_imageSwitcher");
 		//点击下载图片 有问题下载之后本地查看不到
-		press();
-		System.out.println("msg is:" + msg);
-		return msg;
+		result.setActual(true);
+		result.setMessage("新闻详情页面---已截图保存配图！！！");
+		back();
+		return result;
 	}
 	
 	/**

@@ -12,7 +12,7 @@
 <body>
 <h1>testAll</h1>
 <p>
-  Test duration: 249.799s
+  Test duration: 1264.684s
 </p>
 
 
@@ -20,15 +20,15 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.yiibai.primera.testng.cases.HomeTest</td>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.RegisterTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  search2
+                  RegisterOk
       </td>
   <td class="duration">
-    8.362s
+    48.042s
   </td>
   <td class="result">
         
@@ -38,60 +38,11 @@
         <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
     <div class="stackTrace" id="exception-0">
               <br/>
-报错信息: 首页搜索验证 expected [true] but found [false].<br/>
-报错方法名:search2(<br/>
-报错类:HomeTest<br/>
-报错行号:67)<br />
-              com.yiibai.primera.testng.cases.HomeTest.search2(HomeTest.java:67)<br />
-                </div>
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">com.yiibai.primera.testng.cases.LoginTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  loginConfim
-      </td>
-  <td class="duration">
-    4.232s
-  </td>
-  <td class="result">
-        
-    
-        
-
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]</b></a><br />
-    <div class="stackTrace" id="exception-1">
-              org.testng.Assert.fail(Assert.java:94)<br />
-              org.testng.Assert.failNotEquals(Assert.java:494)<br />
-              org.testng.Assert.assertTrue(Assert.java:42)<br />
-              com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:76)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:497)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
-              org.testng.TestRunner.run(TestRunner.java:617)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1149)<br />
-              org.testng.TestNG.run(TestNG.java:1057)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br />
+报错信息: 邮箱和密码均符合规则的情况下是否注册成功 expected [true] but found [false].<br/>
+报错方法名:RegisterOk(<br/>
+报错类:RegisterTest<br/>
+报错行号:35)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.RegisterOk(RegisterTest.java:35)<br />
                 </div>
       </td>
 </tr>
@@ -109,7 +60,7 @@
                   menusEdit
       </td>
   <td class="duration">
-    73.698s
+    46.525s
   </td>
   <td class="result">
         
@@ -123,7 +74,7 @@
                   morningPaper
       </td>
   <td class="duration">
-    7.832s
+    7.952s
   </td>
   <td class="result">
         
@@ -134,10 +85,24 @@
 </tr>
 <tr>
   <td class="method">
-                  search1
+                  searchByHistory
       </td>
   <td class="duration">
-    21.896s
+    33.738s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchByInput
+      </td>
+  <td class="duration">
+    42.136s
   </td>
   <td class="result">
         
@@ -155,7 +120,7 @@
                   loginChinese
       </td>
   <td class="duration">
-    38.753s
+    40.546s
   </td>
   <td class="result">
         
@@ -166,10 +131,10 @@
 </tr>
 <tr>
   <td class="method">
-                  loginEmpty
+                  loginConfim
       </td>
   <td class="duration">
-    4.295s
+    39.114s
   </td>
   <td class="result">
         
@@ -183,7 +148,7 @@
                   loginErrorNum
       </td>
   <td class="duration">
-    4.134s
+    43.665s
   </td>
   <td class="result">
         
@@ -197,7 +162,271 @@
                   loginErrorUser
       </td>
   <td class="duration">
-    4.735s
+    46.631s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.NewsDetailsTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  collect
+      </td>
+  <td class="duration">
+    8.304s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  comment
+      </td>
+  <td class="duration">
+    15.629s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  imageSwitch
+      </td>
+  <td class="duration">
+    12.063s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  like
+      </td>
+  <td class="duration">
+    11.030s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.PersonalCenterTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  myCollection
+      </td>
+  <td class="duration">
+    27.162s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.RegisterTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  EmailAtEnd
+      </td>
+  <td class="duration">
+    48.943s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailMissKeyCharAit
+      </td>
+  <td class="duration">
+    51.086s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailMissKeyCharSpot
+      </td>
+  <td class="duration">
+    48.507s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailMissKeyChars
+      </td>
+  <td class="duration">
+    53.319s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailOnlyCharAitEnd
+      </td>
+  <td class="duration">
+    50.438s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailOnlyCharSpotEnd
+      </td>
+  <td class="duration">
+    47.822s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailSpotEnd
+      </td>
+  <td class="duration">
+    49.423s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailWrong
+      </td>
+  <td class="duration">
+    52.279s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  PwdIsChinese
+      </td>
+  <td class="duration">
+    47.176s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  PwdIsNull
+      </td>
+  <td class="duration">
+    46.984s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  PwdLessThanSix
+      </td>
+  <td class="duration">
+    46.366s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  PwdMoreThanTwentyFive
+      </td>
+  <td class="duration">
+    45.249s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  RegisterExited
+      </td>
+  <td class="duration">
+    46.642s
   </td>
   <td class="result">
         

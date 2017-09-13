@@ -18,6 +18,10 @@ public class NewsDetailsPage extends PageAppium {
     public final String APP_WELCOME_ELEMENTS_ID = "img_coopen";
     //app主页的文字（主要是顶部显示的文字）
     public final String APP_HOME_PAGE_TEXT = "Para ti";
+    //新闻首页定位带图片的新闻
+    public final String NEWS_IMAGE_RIGHT_ID = "img_one_left";
+    public final String NEWS_IMAGE_FILL_ID = "img_one_fill";
+    public final String NEWS_TEXT_ID = "txt_newstitle";
     
     //收藏的BTN
     public final String COLLECT_BTN_ID = "btn_collect";
@@ -53,6 +57,23 @@ public class NewsDetailsPage extends PageAppium {
     public AndroidElement fontSize() {
     	return waitAutoById(FONT_BTN_ID);
     }
+    
+	public AndroidElement getNews() {
+		AndroidElement news = null;
+		//1.定位配图在右边的新闻
+		if(isIdElementExist(NEWS_IMAGE_RIGHT_ID)) {
+			news = findById(NEWS_IMAGE_RIGHT_ID);
+		}
+		//2.定位配图居中的新闻
+		if (news == null && isIdElementExist(NEWS_IMAGE_FILL_ID)) {
+			news = findById(NEWS_IMAGE_FILL_ID);
+		}
+		if (news == null) {
+			//定位没有配图的新闻
+			news = findById(NEWS_TEXT_ID);
+		}
+		return news;
+	}
     
     public AndroidElement fontSizeRadio(){
     	AndroidElement radio = null;

@@ -100,39 +100,6 @@ public class RegisterPage extends PageAppium {
     public List<AndroidElement> getInputElements(){
         return getManyElementByClassName(INPUT_ELEMENT,3);
     }
-    
-    /**
-     * 获取个人中心的一个元素，让操作程序等待
-     */
-//    public String getLogoutElementId(){
-//        return LOGOUT_BTN_ID;
-//    }
-    /**
-     * 是否在欢迎界面(app打开时的广告切换界面)
-     */
-    public boolean isWelcome(){
-//    	System.out.println("isWelcome begin...");
-    	Boolean isWelcome = false;
-    	List<AndroidElement> elements = getManyElementById(APP_WELCOME_ELEMENTS_ID,1);
-    	if(elements == null) {
-    		isWelcome = false;
-    	}else {
-    		isWelcome = true;
-    	}
-//    	System.out.println("是否在app打开时的广告滑动界面：" + isWelcome);
-//    	System.out.println("isWelcome end...");
-    	return isWelcome;
-    }
-    
-    /**
-     * 判断当前界面是不是主界面
-     *
-     * @param
-     * @return 存在返回真
-     */
-    public boolean isHomePage() {
-        return isTextExist(APP_HOME_PAGE_TEXT);
-    }
     /**
      * 注册时输入信息不符合规范时的弹出信息
      * @return
@@ -145,7 +112,9 @@ public class RegisterPage extends PageAppium {
      * @return
      */
     public boolean isRegistered() {
-    	
-    	return isIdElementExist(LOGOUT_BTN_ID);
+    	Boolean isRegistered = false;
+    	if(getLogOutBtn() != null)
+    		isRegistered = true;
+    	return isRegistered;
     }
 }

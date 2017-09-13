@@ -1,6 +1,8 @@
 package com.yiibai.primera.testng.cases;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -19,8 +21,6 @@ import com.yiibai.primera.testng.operation.HomeOperate;
 public class HomeTest extends InitAppium {
 
     private HomeOperate homeOperate;
-    
-//    static AndroidDriver<AndroidElement> driver;
 
     @BeforeMethod
     public void initDriver(){
@@ -48,20 +48,20 @@ public class HomeTest extends InitAppium {
     /**
      * 首页搜索验证
      */
-    @Test(priority = 2)
-	public void search1(){
-        boolean flag = homeOperate.search(1);
-        Assertion.verifyEquals(flag,true,"首页搜索验证");
-        System.out.println("首页搜索验证:"+ flag);
+    @Test(priority = 3)
+	public void searchByInput(){
+        boolean flag = homeOperate.searchByInput();
+        Assertion.verifyEquals(flag,true,"首页搜索验证---在输入框输入搜索条件搜索新闻");
+        System.out.println("首页搜索验证---在输入框输入搜索条件搜索新闻:"+ flag);
     }
     /**
      * 首页搜索验证
      */
-    @Test(priority = 3)
-	public void search2(){
-        boolean flag = homeOperate.search(2);
-        Assertion.verifyEquals(flag,true,"首页搜索验证");
-        System.out.println("首页搜索验证:"+ flag);
+    @Test(priority = 2)
+	public void searchByHistory(){
+        boolean flag = homeOperate.searchByHistory();
+        Assertion.verifyEquals(flag,true,"首页搜索验证---根据搜索历史搜索");
+        System.out.println("首页搜索验证---根据搜索历史搜索:"+ flag);
     }
     /**
      * 首页是否显示晨报
@@ -69,8 +69,16 @@ public class HomeTest extends InitAppium {
      */
     @Test(priority = 4)
 	public void morningPaper() throws ParseException{
-        boolean flag = homeOperate.MorningPaper();
-        Assertion.verifyEquals(flag,false,"首页是否显示晨报");
+    	Date now = new Date();
+		SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+		Date nowTime = df.parse(df.format(now));//当前时间
+		Date compareTime = df.parse("10:30:00");//指定时间
+		Boolean expected = false;
+		if(nowTime.getTime() - compareTime.getTime() <= 0) {
+			expected = true;
+		}
+		boolean flag = homeOperate.MorningPaper();
+		Assertion.verifyEquals(flag,expected,"首页是否显示晨报");
         System.out.println("首页是否显示晨报:"+ flag);
     }
 }

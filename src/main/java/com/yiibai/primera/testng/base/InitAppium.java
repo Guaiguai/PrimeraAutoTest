@@ -51,7 +51,7 @@ public class InitAppium {
 	
 	// app路径
 	public static String appPath = System.getProperty("user.dir") 
-			+ "/src/main/java/apps/PN_ADS.apk";
+			+ "/src/main/java/apps/primera_1.4.2_0912.apk";
 	// 包名
 	public static String appPackage = "com.turbo.turbo.mexico";
 	// 要启动的Activity
@@ -124,7 +124,6 @@ public class InitAppium {
 		// 启动Driver
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
 				capabilities);
-		System.out.println("driver is:" + driver);
 		System.out.println("beforeSuite over----");
 //		return new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),
 //				capabilities);

@@ -11,6 +11,7 @@ import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.HomePage;
 
+import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -28,7 +29,7 @@ public class HomeOperate extends OperateAppium {
 	
 	public HomeOperate(AndroidDriver<AndroidElement> initdriver) {
 		super(initdriver);
-		System.out.println("----");
+		System.out.println(this.getClass() + "----");
 		homePage = new HomePage(initdriver);
 		this.driver = initdriver;
 	}
@@ -71,18 +72,14 @@ public class HomeOperate extends OperateAppium {
 	 * 两种方式搜索
 	 * @return
 	 */
-	public boolean search(int type) {
+	public boolean searchByInput() {
 		if(!isHomePage()) {
 			return Constant.assertFalse;
 		}
-		clickView(homePage.getHomeSearchBtn());
-		if(type == 1) {//方式一搜索直接输入框搜索
-			inputManyText("Suspenden agua potable");
-			clickView(homePage.getSearchBtn());
-		}else if(type == 2) {//方式二搜索根据历史搜索记录搜索
-			clickView(homePage.getSearchHistoryBtn());
-			sleep(300);
-		}
+		if(homePage.getHomeSearchBtn() != null)
+			clickView(homePage.getHomeSearchBtn());
+		inputManyText("Suspenden agua potable");
+		clickView(homePage.getSearchBtn());
 		//根据内容判断是否有搜索到信息
 		if(homePage.getSearchNone() == null) {
 			logger.info("搜索到结果");
@@ -92,7 +89,35 @@ public class HomeOperate extends OperateAppium {
 			logger.info("没有搜索到结果");
 		}
 		//操作完成之后返回主页
-		back();
+		backHome();
+		return Constant.assertTrue;
+	}
+	/**
+	 * 首页左上角新闻搜索
+	 * 两种方式搜索
+	 * @return
+	 */
+	public boolean searchByHistory() {
+		if(!isHomePage()) {
+			return Constant.assertFalse;
+		}
+		clickView(homePage.getHomeSearchBtn());
+		if(homePage.getSearchHistoryBtn() == null) {
+			logger.info("暂时没有搜索历史！");
+			return Constant.assertTrue;
+		}
+		clickView(homePage.getSearchHistoryBtn());
+		waitAuto();
+		//根据内容判断是否有搜索到信息
+		if(homePage.getSearchNone() == null) {
+			logger.info("搜索到结果！");
+			//链接到新闻详情页面
+			clickView(homePage.getSearchAll());
+		}else{
+			logger.info("没有搜索到结果！");
+		}
+		//操作完成之后返回主页
+		backHome();
 		return Constant.assertTrue;
 	}
 	
@@ -128,6 +153,8 @@ public class HomeOperate extends OperateAppium {
 		if(nowTime.getTime() - compareTime.getTime() <= 0) {
 			morningPaper = true;
 			logger.info("nowTime <= compareTime,应该显示早报");
+		}else {
+			logger.info("nowTime > compareTime,不应该显示早报");
 		}
 		//抓取元素
 		AndroidElement element = homePage.getMorningPaperImageElement();
@@ -138,14 +165,30 @@ public class HomeOperate extends OperateAppium {
 			logger.info("没有早报！");
 		}
 		//如果正常显示早报，则点击进去，浏览一条早报信息
-		if(morningPaper && flag) {
-//			flag = true;
-			clickView(element);
-			//点击一条早报信息,进入新闻详情页面，此时可以依赖NewsDetails.java
-			press();
+		if(morningPaper) {
+			if(flag) {
+				clickView(element);
+				//点击一条早报信息,进入新闻详情页面，此时可以依赖NewsDetails.java
+				press();
+				System.out.println("早报验证通过");
+				backHome();
+				return Constant.assertTrue;
+			}else {
+				System.out.println("应该有早报显示，但是没有显示");
+				return Constant.assertFalse;
+			}
+		}else {
+			System.out.println("过了早报时间");
+			return Constant.assertFalse;
 		}
-		back();
-		return Constant.assertTrue;
+	}
+	/**
+	 * 测试完成之后返回到首页
+	 */
+	private void backHome() {
+		while (!isHomePage()) {
+			back();
+		}
 	}
 
 	/**

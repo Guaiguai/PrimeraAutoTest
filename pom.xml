@@ -9,11 +9,12 @@
 
 	<name>PrimeraAutoTest</name>
 	<url>http://maven.apache.org</url>
-
+	<!-- maven 参数配置，这里引用不同的testng.xml -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<xmlFileName>xmlfile/testng.xml</xmlFileName>
 	</properties>
-
+	<!-- maven 引用依赖不同的jar -->
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -21,17 +22,24 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- 依赖testNg -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8.7</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- reportng begin -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- 依赖reportNg 关联testNg -->
 		<dependency>
 			<groupId>org.uncommons</groupId>
 			<artifactId>reportng</artifactId>
-			<version>1.1.4</version>
+			<version>1.1.5</version>
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>
@@ -40,12 +48,24 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- 依赖Guice -->
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
 			<version>4.0</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>velocity</groupId>
+			<artifactId>velocity-dep</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- appium 测试依赖的jars -->
 		<!-- exception:java.lang.NoSuchMethodError: com.google.common.collect.ImmutableSet -->
 		<!-- .toImmutableSet()Ljava/util/stream/Collector -->
 		<dependency>
@@ -53,7 +73,6 @@
 			<artifactId>guava</artifactId>
 			<version>21.0</version>
 		</dependency>
-		<!-- appium 测试依赖的jars -->
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
@@ -111,6 +130,7 @@
 
 	<build>
 		<plugins>
+			<!-- 添加插件 关联testNg.xml -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -121,6 +141,7 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+			<!-- 添加插件,添加ReportNg的监听器，修改最后的TestNg的报告 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -138,6 +159,7 @@
 						</property>
 					</properties>
 					<workingDirectory>target/</workingDirectory>
+					<forkMode>always</forkMode>
 				</configuration>
 			</plugin>
 		</plugins>

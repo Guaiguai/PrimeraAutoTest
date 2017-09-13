@@ -5,6 +5,7 @@ import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.LoginPage;
 
+import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -37,7 +38,7 @@ public class LoginOperate extends OperateAppium {
 	 * @return 是否成功登录到主页
 	 */
 	public boolean login(String name, String pass) {
-
+		System.out.println(this.getClass() + ":login----");
 		sleep(1000);
 		if(!homePage.isHomePage()) {
 			return Constant.assertFalse;
@@ -62,12 +63,16 @@ public class LoginOperate extends OperateAppium {
 			clickView(loginPage.getLoginBtn(), "login Btn");
 		}
 		// 登录时如果出现错误提示弹框，则点击下隐藏掉
-		if (loginPage.isAlert()) {
-			press();
-		}
+//		if (loginPage.isAlert()) {
+//			press();
+//		}
 		sleep(1000);
 		// 返回是否成功到个人中心页面
-		return loginPage.isLogined();
+		Boolean flag = loginPage.isLogined();
+		while(!homePage.isHomePage()) {
+			back();
+		}
+		return flag;
 	}
 
 }

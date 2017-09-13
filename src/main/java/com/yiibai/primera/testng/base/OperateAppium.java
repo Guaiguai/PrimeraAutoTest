@@ -262,12 +262,8 @@ public class OperateAppium extends WaitAutoDriver{
 				.findElementsByClassName("android.widget.EditText");
 		for (int i = 0; i < str.length; i++) {
 			textFieldsList.get(i).click();
-//			System.out.println(
-//					"old input text is:" + textFieldsList.get(i).getText());
 			clearText(textFieldsList.get(i)); // 清除内容
 			textFieldsList.get(i).sendKeys(str[i]);
-//			System.out.println(
-//					"now input text is:" + textFieldsList.get(i).getText());
 		}
 	}
 
@@ -602,8 +598,8 @@ public class OperateAppium extends WaitAutoDriver{
 	 */
 	public void clearText(AndroidElement element) {
 		String text = element.getText();
-		System.out.println(
-				"text length is:" + text.length() + ",text is:" + text);
+//		System.out.println(
+//				"text length is:" + text.length() + ",text is:" + text);
 		// 跳到最后 新版中sendKeyEvent()已经被删除，用pressKeyCode()取代
 		// driver.pressKeyCode(KEYCODE_MOVE_END);定位到文本输入框最后
 		driver.pressKeyCode(KEYCODE_A, META_CTRL_MASK);//文本内容全选

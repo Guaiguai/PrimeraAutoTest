@@ -123,7 +123,10 @@ public class LoginPage extends PageAppium {
      * @return
      */
     public boolean isLogined() {
-    	
-    	return isIdElementExist(LOGOUT_BTN_ID);
+    	Boolean isLogined = false;
+    	if(getLogOutBtn() != null) {
+    		isLogined = true;
+    	}
+    	return isLogined;
     }
 }

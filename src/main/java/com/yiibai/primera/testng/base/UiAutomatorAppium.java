@@ -35,7 +35,7 @@ public class UiAutomatorAppium extends WaitAutoDriver{
 		try {
 			if(driver != null) {
 				String AutomatorStr = 
-						"new UiScrollable(new UiSelector().scrollable(true))";
+					"new UiScrollable(new UiSelector().scrollable(true))";
 				AndroidElement element = driver.findElementByAndroidUIAutomator(AutomatorStr);
 				return element;
 			}else {

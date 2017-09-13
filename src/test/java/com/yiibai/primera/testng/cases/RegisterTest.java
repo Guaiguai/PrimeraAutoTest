@@ -99,7 +99,7 @@ public class RegisterTest extends InitAppium {
 	 * 邮箱包含'@','.',且以'@'结尾，注册失败
 	 */
 	@Test(priority = 7)
-	public void EmailAitEnd() {
+	public void EmailAtEnd() {
 		boolean flag = registerOperate.register("18091969298.qq@",
 				"18091969298", "18091969298");
 		Assertion.verifyEquals(flag, false, "邮箱包含'@','.',且以'@'结尾的情况下是否注册成功");

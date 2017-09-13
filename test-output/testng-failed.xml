@@ -7,22 +7,42 @@
   </listeners>
   <test name="testAll(failed)">
     <classes>
-      <class name="com.yiibai.primera.testng.cases.LoginTest">
+      <class name="com.yiibai.primera.testng.cases.PersonalCenterTest">
         <methods>
+          <include name="initDriver"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
-          <include name="loginConfim"/>
-          <include name="initDriver"/>
         </methods>
-      </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
+      </class> <!-- com.yiibai.primera.testng.cases.PersonalCenterTest -->
       <class name="com.yiibai.primera.testng.cases.HomeTest">
         <methods>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
           <include name="initDriver"/>
-          <include name="search2"/>
         </methods>
       </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
+      <class name="com.yiibai.primera.testng.cases.RegisterTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="RegisterOk"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.RegisterTest -->
+      <class name="com.yiibai.primera.testng.cases.LoginTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
+      <class name="com.yiibai.primera.testng.cases.NewsDetailsTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.NewsDetailsTest -->
     </classes>
   </test> <!-- testAll(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -57,7 +57,7 @@ public class LoginTest extends InitAppium {
     /**
      * 测试帐号密码为空情况
      */
-    @Test(priority = 3)
+    @Test(priority = 3,enabled = false)
     public void loginEmpty(){
         boolean flag = loginOperate.login("","");
         Assertion.verifyEquals(flag,false,"帐号密码为空是否登录成功");
