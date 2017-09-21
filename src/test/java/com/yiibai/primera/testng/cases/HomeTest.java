@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.HomeOperate;
+import com.yiibai.primera.testng.util.ResultUtil;
 
 
 /**
@@ -39,46 +40,66 @@ public class HomeTest extends InitAppium {
     /**
      * 首页菜单编辑验证
      */
-    @Test(priority = 1)
-	public void menusEdit(){
-        boolean flag = homeOperate.menusEdit();
-        Assertion.verifyEquals(flag,true,"首页菜单编辑验证");
-        System.out.println("首页菜单编辑验证:"+ flag);
+    @Test(priority = 7,enabled = false)
+	public void autoMenuEdit(){
+        ResultUtil  result = homeOperate.AutoChannelMenusEdit();
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+        System.out.println("首页菜单编辑验证:"+ result.getActual());
     }
+    
     /**
-     * 首页搜索验证
+     * 首页菜单编辑验证
      */
-    @Test(priority = 3)
-	public void searchByInput(){
-        boolean flag = homeOperate.searchByInput();
-        Assertion.verifyEquals(flag,true,"首页搜索验证---在输入框输入搜索条件搜索新闻");
-        System.out.println("首页搜索验证---在输入框输入搜索条件搜索新闻:"+ flag);
+    @Test(priority = 8)
+	public void allMenusDroped(){
+        ResultUtil  result = homeOperate.channelMenusMoreThanThree();
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+        System.out.println("首页菜单编辑验证:"+ result.getActual());
     }
-    /**
-     * 首页搜索验证
-     */
-    @Test(priority = 2)
-	public void searchByHistory(){
-        boolean flag = homeOperate.searchByHistory();
-        Assertion.verifyEquals(flag,true,"首页搜索验证---根据搜索历史搜索");
-        System.out.println("首页搜索验证---根据搜索历史搜索:"+ flag);
-    }
+
+    
     /**
      * 首页是否显示晨报
      * @throws ParseException 
      */
-    @Test(priority = 4)
+    @Test(priority = 2,enabled = false)
 	public void morningPaper() throws ParseException{
-    	Date now = new Date();
-		SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
-		Date nowTime = df.parse(df.format(now));//当前时间
-		Date compareTime = df.parse("10:30:00");//指定时间
-		Boolean expected = false;
-		if(nowTime.getTime() - compareTime.getTime() <= 0) {
-			expected = true;
-		}
-		boolean flag = homeOperate.MorningPaper();
-		Assertion.verifyEquals(flag,expected,"首页是否显示晨报");
-        System.out.println("首页是否显示晨报:"+ flag);
+		ResultUtil result = homeOperate.MorningPaper();
+		Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+        System.out.println("首页验证晨报:"+ result.getActual() + ",提示信息为:" + result.getMessage());
+    }
+    /**
+     * 首页搜索验证
+     */
+    @Test(priority = 3,enabled = false)
+	public void searchByInputChinese(){
+    	ResultUtil result = homeOperate.searchByInput("测试");
+    	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+    	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+    }
+    @Test(priority = 4,enabled = false)
+   	public void searchByInputEnglish(){
+       	ResultUtil result = homeOperate.searchByInput("hello");
+       	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+       	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+       }
+    /**
+     * 首页搜索验证
+     */
+    @Test(priority = 5,enabled = false)
+	public void searchByHistory(){
+    	ResultUtil result = homeOperate.searchByHistory();
+    	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+    	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+    }
+    
+    /**
+     * 清空搜索历史
+     */
+    @Test(priority=6,enabled = false,dependsOnMethods = {"searchByInputChinese","searchByInputEnglish"})
+    public void clearSearchedHistory() {
+    	ResultUtil result = homeOperate.clearSearchHistory();
+    	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+    	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
     }
 }

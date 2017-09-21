@@ -1,15 +1,16 @@
 package com.yiibai.primera.testng.operation;
 
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.TakesScreenshot;
 
 import com.yiibai.primera.testng.base.ImageAppium;
 import com.yiibai.primera.testng.base.OperateAppium;
-import com.yiibai.primera.testng.constant.Constant;
-import com.yiibai.primera.testng.constant.Result;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.NewsDetailsPage;
+import com.yiibai.primera.testng.util.ConstantUtil;
+import com.yiibai.primera.testng.util.ResultUtil;
 
 import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
@@ -24,6 +25,8 @@ public class NewsDetailsOperate extends OperateAppium {
 	private NewsDetailsPage newsDetailsPage;
 
 	private HomePage homePage;
+	
+	private ResultUtil result = new ResultUtil();
 
 	AndroidDriver<AndroidElement> driver;
 
@@ -59,7 +62,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		System.out.println("share....");
 		if (!isNewsDetailsPage()) {
 			System.out.println(This.class + ":share---没有在新闻详情页面！！！");
-			return Constant.assertFalse;
+			return ConstantUtil.ASSERT_FALSE;
 		}
 		// clickView(newsDetailsPage.shareBtn());
 		// System.out.println("page source is:" + driver.getPageSource());
@@ -86,7 +89,7 @@ public class NewsDetailsOperate extends OperateAppium {
 			Error.printStackTrace();
 		}
 		sleep(10000);
-		return Constant.assertTrue;
+		return ConstantUtil.ASSERT_TRUE;
 	}
 	
 	/**
@@ -125,8 +128,8 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return 是否查看成功
 	 */
-	public Result imageSwitcher() {
-		Result result = new Result();
+	public ResultUtil imageSwitcher() {
+		ResultUtil result = new ResultUtil();
 //		result.setExcepted(true);
 		System.out.println("imageSwitcher....");
 		if (!isNewsDetailsPage()) {
@@ -170,7 +173,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		System.out.println("like....");
 		if (!isNewsDetailsPage()) {
 			System.out.println(This.class + ":like---没有在新闻详情页面！！！");
-			return Constant.assertFalse;
+			return ConstantUtil.ASSERT_FALSE;
 		}
 		// 如果没有点赞则点赞
 		clickView(newsDetailsPage.likeBtn());
@@ -187,7 +190,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		System.out.println("collect.....");
 		if (!isNewsDetailsPage()) {
 			System.out.println(This.class + ":collect---没有在新闻详情页面！！！");
-			return Constant.assertFalse;
+			return ConstantUtil.ASSERT_FALSE;
 		}
 		// 如果没有点赞则点赞
 		clickView(newsDetailsPage.collectBtn());
@@ -199,18 +202,32 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public boolean comment(String details) {
+	public ResultUtil comment(String details) {
 		System.out.println("comment.......");
 		if (!isNewsDetailsPage()) {
-			System.out.println(This.class + ":comment---没有在新闻详情页面！！！");
-			return Constant.assertFalse;
+			result.setMessage(this.getClass() + ":comment---没有在新闻详情页面！！！");
+			result.setActual(ConstantUtil.ASSERT_FALSE);
+			return result;
 		}
 		clickView(newsDetailsPage.commentBtn());
 		inputManyText(details);
 		clickView(newsDetailsPage.commentSendBtn());
+		//在所有的评论中查找测试提交的评论
+		List<AndroidElement> commentList = newsDetailsPage.getCommentList();
+		if(commentList != null && !commentList.isEmpty()) {
+			for (int i = 0; i < commentList.size(); i++) {
+				String text = commentList.get(i).getText();
+				if(text.equals(details)) {
+					result.setActual(ConstantUtil.ASSERT_TRUE);
+				}
+			}
+		}else {
+			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setMessage("用户提交评论，但是没有看到用户的评论内容，测试不通过");
+		}
 		//返回
 		back();
-		return true;
+		return result;
 	}
 
 }

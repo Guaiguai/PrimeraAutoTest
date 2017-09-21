@@ -3,6 +3,8 @@ package com.yiibai.primera.testng.pages;
 
 import java.util.List;
 
+import org.apache.log4j.varia.StringMatchFilter;
+import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 import org.openqa.selenium.By;
 
 import com.yiibai.primera.testng.base.PageAppium;
@@ -29,9 +31,11 @@ public class HomePage extends PageAppium {
     //首页左上角的search 搜索结果根据内容显示判断，无--SEARCH_NONE 为true 有--SEARCH_ALL
     private final String HOME_SEARCH_BTN_ID = "lin_left";
     private final String SEARCH_BTN_ID = "img_search_btn";
-    private final String SEARCH_NONE = "txt_clear";
+    //如果关键字搜索不到新闻，则页面显示‘Lo siento, no hay datos’
+    private final String SEARCH_NONE_ID = "lin_shownodata";
     private final String SEARCH_ALL = "lin_parent";
     private final String SEARCH_HISTORY = "txt_historyword";
+    private final String SEARCH_CLEAR_ID = "txt_clear";//清空搜索历史
     //右上角的新闻菜单编辑按钮
     private final String HOME_MENUS_EDIT_BTN_ID = "img_rightchannel";
     //菜单编辑页面的编辑按钮
@@ -39,6 +43,12 @@ public class HomePage extends PageAppium {
     private final String MENU_AUTO_TEXT = "Auto";
     private final String AUTO_BTN_XPATH = "//android.widget.TextView[@text='Auto']/following-sibling::android.widget.ImageView";
     private final String MENU_BACK_BTN_ID = "img_back";
+    private final String MENU_ADD_MORE_ID = "txt_addmore";
+    private final String MENU_CHANNAL_TEXT_ID = "txt_name";
+    private final String MENU_CHANNAL_ADDED = "channel_list_top";
+    private final String MENU_CHANNAL_DROPED = "channel_list_bottom";
+    //获得所有的已经加入的频道
+    private final String ALL_ADDED_MENUS_XPATH = "//android.support.v7.widget.RecyclerView[contains(@resource-id,'"+ MENU_CHANNAL_ADDED +"')]/android.widget.LinearLayout/";
     
     //首页新闻刷新的测试
     private final String REFRESH_BTN_ID = "btn_refresh";
@@ -47,10 +57,44 @@ public class HomePage extends PageAppium {
         super(driver);
     }
 
-    //右上角菜单编辑主界面
+    //右上角频道编辑主界面
     public AndroidElement getHomeMenuEditBtn() {
     	return waitAutoById(HOME_MENUS_EDIT_BTN_ID);
     }
+    //获得第一个频道菜单
+//    public AndroidElement getFirstChannalMenu() {
+//    	return getListOneElementById(MENU_CHANNAL_TEXT_ID, 0);
+//    }
+    //根据显示的文字获得当前控件的Xpath
+    public String getXpath(String text) {
+    	return  "//android.widget.TextView[@text='"+ text +"']/following-sibling::android.widget.ImageView";
+    }
+    //获得已经添加的频道的xpath
+    public String getAddedMenusXpath() {
+    	return "//android.support.v7.widget.RecyclerView[contains(@resource-id,'"+ MENU_CHANNAL_ADDED +"')]"
+    			+ "/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/"
+    			+ "android.widget.ImageView[contains(@resource-id,'"+ MENUS_EDIT_BTN_ID +"')]";
+    }
+    
+    public List<AndroidElement> getAllAddedMenus(){
+    	return getManyElementByXpath(getAddedMenusXpath(), 0);
+    }
+    //判断频道是否已经被取消完
+    public boolean isDropedAllChannal() {
+    	return !isIdElementExist(MENU_CHANNAL_ADDED);
+    }
+    //获得所有的已经加入的菜单
+//    public List<AndroidElement> getAllAddedMenus(){
+//    	AndroidElement element = findById(MENU_CHANNAL_ADDED);
+//    	String xpath = element.
+//    	return getManyElementByXpath(ALL_ADDED_MENUS_XPATH,0);
+//    }
+//    public AndroidElement getFirstChannalImage() {
+//    	AndroidElement firstChannal = getFirstChannalMenu();
+//    	String text = firstChannal.getText();
+//    	String xpath = getXpath(text);
+//    	return findByXpath(xpath);
+//    }
     public AndroidElement Auto() {
     	return findByXpath(AUTO_BTN_XPATH);
     }
@@ -77,8 +121,15 @@ public class HomePage extends PageAppium {
     public AndroidElement getSearchBtn() {
     	return waitAutoById(SEARCH_BTN_ID);
     }
-    public AndroidElement getSearchNone() {
-    	return waitAutoById(SEARCH_NONE);
+    public AndroidElement getClearSearchHistoryBtn() {
+    	return waitAutoById(SEARCH_CLEAR_ID);
+    }
+    public boolean isSearchNoData() {
+    	boolean isNoData = false;
+    	AndroidElement searchNoDataEl = waitAutoById(SEARCH_NONE_ID);
+    	if(searchNoDataEl != null)
+    		isNoData = true;
+    	return isNoData;
     }
     public AndroidElement getSearchAll() {
     	return waitAutoById(SEARCH_ALL);

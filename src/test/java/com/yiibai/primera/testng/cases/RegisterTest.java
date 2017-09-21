@@ -11,7 +11,7 @@ import com.yiibai.primera.testng.operation.RegisterOperate;
 /**
  * 用户注册测试用例 
  * email 用户邮箱地址 验证规则是：必须含有'@','.' 不含有中文
- * pass 要求两次输入密码一直 长度在6-25个字符 （小于6 大于25 两次密码不一致） 
+ * pass 要求两次输入密码一致 长度在6-25个字符 （小于6 大于25 两次密码不一致） 
  * 邮箱没有验证其真实存在性
  * Created by ChenXiaoGuai on 2017/08/10.
  */
@@ -121,7 +121,7 @@ public class RegisterTest extends InitAppium {
 	@Test(priority = 9)
 	public void PwdLessThanSix() {
 		boolean flag = registerOperate.register("18091969298@qq.com",
-				"18091969298", "18091969298");
+				"12345", "12345");
 		Assertion.verifyEquals(flag, false, "pass 长度小于6的情况下是否注册成功");
 		print("pass 长度小于6的情况下是否注册成功:" + flag);
 	}
@@ -131,7 +131,7 @@ public class RegisterTest extends InitAppium {
 	@Test(priority = 10)
 	public void PwdMoreThanTwentyFive() {
 		boolean flag = registerOperate.register("18091969298@qq.com",
-				"18091969298", "18091969298");
+				"123456789123456789123456789", "123456789123456789123456789");
 		Assertion.verifyEquals(flag, false, "pass 长度大于25的情况下是否注册成功");
 		print("pass 长度大于25的情况下是否注册成功:" + flag);
 	}
@@ -148,7 +148,7 @@ public class RegisterTest extends InitAppium {
 	/**
 	 * pass 是空格，注册失败
 	 */
-	@Test(priority = 12)
+	@Test(priority = 12,enabled = false)
 	public void PwdIsNull() {
 		boolean flag = registerOperate.register("18091969298@qq.com",
 				"", "");

@@ -1,9 +1,9 @@
 package com.yiibai.primera.testng.operation;
 
 import com.yiibai.primera.testng.base.OperateAppium;
-import com.yiibai.primera.testng.constant.Constant;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.LoginPage;
+import com.yiibai.primera.testng.util.ConstantUtil;
 
 import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
@@ -41,7 +41,7 @@ public class LoginOperate extends OperateAppium {
 		System.out.println(this.getClass() + ":login----");
 		sleep(1000);
 		if(!homePage.isHomePage()) {
-			return Constant.assertFalse;
+			return ConstantUtil.ASSERT_FALSE;
 		}
 		// 1、点击首页右下角的cuenta---进入个人中心
 		clickView(loginPage.getCuentaBtn(), "Cuenta Btn");

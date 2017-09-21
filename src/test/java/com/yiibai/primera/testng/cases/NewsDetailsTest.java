@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 
 import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
-import com.yiibai.primera.testng.constant.Result;
 import com.yiibai.primera.testng.operation.NewsDetailsOperate;
+import com.yiibai.primera.testng.util.ResultUtil;
 
 /**
  * 新闻详情页面测试用例
@@ -50,7 +50,7 @@ public class NewsDetailsTest extends InitAppium {
 	 */
 	@Test(priority = 1)
 	public void imageSwitch() {
-		Result result = newsdetailsOperate.imageSwitcher();
+		ResultUtil result = newsdetailsOperate.imageSwitcher();
 		System.out.println("getActual is:" + result.getActual());
 		System.out.println("getExcepted is:" + result.getExcepted());
 		System.out.println("message is:" + result.getMessage());
@@ -62,9 +62,9 @@ public class NewsDetailsTest extends InitAppium {
 	 */
 	@Test(priority = 5)
 	public void comment() {
-		boolean flag = newsdetailsOperate.comment("very good!");
-		Assert.assertTrue(flag, "验证文章评论");
-		print("验证文章评论:" + flag);
+		ResultUtil result = newsdetailsOperate.comment("very good!");
+		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+		print("验证文章评论:" + result.getActual() + ",返回信息为:" + result.getMessage());
 	}
 	/**
 	 * 验证文章收藏

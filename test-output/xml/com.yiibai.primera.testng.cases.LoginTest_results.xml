@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="169.956">
+           time="162.139">
   <properties />
   
   
-            <testcase name="loginChinese" time="40.546" classname="com.yiibai.primera.testng.cases.LoginTest" />
-                <testcase name="loginConfim" time="39.114" classname="com.yiibai.primera.testng.cases.LoginTest" />
-                <testcase name="loginErrorUser" time="46.631" classname="com.yiibai.primera.testng.cases.LoginTest" />
-                <testcase name="loginErrorNum" time="43.665" classname="com.yiibai.primera.testng.cases.LoginTest" />
+            <testcase name="loginErrorNum" time="40.552" classname="com.yiibai.primera.testng.cases.LoginTest" />
+                <testcase name="loginConfim" time="36.465" classname="com.yiibai.primera.testng.cases.LoginTest" />
+                <testcase name="loginChinese" time="40.496" classname="com.yiibai.primera.testng.cases.LoginTest" />
+                <testcase name="loginErrorUser" time="44.626" classname="com.yiibai.primera.testng.cases.LoginTest" />
       
 </testsuite>

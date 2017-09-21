@@ -33,6 +33,7 @@ public class NewsDetailsPage extends PageAppium {
     public final String COMMENT_BTN_ID = "btn_comment";
     public final String COMMENT_SEND_BTN_ID = "btn_send";
     public final String COMMENT_CONTENT_INPUT_ID = "edit_comment";
+    public final String COMMENT_LAYOUT_ID = "com_comment_content";
     
     //图片的ID
     public final String IMAGES_ID = "img_local_big";
@@ -56,6 +57,10 @@ public class NewsDetailsPage extends PageAppium {
     //评论提交按钮
     public AndroidElement fontSize() {
     	return waitAutoById(FONT_BTN_ID);
+    }
+    //获得所有的评论
+    public List<AndroidElement> getCommentList(){
+    	 return getManyElementById(COMMENT_LAYOUT_ID, 100);
     }
     
 	public AndroidElement getNews() {

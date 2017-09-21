@@ -3,14 +3,11 @@ package com.yiibai.primera.testng.base;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.Driver;
 
 import org.apache.http.util.TextUtils;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
 import io.appium.java_client.android.AndroidDriver;

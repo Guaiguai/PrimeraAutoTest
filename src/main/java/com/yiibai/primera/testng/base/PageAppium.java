@@ -282,6 +282,33 @@ public class PageAppium extends WaitAutoDriver{
 
 	}
 	/**
+	 * 根据Xpath获取多个控件
+	 *
+	 * @param Xpath
+	 *            控件的xpath路径
+	 * @param num
+	 *            返回的数量
+	 * @return
+	 */
+	public List<AndroidElement> getManyElementByXpath(String xpath,
+			int num) {
+//		System.out.println("xpath is:" + xpath);
+		List<AndroidElement> xpathFieldsList = driver
+				.findElementsByXPath(xpath);
+		List<AndroidElement> list = new ArrayList<AndroidElement>();
+		try {
+			if(num == 0) num = xpathFieldsList.size();
+			for (int i = 0; i < num; i++) {
+				list.add(xpathFieldsList.get(i));
+			}
+			return list;
+		} catch (Exception e) {
+			print("根据XPATH获取多个控件异常" + e.getMessage());
+		}
+		return null;
+
+	}
+	/**
 	 * 获取同className的list的控件
 	 * 
 	 * @param String

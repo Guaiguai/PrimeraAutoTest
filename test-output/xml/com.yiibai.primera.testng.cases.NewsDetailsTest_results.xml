@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="47.026">
+           time="49.204">
   <properties />
   
   
-            <testcase name="imageSwitch" time="12.063" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="comment" time="15.629" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="collect" time="8.304" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="like" time="11.030" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+            <testcase name="imageSwitch" time="10.248" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="collect" time="9.155" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="like" time="12.710" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="comment" time="17.091" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
       
 </testsuite>

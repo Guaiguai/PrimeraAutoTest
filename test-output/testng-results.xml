@@ -1,285 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="27" passed="26">
+<testng-results skipped="0" failed="8" total="15" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1264743" started-at="2017-09-12T10:04:16Z" finished-at="2017-09-12T10:25:20Z">
+  <suite name="Suite" duration-ms="643997" started-at="2017-09-21T01:51:47Z" finished-at="2017-09-21T02:02:31Z">
     <groups>
     </groups>
-    <test name="testAll" duration-ms="1264743" started-at="2017-09-12T10:04:16Z" finished-at="2017-09-12T10:25:20Z">
-      <class name="com.yiibai.primera.testng.cases.NewsDetailsTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="beforeSuite" is-config="true" duration-ms="39785" started-at="2017-09-12T18:23:52Z" finished-at="2017-09-12T18:24:32Z">
+    <test name="testAll" duration-ms="643997" started-at="2017-09-21T01:51:47Z" finished-at="2017-09-21T02:02:31Z">
+      <class name="com.yiibai.primera.testng.cases.PersonalCenterTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="beforeSuite" is-config="true" duration-ms="41289" started-at="2017-09-21T09:51:47Z" finished-at="2017-09-21T09:52:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-12T18:24:32Z" finished-at="2017-09-12T18:24:32Z">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="37" started-at="2017-09-21T09:52:28Z" finished-at="2017-09-21T09:52:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="imageSwitch()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="imageSwitch" duration-ms="12063" started-at="2017-09-12T18:24:32Z" finished-at="2017-09-12T18:24:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- imageSwitch -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-12T18:24:44Z" finished-at="2017-09-12T18:24:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="collect()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="collect" duration-ms="8304" started-at="2017-09-12T18:24:44Z" finished-at="2017-09-12T18:24:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- collect -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="initDriver" is-config="true" duration-ms="25" started-at="2017-09-12T18:24:52Z" finished-at="2017-09-12T18:24:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="like()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="like" duration-ms="11030" started-at="2017-09-12T18:24:52Z" finished-at="2017-09-12T18:25:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- like -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="initDriver" is-config="true" duration-ms="13" started-at="2017-09-12T18:25:03Z" finished-at="2017-09-12T18:25:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="comment()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="comment" duration-ms="15629" started-at="2017-09-12T18:25:03Z" finished-at="2017-09-12T18:25:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- comment -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.NewsDetailsTest@614ddd49]" name="afterClass" is-config="true" duration-ms="1492" started-at="2017-09-12T18:25:19Z" finished-at="2017-09-12T18:25:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.yiibai.primera.testng.cases.NewsDetailsTest -->
-      <class name="com.yiibai.primera.testng.cases.LoginTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="beforeSuite" is-config="true" duration-ms="39723" started-at="2017-09-12T18:07:09Z" finished-at="2017-09-12T18:07:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="initDriver" is-config="true" duration-ms="32" started-at="2017-09-12T18:07:48Z" finished-at="2017-09-12T18:07:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="loginErrorUser()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="loginErrorUser" duration-ms="46631" started-at="2017-09-12T18:07:48Z" finished-at="2017-09-12T18:08:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginErrorUser -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="initDriver" is-config="true" duration-ms="18" started-at="2017-09-12T18:08:35Z" finished-at="2017-09-12T18:08:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="loginErrorNum()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="loginErrorNum" duration-ms="43665" started-at="2017-09-12T18:08:35Z" finished-at="2017-09-12T18:09:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginErrorNum -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-12T18:09:19Z" finished-at="2017-09-12T18:09:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="loginChinese()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="loginChinese" duration-ms="40546" started-at="2017-09-12T18:09:19Z" finished-at="2017-09-12T18:09:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginChinese -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="initDriver" is-config="true" duration-ms="15" started-at="2017-09-12T18:09:59Z" finished-at="2017-09-12T18:09:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="loginConfim()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="loginConfim" duration-ms="39114" started-at="2017-09-12T18:09:59Z" finished-at="2017-09-12T18:10:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginConfim -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.LoginTest@76707e36]" name="afterClass" is-config="true" duration-ms="1439" started-at="2017-09-12T18:10:38Z" finished-at="2017-09-12T18:10:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
-      <class name="com.yiibai.primera.testng.cases.RegisterTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="beforeSuite" is-config="true" duration-ms="39639" started-at="2017-09-12T18:10:40Z" finished-at="2017-09-12T18:11:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="15" started-at="2017-09-12T18:11:19Z" finished-at="2017-09-12T18:11:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailMissKeyChars()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailMissKeyChars" duration-ms="53319" started-at="2017-09-12T18:11:19Z" finished-at="2017-09-12T18:12:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailMissKeyChars -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="15" started-at="2017-09-12T18:12:13Z" finished-at="2017-09-12T18:12:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailMissKeyCharSpot()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailMissKeyCharSpot" duration-ms="48507" started-at="2017-09-12T18:12:13Z" finished-at="2017-09-12T18:13:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailMissKeyCharSpot -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="15" started-at="2017-09-12T18:13:01Z" finished-at="2017-09-12T18:13:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailMissKeyCharAit()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailMissKeyCharAit" duration-ms="51086" started-at="2017-09-12T18:13:01Z" finished-at="2017-09-12T18:13:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailMissKeyCharAit -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="13" started-at="2017-09-12T18:13:52Z" finished-at="2017-09-12T18:13:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailOnlyCharAitEnd()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailOnlyCharAitEnd" duration-ms="50438" started-at="2017-09-12T18:13:52Z" finished-at="2017-09-12T18:14:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailOnlyCharAitEnd -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="13" started-at="2017-09-12T18:14:43Z" finished-at="2017-09-12T18:14:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailOnlyCharSpotEnd()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailOnlyCharSpotEnd" duration-ms="47822" started-at="2017-09-12T18:14:43Z" finished-at="2017-09-12T18:15:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailOnlyCharSpotEnd -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="20" started-at="2017-09-12T18:15:31Z" finished-at="2017-09-12T18:15:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailSpotEnd()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailSpotEnd" duration-ms="49423" started-at="2017-09-12T18:15:31Z" finished-at="2017-09-12T18:16:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailSpotEnd -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="14" started-at="2017-09-12T18:16:20Z" finished-at="2017-09-12T18:16:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailAtEnd()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailAtEnd" duration-ms="48943" started-at="2017-09-12T18:16:20Z" finished-at="2017-09-12T18:17:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailAtEnd -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="19" started-at="2017-09-12T18:17:09Z" finished-at="2017-09-12T18:17:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="EmailWrong()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="EmailWrong" duration-ms="52279" started-at="2017-09-12T18:17:09Z" finished-at="2017-09-12T18:18:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailWrong -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-12T18:18:01Z" finished-at="2017-09-12T18:18:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="PwdLessThanSix()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="PwdLessThanSix" duration-ms="46366" started-at="2017-09-12T18:18:01Z" finished-at="2017-09-12T18:18:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PwdLessThanSix -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="14" started-at="2017-09-12T18:18:48Z" finished-at="2017-09-12T18:18:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="PwdMoreThanTwentyFive()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="PwdMoreThanTwentyFive" duration-ms="45249" started-at="2017-09-12T18:18:48Z" finished-at="2017-09-12T18:19:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PwdMoreThanTwentyFive -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="12" started-at="2017-09-12T18:19:33Z" finished-at="2017-09-12T18:19:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="PwdIsChinese()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="PwdIsChinese" duration-ms="47176" started-at="2017-09-12T18:19:33Z" finished-at="2017-09-12T18:20:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PwdIsChinese -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="15" started-at="2017-09-12T18:20:20Z" finished-at="2017-09-12T18:20:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="PwdIsNull()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="PwdIsNull" duration-ms="46984" started-at="2017-09-12T18:20:20Z" finished-at="2017-09-12T18:21:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PwdIsNull -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="14" started-at="2017-09-12T18:21:07Z" finished-at="2017-09-12T18:21:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="RegisterExited()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="RegisterExited" duration-ms="46642" started-at="2017-09-12T18:21:07Z" finished-at="2017-09-12T18:21:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisterExited -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="initDriver" is-config="true" duration-ms="19" started-at="2017-09-12T18:21:54Z" finished-at="2017-09-12T18:21:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="FAIL" signature="RegisterOk()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="RegisterOk" duration-ms="48042" started-at="2017-09-12T18:21:54Z" finished-at="2017-09-12T18:22:42Z">
+        <test-method status="FAIL" signature="editUsernameLessThanFourChars()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editUsernameLessThanFourChars" duration-ms="41090" started-at="2017-09-21T09:52:28Z" finished-at="2017-09-21T09:53:10Z">
           <exception class="java.lang.Throwable">
             <full-stacktrace>
               <![CDATA[java.lang.Throwable
 	at 
-报错信息: 邮箱和密码均符合规则的情况下是否注册成功 expected [true] but found [false].
-报错方法名:RegisterOk(
-报错类:RegisterTest
-报错行号:35)
-	at com.yiibai.primera.testng.cases.RegisterTest.RegisterOk(RegisterTest.java:35)
+报错信息: 编辑用户昵称失败;---(编辑前后用户昵称不一致); expected [true] but found [false].
+报错方法名:editUsernameLessThanFourChars(
+报错类:PersonalCenterTest
+报错行号:44)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editUsernameLessThanFourChars(PersonalCenterTest.java:44)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegisterOk -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.RegisterTest@1e6d1014]" name="afterClass" is-config="true" duration-ms="1534" started-at="2017-09-12T18:22:42Z" finished-at="2017-09-12T18:22:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.yiibai.primera.testng.cases.RegisterTest -->
-      <class name="com.yiibai.primera.testng.cases.HomeTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="beforeSuite" is-config="true" duration-ms="41034" started-at="2017-09-12T18:04:16Z" finished-at="2017-09-12T18:04:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="initDriver" is-config="true" duration-ms="22" started-at="2017-09-12T18:04:57Z" finished-at="2017-09-12T18:04:57Z">
+        </test-method> <!-- editUsernameLessThanFourChars -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="20" started-at="2017-09-21T09:53:10Z" finished-at="2017-09-21T09:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="menusEdit()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="menusEdit" duration-ms="46525" started-at="2017-09-12T18:04:57Z" finished-at="2017-09-12T18:05:43Z">
+        <test-method status="PASS" signature="editUsernameConfirm()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editUsernameConfirm" duration-ms="37712" started-at="2017-09-21T09:53:10Z" finished-at="2017-09-21T09:53:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- menusEdit -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="initDriver" is-config="true" duration-ms="12" started-at="2017-09-12T18:05:43Z" finished-at="2017-09-12T18:05:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="searchByHistory()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="searchByHistory" duration-ms="33738" started-at="2017-09-12T18:05:43Z" finished-at="2017-09-12T18:06:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByHistory -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-12T18:06:17Z" finished-at="2017-09-12T18:06:17Z">
+        </test-method> <!-- editUsernameConfirm -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="19" started-at="2017-09-21T09:53:47Z" finished-at="2017-09-21T09:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="searchByInput()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="searchByInput" duration-ms="42136" started-at="2017-09-12T18:06:17Z" finished-at="2017-09-12T18:06:59Z">
+        <test-method status="FAIL" signature="editAccountExited()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editAccountExited" duration-ms="42812" started-at="2017-09-21T09:53:47Z" finished-at="2017-09-21T09:54:30Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 编辑用户登录账号失败; expected [true] but found [false].
+报错方法名:editAccountExited(
+报错类:PersonalCenterTest
+报错行号:54)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editAccountExited(PersonalCenterTest.java:54)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchByInput -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-12T18:06:59Z" finished-at="2017-09-12T18:06:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="morningPaper()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="morningPaper" duration-ms="7952" started-at="2017-09-12T18:06:59Z" finished-at="2017-09-12T18:07:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- morningPaper -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@4f063c0a]" name="afterClass" is-config="true" duration-ms="1411" started-at="2017-09-12T18:07:07Z" finished-at="2017-09-12T18:07:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
-      <class name="com.yiibai.primera.testng.cases.PersonalCenterTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@6737fd8f]" name="beforeSuite" is-config="true" duration-ms="40008" started-at="2017-09-12T18:22:44Z" finished-at="2017-09-12T18:23:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@6737fd8f]" name="initDriver" is-config="true" duration-ms="25" started-at="2017-09-12T18:23:24Z" finished-at="2017-09-12T18:23:24Z">
+        </test-method> <!-- editAccountExited -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="21" started-at="2017-09-21T09:54:30Z" finished-at="2017-09-21T09:54:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="myCollection()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@6737fd8f]" name="myCollection" duration-ms="27162" started-at="2017-09-12T18:23:24Z" finished-at="2017-09-12T18:23:51Z">
+        <test-method status="FAIL" signature="editAccountLessThanSixChars()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editAccountLessThanSixChars" duration-ms="37828" started-at="2017-09-21T09:54:30Z" finished-at="2017-09-21T09:55:08Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 编辑用户登录账号失败; expected [true] but found [false].
+报错方法名:editAccountLessThanSixChars(
+报错类:PersonalCenterTest
+报错行号:60)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editAccountLessThanSixChars(PersonalCenterTest.java:60)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- myCollection -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@6737fd8f]" name="afterClass" is-config="true" duration-ms="1392" started-at="2017-09-12T18:23:51Z" finished-at="2017-09-12T18:23:52Z">
+        </test-method> <!-- editAccountLessThanSixChars -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="17" started-at="2017-09-21T09:55:08Z" finished-at="2017-09-21T09:55:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="editAccountConfirm()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editAccountConfirm" duration-ms="34527" started-at="2017-09-21T09:55:08Z" finished-at="2017-09-21T09:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editAccountConfirm -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="16" started-at="2017-09-21T09:55:43Z" finished-at="2017-09-21T09:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="editPasswordEqualOld()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editPasswordEqualOld" duration-ms="54048" started-at="2017-09-21T09:55:43Z" finished-at="2017-09-21T09:56:37Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordEqualOld(
+报错类:PersonalCenterTest
+报错行号:76)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordEqualOld(PersonalCenterTest.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPasswordEqualOld -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="23" started-at="2017-09-21T09:56:37Z" finished-at="2017-09-21T09:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="editPasswordWrongOldPwd()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editPasswordWrongOldPwd" duration-ms="49591" started-at="2017-09-21T09:56:37Z" finished-at="2017-09-21T09:57:26Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordWrongOldPwd(
+报错类:PersonalCenterTest
+报错行号:82)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordWrongOldPwd(PersonalCenterTest.java:82)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPasswordWrongOldPwd -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="20" started-at="2017-09-21T09:57:26Z" finished-at="2017-09-21T09:57:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="editPasswordLessThanSixChars()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editPasswordLessThanSixChars" duration-ms="52352" started-at="2017-09-21T09:57:26Z" finished-at="2017-09-21T09:58:19Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordLessThanSixChars(
+报错类:PersonalCenterTest
+报错行号:88)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordLessThanSixChars(PersonalCenterTest.java:88)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPasswordLessThanSixChars -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="14" started-at="2017-09-21T09:58:19Z" finished-at="2017-09-21T09:58:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="editPasswordMoreThanTwentyFiveChars()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editPasswordMoreThanTwentyFiveChars" duration-ms="57920" started-at="2017-09-21T09:58:19Z" finished-at="2017-09-21T09:59:17Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordMoreThanTwentyFiveChars(
+报错类:PersonalCenterTest
+报错行号:94)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordMoreThanTwentyFiveChars(PersonalCenterTest.java:94)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPasswordMoreThanTwentyFiveChars -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="17" started-at="2017-09-21T09:59:17Z" finished-at="2017-09-21T09:59:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="editPasswordNotEqualWithConfirmed()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editPasswordNotEqualWithConfirmed" duration-ms="53892" started-at="2017-09-21T09:59:17Z" finished-at="2017-09-21T10:00:10Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordNotEqualWithConfirmed(
+报错类:PersonalCenterTest
+报错行号:100)
+	at com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordNotEqualWithConfirmed(PersonalCenterTest.java:100)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPasswordNotEqualWithConfirmed -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="20" started-at="2017-09-21T10:00:10Z" finished-at="2017-09-21T10:00:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="editPasswordConfirm()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="editPasswordConfirm" duration-ms="49992" started-at="2017-09-21T10:00:10Z" finished-at="2017-09-21T10:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPasswordConfirm -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="21" started-at="2017-09-21T10:01:00Z" finished-at="2017-09-21T10:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="clearCache()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="clearCache" duration-ms="18857" started-at="2017-09-21T10:01:00Z" finished-at="2017-09-21T10:01:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCache -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="11" started-at="2017-09-21T10:01:19Z" finished-at="2017-09-21T10:01:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="clearFirstCollection()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="clearFirstCollection" duration-ms="26995" started-at="2017-09-21T10:01:19Z" finished-at="2017-09-21T10:01:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearFirstCollection -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="15" started-at="2017-09-21T10:01:46Z" finished-at="2017-09-21T10:01:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="clearAllCollection()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="clearAllCollection" duration-ms="26672" started-at="2017-09-21T10:01:46Z" finished-at="2017-09-21T10:02:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearAllCollection -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="initDriver" is-config="true" duration-ms="13" started-at="2017-09-21T10:02:13Z" finished-at="2017-09-21T10:02:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="Logout" duration-ms="16718" started-at="2017-09-21T10:02:13Z" finished-at="2017-09-21T10:02:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.PersonalCenterTest@3b084709]" name="afterClass" is-config="true" duration-ms="1383" started-at="2017-09-21T10:02:30Z" finished-at="2017-09-21T10:02:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="682.276">
+           time="844.043">
   <properties />
-            <testcase name="RegisterOk" time="48.042" classname="com.yiibai.primera.testng.cases.RegisterTest">
+            <testcase name="RegisterOk" time="58.655" classname="com.yiibai.primera.testng.cases.RegisterTest">
                 <failure type="java.lang.Throwable"
                   message="(null)"
               >
@@ -23,18 +23,18 @@
           </testcase>
   
   
-            <testcase name="EmailSpotEnd" time="49.423" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="EmailMissKeyCharAit" time="51.086" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="PwdIsNull" time="46.984" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="EmailWrong" time="52.279" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="PwdMoreThanTwentyFive" time="45.249" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="EmailMissKeyCharSpot" time="48.507" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="PwdLessThanSix" time="46.366" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="RegisterExited" time="46.642" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="EmailOnlyCharSpotEnd" time="47.822" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="PwdIsChinese" time="47.176" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="EmailAtEnd" time="48.943" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="EmailOnlyCharAitEnd" time="50.438" classname="com.yiibai.primera.testng.cases.RegisterTest" />
-                <testcase name="EmailMissKeyChars" time="53.319" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+            <testcase name="EmailSpotEnd" time="60.534" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="EmailAtEnd" time="53.991" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="EmailOnlyCharAitEnd" time="58.849" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="EmailOnlyCharSpotEnd" time="62.195" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="PwdIsNull" time="60.634" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="EmailWrong" time="63.711" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="PwdLessThanSix" time="56.395" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="RegisterExited" time="55.017" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="PwdMoreThanTwentyFive" time="59.357" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="EmailMissKeyCharAit" time="63.274" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="EmailMissKeyChars" time="64.783" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="EmailMissKeyCharSpot" time="68.421" classname="com.yiibai.primera.testng.cases.RegisterTest" />
+                <testcase name="PwdIsChinese" time="58.227" classname="com.yiibai.primera.testng.cases.RegisterTest" />
       
 </testsuite>
