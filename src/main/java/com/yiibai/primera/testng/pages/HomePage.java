@@ -1,12 +1,8 @@
 package com.yiibai.primera.testng.pages;
 
-
 import java.util.List;
 
-import org.apache.log4j.varia.StringMatchFilter;
-import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 import org.openqa.selenium.By;
-
 import com.yiibai.primera.testng.base.PageAppium;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -24,10 +20,11 @@ public class HomePage extends PageAppium {
     public final String APP_HOME_PAGE_TEXT = "Para ti";
   //app主页 顶部显示的文字的id
     public final String HOME_TOP_ELEMENTS_ID = "txt_news_top";
+    //1.晨报验证
     //首页有显示文字“Periódico Matutino” 则表示有晨报
     private final String HOME_TEXT_CLASS = "android.widget.TextView";
     private final String HOME_MORNING_PAPER_TEXT = "Periódico Matutino";
-    
+    //2.新闻搜索
     //首页左上角的search 搜索结果根据内容显示判断，无--SEARCH_NONE 为true 有--SEARCH_ALL
     private final String HOME_SEARCH_BTN_ID = "lin_left";
     private final String SEARCH_BTN_ID = "img_search_btn";
@@ -36,6 +33,7 @@ public class HomePage extends PageAppium {
     private final String SEARCH_ALL = "lin_parent";
     private final String SEARCH_HISTORY = "txt_historyword";
     private final String SEARCH_CLEAR_ID = "txt_clear";//清空搜索历史
+    //3.频道编辑
     //右上角的新闻菜单编辑按钮
     private final String HOME_MENUS_EDIT_BTN_ID = "img_rightchannel";
     //菜单编辑页面的编辑按钮
@@ -49,22 +47,33 @@ public class HomePage extends PageAppium {
     private final String MENU_CHANNAL_DROPED = "channel_list_bottom";
     //获得所有的已经加入的频道
     private final String ALL_ADDED_MENUS_XPATH = "//android.support.v7.widget.RecyclerView[contains(@resource-id,'"+ MENU_CHANNAL_ADDED +"')]/android.widget.LinearLayout/";
-    
+    //4.新闻刷新
     //首页新闻刷新的测试
     private final String REFRESH_BTN_ID = "btn_refresh";
+    private final String REFRESH_NEWS_COUNT_ID = "news_new_count";//刷新的新闻的总数量控件（3秒消失）
     
     public HomePage(AndroidDriver<AndroidElement> driver){
         super(driver);
+    }
+    
+    //首页刷新
+    public int getRefreshedTotal() {
+    	int total = 0;
+    	if(isIdElementExist(REFRESH_NEWS_COUNT_ID)) {
+    		System.out.println("控件定位到！");
+    		AndroidElement refreshedEl = findById(REFRESH_NEWS_COUNT_ID);
+    		String str = refreshedEl.getText();
+    		String[] strList = str.split("\\s+");
+    		String totalStr = strList[0];
+    		total = Integer.parseInt(totalStr);
+    	}
+    	return total;
     }
 
     //右上角频道编辑主界面
     public AndroidElement getHomeMenuEditBtn() {
     	return waitAutoById(HOME_MENUS_EDIT_BTN_ID);
     }
-    //获得第一个频道菜单
-//    public AndroidElement getFirstChannalMenu() {
-//    	return getListOneElementById(MENU_CHANNAL_TEXT_ID, 0);
-//    }
     //根据显示的文字获得当前控件的Xpath
     public String getXpath(String text) {
     	return  "//android.widget.TextView[@text='"+ text +"']/following-sibling::android.widget.ImageView";
@@ -103,6 +112,9 @@ public class HomePage extends PageAppium {
     }
     public By menuAuto(){
     	return By.name(MENU_AUTO_TEXT);
+    }
+    public By menuPara() {
+    	return By.name(APP_HOME_PAGE_TEXT);
     }
     public AndroidElement getMenuBack(){
     	return findById(MENU_BACK_BTN_ID);
@@ -170,10 +182,9 @@ public class HomePage extends PageAppium {
      * 是否在欢迎界面(app打开时的广告切换界面)
      */
     public boolean isWelcome(){
-//    	System.out.println("isWelcome begin...");
     	Boolean isWelcome = false;
     	List<AndroidElement> elements = getManyElementById(APP_WELCOME_ELEMENTS_ID,1);
-    	if(elements == null) {
+    	if(elements == null || elements.isEmpty()) {
     		isWelcome = false;
     	}else {
     		isWelcome = true;
@@ -188,11 +199,12 @@ public class HomePage extends PageAppium {
      * @return 存在返回真
      */
     public boolean isHomePage() {
-    	//
     	boolean isHomePage = false;
-    	AndroidElement element = getListOneElementById(HOME_TOP_ELEMENTS_ID,1);
-    	if(element != null) {
-    		isHomePage = true;
+    	if(isIdElementExist(HOME_TOP_ELEMENTS_ID)) {
+    		AndroidElement element = findById(HOME_TOP_ELEMENTS_ID);
+    		if(element != null && element.getText().equals(APP_HOME_PAGE_TEXT)) {
+    			isHomePage = true;
+    		}
     	}
         return isHomePage;
     }

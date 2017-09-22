@@ -4,8 +4,8 @@ import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.LoginPage;
 import com.yiibai.primera.testng.util.ConstantUtil;
+import com.yiibai.primera.testng.util.ResultUtil;
 
-import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -37,11 +37,13 @@ public class LoginOperate extends OperateAppium {
 	 *            密码
 	 * @return 是否成功登录到主页
 	 */
-	public boolean login(String name, String pass) {
+	public ResultUtil login(String name, String pass) {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		System.out.println(this.getClass() + ":login----");
 		sleep(1000);
 		if(!homePage.isHomePage()) {
-			return ConstantUtil.ASSERT_FALSE;
+			return result;
 		}
 		// 1、点击首页右下角的cuenta---进入个人中心
 		clickView(loginPage.getCuentaBtn(), "Cuenta Btn");
@@ -67,12 +69,12 @@ public class LoginOperate extends OperateAppium {
 //			press();
 //		}
 		sleep(1000);
+		result.setActual(loginPage.isLogined());
 		// 返回是否成功到个人中心页面
-		Boolean flag = loginPage.isLogined();
 		while(!homePage.isHomePage()) {
 			back();
 		}
-		return flag;
+		return result;
 	}
 
 }

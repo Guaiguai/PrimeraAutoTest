@@ -7,6 +7,7 @@ import com.yiibai.primera.testng.base.Assertion;
 
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.RegisterOperate;
+import com.yiibai.primera.testng.util.ResultUtil;
 
 /**
  * 用户注册测试用例 
@@ -30,130 +31,130 @@ public class RegisterTest extends InitAppium {
 	 */
 	@Test(priority = 14)
 	public void RegisterOk() {
-		boolean flag = registerOperate.register("15906651240@qq.com",
+		ResultUtil result = registerOperate.register("15906651240@qq.com",
 				"15906651240", "15906651240");
-		Assertion.verifyEquals(flag, true, "邮箱和密码均符合规则的情况下是否注册成功");
-		print("邮箱和密码均符合规则的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱和密码均符合规则的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱缺失关键字符'@'和'.',注册失败
 	 */
 	@Test(priority = 1)
 	public void EmailMissKeyChars() {
-		boolean flag = registerOperate.register("18091969298",
+		ResultUtil result = registerOperate.register("18091969298",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱缺失关键字符'@'和'.'的情况下是否注册成功");
-		print("邮箱缺失关键字符'@'和'.'的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱缺失关键字符'@'和'.'的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'@'，注册失败
 	 */
 	@Test(priority = 2)
 	public void EmailMissKeyCharSpot() {
-		boolean flag = registerOperate.register("18091969298@qqcom",
+		ResultUtil result = registerOperate.register("18091969298@qqcom",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱只包含'@'的情况下是否注册成功");
-		print("邮箱只包含'@'的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱只包含'@'的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'.'，注册失败
 	 */
 	@Test(priority = 3)
 	public void EmailMissKeyCharAit() {
-		boolean flag = registerOperate.register("18091969298qq.com",
+		ResultUtil result = registerOperate.register("18091969298qq.com",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱只包含'.'的情况下是否注册成功");
-		print("邮箱只包含'.'的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱只包含'.'的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'@',且以其结尾，注册失败
 	 */
 	@Test(priority = 4)
 	public void EmailOnlyCharAitEnd() {
-		boolean flag = registerOperate.register("18091969298@",
+		ResultUtil result = registerOperate.register("18091969298@",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱只包含'@',且以其结尾的情况下是否注册成功");
-		print("邮箱只包含'@',且以其结尾的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱只包含'@',且以其结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'.',且以其结尾，注册失败
 	 */
 	@Test(priority = 5)
 	public void EmailOnlyCharSpotEnd() {
-		boolean flag = registerOperate.register("18091969298qq.",
+		ResultUtil result = registerOperate.register("18091969298qq.",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱只包含'.',且以其结尾的情况下是否注册成功");
-		print("邮箱只包含'.',且以其结尾的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱只包含'.',且以其结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱包含'@','.',且以'.'结尾，注册失败
 	 */
 	@Test(priority = 6)
 	public void EmailSpotEnd() {
-		boolean flag = registerOperate.register("18091969298@qq.",
+		ResultUtil result = registerOperate.register("18091969298@qq.",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱包含'@','.',且以'.'结尾的情况下是否注册成功");
-		print("邮箱包含'@','.',且以'.'结尾的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱包含'@','.',且以'.'结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱包含'@','.',且以'@'结尾，注册失败
 	 */
 	@Test(priority = 7)
 	public void EmailAtEnd() {
-		boolean flag = registerOperate.register("18091969298.qq@",
+		ResultUtil result = registerOperate.register("18091969298.qq@",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱包含'@','.',且以'@'结尾的情况下是否注册成功");
-		print("邮箱包含'@','.',且以'@'结尾的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱包含'@','.',且以'@'结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱包含'@','.',且符号位置交换，注册失败
 	 */
 	@Test(priority = 8)
 	public void EmailWrong() {
-		boolean flag = registerOperate.register("18091969298.qq@com",
+		ResultUtil result = registerOperate.register("18091969298.qq@com",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "邮箱包含'@','.',且符号位置交换的情况下是否注册成功");
-		print("邮箱包含'@','.',且符号位置交换的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("邮箱包含'@','.',且符号位置交换的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 长度小于6，注册失败
 	 */
 	@Test(priority = 9)
 	public void PwdLessThanSix() {
-		boolean flag = registerOperate.register("18091969298@qq.com",
+		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"12345", "12345");
-		Assertion.verifyEquals(flag, false, "pass 长度小于6的情况下是否注册成功");
-		print("pass 长度小于6的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("pass 长度小于6的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 长度大于25，注册失败
 	 */
 	@Test(priority = 10)
 	public void PwdMoreThanTwentyFive() {
-		boolean flag = registerOperate.register("18091969298@qq.com",
+		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"123456789123456789123456789", "123456789123456789123456789");
-		Assertion.verifyEquals(flag, false, "pass 长度大于25的情况下是否注册成功");
-		print("pass 长度大于25的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("pass 长度大于25的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 是中文，注册失败
 	 */
 	@Test(priority = 11)
 	public void PwdIsChinese() {
-		boolean flag = registerOperate.register("18091969298@qq.com",
+		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"测试测试测试测试", "测试测试测试测试");
-		Assertion.verifyEquals(flag, false, "pass 是中文的情况下是否注册成功");
-		print("pass 是中文的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("pass 是中文的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 是空格，注册失败
 	 */
 	@Test(priority = 12,enabled = false)
 	public void PwdIsNull() {
-		boolean flag = registerOperate.register("18091969298@qq.com",
+		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"", "");
-		Assertion.verifyEquals(flag, false, "pass 是空格的情况下是否注册成功");
-		print("pass 是空格的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("pass 是空格的情况下是否注册成功:" + result.getActual());
 	}
 	
 
@@ -163,9 +164,9 @@ public class RegisterTest extends InitAppium {
 	 */
 	@Test(priority = 13)
 	public void RegisterExited() {
-		boolean flag = registerOperate.register("550881764@qq.com",
+		ResultUtil result = registerOperate.register("550881764@qq.com",
 				"18091969298", "18091969298");
-		Assertion.verifyEquals(flag, false, "用户已经存在的情况下是否注册成功");
-		print("用户已经存在的情况下是否注册成功:" + flag);
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+		print("用户已经存在的情况下是否注册成功:" + result.getActual());
 	}
 }

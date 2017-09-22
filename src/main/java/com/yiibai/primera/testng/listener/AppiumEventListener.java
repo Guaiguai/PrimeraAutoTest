@@ -104,5 +104,17 @@ public class AppiumEventListener implements AppiumWebDriverEventListener {
     private String splitBy(By by) {  
         String str = by.toString().split("-")[1].toString().split(":")[3];  
         return str.substring(0, str.length() - 3);  
-    }  
+    }
+	@Override
+	public void afterChangeValueOf(WebElement arg0, WebDriver arg1,
+			CharSequence[] arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void beforeChangeValueOf(WebElement arg0, WebDriver arg1,
+			CharSequence[] arg2) {
+		// TODO Auto-generated method stub
+		
+	}  
 }

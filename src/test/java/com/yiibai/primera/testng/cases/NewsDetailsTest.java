@@ -25,25 +25,6 @@ public class NewsDetailsTest extends InitAppium {
 		Assert.assertNotNull(driver);
 		newsdetailsOperate = new NewsDetailsOperate(driver);
 	}
-	/**
-	 * 验证新闻详情页的字体的设置
-	 */
-	@Test(priority = 6,enabled = false)
-	public void share() {
-		boolean flag = newsdetailsOperate.share();
-		Assert.assertTrue(flag);
-		print("验证文章分享:" + flag);
-	}
-	
-	/**
-	 * 验证新闻详情页的字体的设置
-	 */
-	@Test(priority = 4,enabled = false)
-	public void fontSize() {
-		String msg = newsdetailsOperate.fontSize();
-		Assert.assertEquals(msg, null);
-		print("验证文章字体设置:" + msg);
-	}
 	
 	/**
 	 * 验证文章配图查看
@@ -58,6 +39,33 @@ public class NewsDetailsTest extends InitAppium {
 		print("验证文章配图查看:" + result.getMessage());
 	}
 	/**
+	 * 验证文章收藏
+	 */
+	@Test(priority = 2)
+	public void collect() {
+		ResultUtil result = newsdetailsOperate.collect();
+		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+		print("验证文章收藏:" + result.getActual());
+	}
+	/**
+	 * 验证文章点赞
+	 */
+	@Test(priority = 3)
+	public void like() {
+		ResultUtil result = newsdetailsOperate.like();
+		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+		print("验证文章点赞:" + result.getActual());
+	}
+	/**
+	 * 验证新闻详情页的字体的设置
+	 */
+	@Test(priority = 4)
+	public void fontSize() {
+		ResultUtil result = newsdetailsOperate.fontSize();
+		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+		print("验证文章字体设置:" + result.getMessage());
+	}
+	/**
 	 * 验证文章评论
 	 */
 	@Test(priority = 5)
@@ -67,22 +75,21 @@ public class NewsDetailsTest extends InitAppium {
 		print("验证文章评论:" + result.getActual() + ",返回信息为:" + result.getMessage());
 	}
 	/**
-	 * 验证文章收藏
+	 * 验证文章更多阅读
 	 */
-	@Test(priority = 2)
-	public void collect() {
-		boolean flag = newsdetailsOperate.collect();
-		Assert.assertTrue(flag, "验证文章收藏");
-		print("验证文章收藏:" + flag);
+	@Test(enabled = false)
+	public void readingMore() {
+		ResultUtil result = newsdetailsOperate.readingsMore();
+		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+		print("验证新闻更多阅读:" + result.getActual() + ",返回信息为:" + result.getMessage());
 	}
 	/**
-	 * 验证文章点赞
+	 * 验证新闻详情页的字体的设置
 	 */
-	@Test(priority = 3)
-	public void like() {
-		boolean flag = newsdetailsOperate.like();
-		Assert.assertTrue(flag, "验证文章点赞");
-		print("验证文章点赞:" + flag);
+	@Test(enabled = false)
+	public void share() {
+		ResultUtil result = newsdetailsOperate.share();
+		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+		print("验证文章分享:" + result.getActual());
 	}
-
 }

@@ -7,16 +7,12 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import org.testng.log4testng.Logger;
-
-import com.sun.jna.Function;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.util.MethodUtil;
 import com.yiibai.primera.testng.util.ConstantUtil;
 import com.yiibai.primera.testng.util.ResultUtil;
 
-import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -28,13 +24,12 @@ import io.appium.java_client.android.AndroidElement;
 public class HomeOperate extends OperateAppium {
 
 	private HomePage homePage;
-	private static Logger logger = Logger.getLogger(HomeOperate.class);
+//	private static Logger logger = Logger.getLogger(HomeOperate.class);
 
 	AndroidDriver<AndroidElement> driver;
 	
 	public HomeOperate(AndroidDriver<AndroidElement> initdriver) {
 		super(initdriver);
-		System.out.println(this.getClass() + "----");
 		homePage = new HomePage(initdriver);
 		this.driver = initdriver;
 	}
@@ -49,31 +44,38 @@ public class HomeOperate extends OperateAppium {
 			result.setMessage("请定位到APP首页！");
 			return result;
 		}
+		//1.首页AUTO频道是否存在
+		boolean isDisappearedBeforeEdit = swipAtTopUtilElementAppear(homePage.menuAuto(), "LEFT", 300,15);
+		System.out.println("AUTO频道编辑之前的是否出现：" + isDisappearedBeforeEdit);
 		//进入菜单编辑主页面
 		clickView(homePage.getHomeMenuEditBtn());
 		clickView(homePage.getMenuEditBtn());
 		sleep(300);
+		//查找到AUTO频道
+		boolean isDisappearedAfterEdit = false;
 		AndroidElement menuAuto = swipTilElementAppear(homePage.menuAuto(),"UP", 300);
-		
 		if(menuAuto != null) {
-			logger.info("menuAuto text is:" + menuAuto.getText());
 			AndroidElement autoBtn = null;
 			autoBtn = homePage.Auto();
 			if(autoBtn != null) {
-				logger.info("用xpath方式定位到元素");
 				clickView(autoBtn);
 				clickView(homePage.getMenuEditBtn());
 				//TODU 需要开发配合修改，比如添加文字说明，已添加，未添加之类，根据该文字返回首页滑动菜单查找测试元素
 				//返回首页
 				clickView(homePage.getMenuBack());
 				//在菜单上滑动知道Auto菜单出现
-				boolean isDisplayed = swipAtTopUtilElementAppear(homePage.menuAuto(), "LEFT", 300,15);
-				logger.info("isDisplayed:" + isDisplayed);
-				result.setMessage("AUTO频道：" + isDisplayed);
-				//此时需要判断是否应该显示  加菜单，显示 /减菜单，不显示就OK，反之case失败  开发配合
+				isDisappearedAfterEdit = swipAtTopUtilElementAppear(homePage.menuAuto(), "LEFT", 300,15);
+				System.out.println("AUTO频道编辑之后是否出现：" + isDisappearedAfterEdit);
 			}
 		}
-		result.setActual(ConstantUtil.ASSERT_TRUE);
+		if ((isDisappearedBeforeEdit && !isDisappearedAfterEdit)
+				|| (!isDisappearedBeforeEdit && isDisappearedAfterEdit)) {
+			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setMessage("AUTO频道编辑：添加/取消成功！");
+		}
+		back();
+		//操作完成之后定位到Parati频道
+		swipAtTopUtilElementAppear(homePage.menuPara(), "RIGHT", 300, 15);
 		return result;
 	}
 	/**
@@ -203,16 +205,22 @@ public class HomeOperate extends OperateAppium {
 	}
 	
 	/**
-	 * TODU首页刷新
+	 * 首页刷新
 	 * @return
 	 */
-	public boolean refresh() {
+	public ResultUtil refresh() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		if(!isHomePage()) {
-			return ConstantUtil.ASSERT_FALSE;
+			return result;
 		}
-//		boolean isDisplayed = swipAtTopUtilElementAppear(homePage.menuAuto(), "LEFT", 300,15);
-//		logger.info("isDisplayed:" + isDisplayed);
-		return ConstantUtil.ASSERT_FALSE;
+		//首页刷新
+		swipeToDown(300);
+		sleep(3000);
+		//获得刷新的控件
+		int total = homePage.getRefreshedTotal();
+		result.setMessage("首页刷新，刷新的新数据有：" + total + "条");
+		return result;
 	}
 	/**
 	 *  首页晨报的测试
@@ -220,14 +228,11 @@ public class HomeOperate extends OperateAppium {
 	 * @throws ParseException 
 	 */
 	public ResultUtil MorningPaper() throws ParseException {
-//		Boolean flag = false;
+
 		ResultUtil result = new ResultUtil();
 		result.setActual(ConstantUtil.ASSERT_FALSE);
-		if(!isHomePage()) {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
-			return result;
-		}
-		//是否应该显示早报
+		if(!isHomePage())  return result;
+//		是否应该显示早报
 		Boolean morningPaperShouldExist = false;
 		//当前时间和晨报显示时间对比，小于则显示晨报，大于则不显示
 		Date now = new Date();
@@ -236,7 +241,7 @@ public class HomeOperate extends OperateAppium {
 		Date compareTime = df.parse("10:30:00");//指定时间
 		if(nowTime.getTime() - compareTime.getTime() <= 0) {
 			morningPaperShouldExist = true;
-//			result.setMessage("nowTime <= compareTime,应该显示早报");
+			result.setMessage("nowTime <= compareTime,应该显示早报");
 		}
 		//抓取元素
 		boolean morningPaperIsExist = false;
@@ -247,7 +252,7 @@ public class HomeOperate extends OperateAppium {
 		//应该显示+显示了 或者 不应该显示+没有显示则通过
 		if((morningPaperShouldExist && morningPaperIsExist) || (!morningPaperShouldExist && !morningPaperIsExist)) {
 			result.setActual(ConstantUtil.ASSERT_TRUE);
-			result.setMessage("应该显示+显示了 或者 不应该显示+没有显示,则该条测试是通过的");
+			result.setMessage("测试通过!");
 			if(morningPaperIsExist) {
 				clickView(element);
 				//点击一条早报信息,进入新闻详情页面，此时可以依赖NewsDetails.java
@@ -278,7 +283,7 @@ public class HomeOperate extends OperateAppium {
 	 */
 	public boolean isHomePage() {
 		boolean isHomePage = false;
-		sleep(1000);
+		sleep(3000);
 		// 是否在欢迎页面---广告动态切换的SWIPE
 		if (homePage.isWelcome()) {
 			print("app打开时广告动态切换的swipe...");
@@ -291,7 +296,6 @@ public class HomeOperate extends OperateAppium {
 		if (homePage.isHomePage()) {
 			isHomePage = true;
 		}else {
-			//
 			isHomePage = false;
 		}
 		return isHomePage;

@@ -25,47 +25,6 @@ public class LocalOperate extends OperateAppium {
 		this.driver = driver;
 	}
 
-	/**
-	 * 传递帐号密码
-	 * 
-	 * @param name
-	 *            帐号
-	 * @param pass
-	 *            密码
-	 * @return 是否成功登录到主页
-	 */
-	public boolean login(String name, String pass) {
-
-		sleep(1000);
-		if(!homeOperate.isHomePage()) {
-			return false;
-		}else {
-			clickView(loginPage.getCuentaBtn(), "Cuenta Btn");
-		}
-		// 在个人中心界面， 验证用户是否已经登录，yes则退出重新登录
-		if (loginPage.getLogOutBtn() != null) {
-			System.out.println("退出重新登录...");
-			// 1.1点击退出
-			clickView(loginPage.getLogOutBtn(), "LogOut Btn");
-			clickView(loginPage.getLogOutOkBtn(), "LogOutOk Btn");
-		}
-		if (loginPage.getSignInBtn() != null) {
-			// 2、点击 Registrarse Btn --- 进入登录界面
-			clickView(loginPage.getSignInBtn(), "Signin Btn");
-		}
-		// 输入内容
-		inputManyText(name, pass);
-		// 3、点击登录
-		if(loginPage.getLoginBtn().isEnabled()) {
-			clickView(loginPage.getLoginBtn(), "login Btn");
-		}
-		// 登录时如果出现错误提示弹框，则点击下隐藏掉
-		if (loginPage.isAlert()) {
-			press();
-		}
-		sleep(1000);
-		// 返回是否成功到个人中心页面
-		return loginPage.isLogined();
-	}
+	
 
 }

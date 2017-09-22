@@ -4,6 +4,7 @@ import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.RegisterPage;
 import com.yiibai.primera.testng.util.ConstantUtil;
+import com.yiibai.primera.testng.util.ResultUtil;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -34,11 +35,13 @@ public class RegisterOperate extends OperateAppium {
 	 * @return 是否注册成功
 	 * @throws Exception
 	 */
-	public boolean register(String email, String name, String pass) {
+	public ResultUtil register(String email, String name, String pass) {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		// 是否在欢迎页面---广告动态切换的SWIPE
 		sleep(1000);
 		if(!homePage.isHomePage()) {
-			return ConstantUtil.ASSERT_FALSE;
+			return result;
 		}
 		// 1、点击首页右下角的cuenta---进入个人中心
 		clickView(registerPage.getCuentaBtn(), "Cuenta Btn");
@@ -59,8 +62,8 @@ public class RegisterOperate extends OperateAppium {
 		}
 		System.out.println("开始注册啦。。。。。。");
 		if (registerPage.getSingUpBtn() == null) {
-			System.out.println("没有在APP注册主界面");
-			return ConstantUtil.ASSERT_FALSE;
+			result.setMessage("没有在APP注册主界面");
+			return result;
 		}
 		// 输入内容
 		inputManyText(email, name, pass);
@@ -74,7 +77,8 @@ public class RegisterOperate extends OperateAppium {
 			back();
 		}
 		// 返回是否成功到个人中心页面
-		return registerPage.isRegistered();
+		result.setActual(registerPage.isRegistered());
+		return result;
 	}
 
 }

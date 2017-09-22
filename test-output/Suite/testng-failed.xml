@@ -7,12 +7,51 @@
   </listeners>
   <test name="testAll(failed)">
     <classes>
+      <class name="com.yiibai.primera.testng.cases.LoginTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="loginErrorUser"/>
+          <include name="loginChinese"/>
+          <include name="loginConfim"/>
+          <include name="initDriver"/>
+          <include name="loginErrorNum"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
+      <class name="com.yiibai.primera.testng.cases.HomeTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
+      <class name="com.yiibai.primera.testng.cases.RegisterTest">
+        <methods>
+          <include name="EmailOnlyCharAitEnd"/>
+          <include name="EmailAtEnd"/>
+          <include name="PwdMoreThanTwentyFive"/>
+          <include name="beforeSuite"/>
+          <include name="EmailMissKeyCharAit"/>
+          <include name="EmailMissKeyChars"/>
+          <include name="EmailMissKeyCharSpot"/>
+          <include name="EmailOnlyCharSpotEnd"/>
+          <include name="PwdLessThanSix"/>
+          <include name="EmailSpotEnd"/>
+          <include name="PwdIsChinese"/>
+          <include name="afterClass"/>
+          <include name="RegisterOk"/>
+          <include name="RegisterExited"/>
+          <include name="EmailWrong"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.RegisterTest -->
       <class name="com.yiibai.primera.testng.cases.PersonalCenterTest">
         <methods>
           <include name="editPasswordNotEqualWithConfirmed"/>
           <include name="initDriver"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
+          <include name="Logout"/>
           <include name="editAccountLessThanSixChars"/>
           <include name="editPasswordMoreThanTwentyFiveChars"/>
           <include name="editPasswordWrongOldPwd"/>
@@ -22,6 +61,13 @@
           <include name="editPasswordEqualOld"/>
         </methods>
       </class> <!-- com.yiibai.primera.testng.cases.PersonalCenterTest -->
+      <class name="com.yiibai.primera.testng.cases.NewsDetailsTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.NewsDetailsTest -->
     </classes>
   </test> <!-- testAll(failed) -->
 </suite> <!-- Failed suite [Suite] -->

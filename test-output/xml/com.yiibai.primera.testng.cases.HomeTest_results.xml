@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="testAll"
-           tests="1"
-           failures="1"
+           tests="6"
+           failures="0"
            errors="0"
            skipped="0"
-           time="11.720">
+           time="248.795">
   <properties />
-            <testcase name="allMenusDroped" time="11.720" classname="com.yiibai.primera.testng.cases.HomeTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:allMenusDroped(
-报错类:HomeTest
-报错行号:56)
-  com.yiibai.primera.testng.cases.HomeTest.allMenusDroped(HomeTest.java:56)
-]]>
-      </failure>
-
-          </testcase>
   
   
-  
+            <testcase name="searchByHistory" time="38.820" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="searchByInputEnglish" time="47.786" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="searchByInputChinese" time="40.622" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="clearSearchedHistory" time="13.069" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="morningPaper" time="10.721" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="autoMenuEdit" time="97.777" classname="com.yiibai.primera.testng.cases.HomeTest" />
+      
 </testsuite>

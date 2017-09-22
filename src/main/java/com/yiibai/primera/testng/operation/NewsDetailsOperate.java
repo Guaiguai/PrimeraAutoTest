@@ -1,8 +1,11 @@
 package com.yiibai.primera.testng.operation;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import com.yiibai.primera.testng.base.ImageAppium;
@@ -26,7 +29,7 @@ public class NewsDetailsOperate extends OperateAppium {
 
 	private HomePage homePage;
 	
-	private ResultUtil result = new ResultUtil();
+//	private ResultUtil result = new ResultUtil();
 
 	AndroidDriver<AndroidElement> driver;
 
@@ -57,12 +60,13 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public boolean share() {
-		Boolean flag = false;
+	public ResultUtil share() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		System.out.println("share....");
 		if (!isNewsDetailsPage()) {
-			System.out.println(This.class + ":share---没有在新闻详情页面！！！");
-			return ConstantUtil.ASSERT_FALSE;
+			result.setMessage(This.class + ":share---没有在新闻详情页面！！！");
+			return result;
 		}
 		// clickView(newsDetailsPage.shareBtn());
 		// System.out.println("page source is:" + driver.getPageSource());
@@ -89,39 +93,45 @@ public class NewsDetailsOperate extends OperateAppium {
 			Error.printStackTrace();
 		}
 		sleep(10000);
-		return ConstantUtil.ASSERT_TRUE;
+		result.setActual(ConstantUtil.ASSERT_TRUE);
+		return result;
 	}
 	
 	/**
 	 * 新闻详情页面操作 之 字体设置
 	 * 截屏进行比较，根据页面的图片比较进行判断是否字体设置成功
-	 * TODU 截屏比较的方式被CUT掉，需要重新思路测试
+	 * 
 	 * @return 是否设置成功
 	 */
-	public String fontSize() {
-		String msg = null;
+	public ResultUtil fontSize() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		System.out.println("fontSize....");
 		if (!isNewsDetailsPage()) {
-			System.out.println(This.class + ":fontSize---没有在新闻详情页面！！！");
-			return msg;
+			result.setMessage(This.class + ":fontSize---没有在新闻详情页面！！！");
+			return result;
 		}
-		sleep(300);
-		switchToWeb();
+		sleep(5000);
 		//截屏保存
-//		ImageAppium.snapshot((TakesScreenshot) driver, "newsDetail_fontSize_before.png");
-//		//点击设置字体按钮---进行字体设置
-//		clickView(newsDetailsPage.fontSize());
-//		clickView(newsDetailsPage.fontSizeRadio());
-//		press();
-//		ImageAppium.snapshot((TakesScreenshot) driver, "newsDetail_fontSize_after.png");
-//		//图片比较，验证是否设置成功
-//		String dataDir = ImageAppium.setImgFolder();
-//		System.out.println(dataDir + "/newsDetail_fontSize_before.png");
-//		BufferedImage before = ImageAppium.getImageFromFile(new File(dataDir + "/newsDetail_fontSize_before.png"));
-//        BufferedImage after = ImageAppium.getImageFromFile(new File(dataDir + "/newsDetail_fontSize_after.png"));
-//        boolean isSame = ImageAppium.sameAs(before,after,0.0);
-//        System.out.println("字体设置前后对比结果为：" + isSame);
-		return msg;
+		ImageAppium.snapshot((TakesScreenshot) driver, "newsDetail_fontSize_before.png");
+		sleep(5000);
+		//点击设置字体按钮---进行字体设置
+		clickView(newsDetailsPage.fontSize());
+		clickView(newsDetailsPage.fontSizeRadio());
+		back();
+		sleep(5000);
+		ImageAppium.snapshot((TakesScreenshot) driver, "newsDetail_fontSize_after.png");
+		//图片比较，验证是否设置成功
+		String dataDir = ImageAppium.setImgFolder();
+		BufferedImage before = ImageAppium.getImageFromFile(new File(dataDir + "/newsDetail_fontSize_before.png"));
+        BufferedImage after = ImageAppium.getImageFromFile(new File(dataDir + "/newsDetail_fontSize_after.png"));
+        
+        result.setMessage("字体设置前后对比结果为：" + ImageAppium.sameAs(before,after,0.9));
+        if(!ImageAppium.sameAs(before,after,0.9)) {
+        	result.setActual(ConstantUtil.ASSERT_TRUE);
+        }
+        
+		return result;
 	}
 	/**
 	 * 新闻详情页面操作 之 图片查看
@@ -133,12 +143,12 @@ public class NewsDetailsOperate extends OperateAppium {
 //		result.setExcepted(true);
 		System.out.println("imageSwitcher....");
 		if (!isNewsDetailsPage()) {
-			result.setActual(false);
+			result.setActual(ConstantUtil.ASSERT_FALSE);
 			result.setMessage("没有在新闻详情页面！！！");
 		}
 		// 如果有配图，则点击查看 如果有多张图片的话，则向左滑动  图片下载
 		if(newsDetailsPage.imageElement() == null) {
-			result.setActual(true);
+			result.setActual(ConstantUtil.ASSERT_TRUE);
 			result.setMessage("新闻详情页面没有配图！！！");
 		}
 		clickView(newsDetailsPage.imageElement());
@@ -151,7 +161,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		}
 		ImageAppium.snapshot((TakesScreenshot) driver, "newsDetail_imageSwitcher");
 		//点击下载图片 有问题下载之后本地查看不到
-		result.setActual(true);
+		result.setActual(ConstantUtil.ASSERT_TRUE);
 		result.setMessage("新闻详情页面---已截图保存配图！！！");
 		back();
 		return result;
@@ -161,24 +171,41 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 详情页面下面的相关阅读
 	 * @return
 	 */
-	public boolean readingsMore() {
-		return false;
+	public ResultUtil readingsMore() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
+		if (!isNewsDetailsPage()) {
+			result.setMessage(This.class + ":readingsMore---没有在新闻详情页面！！！");
+			return result;
+		}
+		System.out.println("开始滑动...");
+		//滑动到新闻详情页面下部的相关阅读
+		AndroidElement moreNews = swipTilElementAppear(newsDetailsPage.getOneReadingMoreNews(), "UP", 300);
+		if(moreNews != null) {
+			clickView(newsDetailsPage.getFirstReadingMoreNews());
+			result.setActual(ConstantUtil.ASSERT_TRUE);
+		}
+		
+		return result;
 	}
 	/**
 	 * 新闻详情页面操作 之 点赞
 	 * 
 	 * @return 是否点赞成功
 	 */
-	public boolean like() {
+	public ResultUtil like() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		System.out.println("like....");
 		if (!isNewsDetailsPage()) {
-			System.out.println(This.class + ":like---没有在新闻详情页面！！！");
-			return ConstantUtil.ASSERT_FALSE;
+			result.setMessage(This.class + ":like---没有在新闻详情页面！！！");
+			return result;
 		}
 		// 如果没有点赞则点赞
 		clickView(newsDetailsPage.likeBtn());
-		sleep(3000);
-		return newsDetailsPage.isLiked();
+		sleep(5000);
+		result.setActual(newsDetailsPage.isLiked());
+		return result;
 	}
 
 	/**
@@ -186,16 +213,19 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return 是否收藏成功
 	 */
-	public boolean collect() {
+	public ResultUtil collect() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		System.out.println("collect.....");
 		if (!isNewsDetailsPage()) {
-			System.out.println(This.class + ":collect---没有在新闻详情页面！！！");
-			return ConstantUtil.ASSERT_FALSE;
+			result.setMessage(This.class + ":collect---没有在新闻详情页面！！！");
+			return result;
 		}
 		// 如果没有点赞则点赞
 		clickView(newsDetailsPage.collectBtn());
 		sleep(3000);
-		return newsDetailsPage.isCollected();
+		result.setActual(newsDetailsPage.isCollected());
+		return result;
 	}
 	/**
 	 * 新闻详情页面操作 之 评论
@@ -203,10 +233,11 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * @return
 	 */
 	public ResultUtil comment(String details) {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		System.out.println("comment.......");
 		if (!isNewsDetailsPage()) {
 			result.setMessage(this.getClass() + ":comment---没有在新闻详情页面！！！");
-			result.setActual(ConstantUtil.ASSERT_FALSE);
 			return result;
 		}
 		clickView(newsDetailsPage.commentBtn());
@@ -215,14 +246,17 @@ public class NewsDetailsOperate extends OperateAppium {
 		//在所有的评论中查找测试提交的评论
 		List<AndroidElement> commentList = newsDetailsPage.getCommentList();
 		if(commentList != null && !commentList.isEmpty()) {
-			for (int i = 0; i < commentList.size(); i++) {
-				String text = commentList.get(i).getText();
-				if(text.equals(details)) {
-					result.setActual(ConstantUtil.ASSERT_TRUE);
-				}
+			String firstCommentText = commentList.get(0).getText();
+			if(firstCommentText.equals(details)) {
+				result.setActual(ConstantUtil.ASSERT_TRUE);
 			}
+//			for (int i = 0; i < commentList.size(); i++) {
+//				String text = commentList.get(i).getText();
+//				if(text.equals(details)) {
+//					result.setActual(ConstantUtil.ASSERT_TRUE);
+//				}
+//			}
 		}else {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
 			result.setMessage("用户提交评论，但是没有看到用户的评论内容，测试不通过");
 		}
 		//返回

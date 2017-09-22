@@ -3,6 +3,8 @@ package com.yiibai.primera.testng.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
+
 import com.yiibai.primera.testng.base.PageAppium;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -15,36 +17,40 @@ import io.appium.java_client.android.AndroidElement;
 public class NewsDetailsPage extends PageAppium {
 
     //app打开时是否有可滑动的广告图
-    public final String APP_WELCOME_ELEMENTS_ID = "img_coopen";
+    private final String APP_WELCOME_ELEMENTS_ID = "img_coopen";
     //app主页的文字（主要是顶部显示的文字）
-    public final String APP_HOME_PAGE_TEXT = "Para ti";
+    private final String APP_HOME_PAGE_TEXT = "Para ti";
     //新闻首页定位带图片的新闻
-    public final String NEWS_IMAGE_RIGHT_ID = "img_one_left";
-    public final String NEWS_IMAGE_FILL_ID = "img_one_fill";
-    public final String NEWS_TEXT_ID = "txt_newstitle";
+    private final String NEWS_IMAGE_RIGHT_ID = "img_one_left";
+    private final String NEWS_IMAGE_FILL_ID = "img_one_fill";
+    private final String NEWS_TEXT_ID = "txt_newstitle";
     
     //收藏的BTN
-    public final String COLLECT_BTN_ID = "btn_collect";
+    private final String COLLECT_BTN_ID = "btn_collect";
     //点赞的BTN
-    public final String LIKE_BTN_ID = "btn_like";
+    private final String LIKE_BTN_ID = "btn_like";
     //评论支持的BTN(给别人的评论点赞)
-    public final String COMMENT_SUPP_BTN_ID = "img_com_supp";
+    private final String COMMENT_SUPP_BTN_ID = "img_com_supp";
     //评论的BTN
-    public final String COMMENT_BTN_ID = "btn_comment";
-    public final String COMMENT_SEND_BTN_ID = "btn_send";
-    public final String COMMENT_CONTENT_INPUT_ID = "edit_comment";
-    public final String COMMENT_LAYOUT_ID = "com_comment_content";
+    private final String COMMENT_BTN_ID = "btn_comment";
+    private final String COMMENT_SEND_BTN_ID = "btn_send";
+    private final String COMMENT_CONTENT_INPUT_ID = "edit_comment";
+    private final String COMMENT_LAYOUT_ID = "com_comment_content";
     
     //图片的ID
-    public final String IMAGES_ID = "img_local_big";
-    public final String IMAG_COUNT_ID = "txt_allcout";//配图总数
+    private final String IMAGES_ID = "img_local_big";
+    private final String IMAG_COUNT_ID = "txt_allcout";//配图总数
     
     //字体设置的ID
-    public final String FONT_BTN_ID = "btn_font";
-    public final String FONTSIZE_RADIO_CLASS = "android.widget.RadioButton";
+    private final String FONT_BTN_ID = "btn_font";
+    private final String FONTSIZE_RADIO_CLASS = "android.widget.RadioButton";
     
     //文章分享的ID
-    public final String SHARE_BTN_ID = "img_right";
+    private final String SHARE_BTN_ID = "img_right";
+    
+    //新闻相关阅读
+    private final String NEWS_READIND_MORE_ID = "tv_reading";
+    
     public NewsDetailsPage(AndroidDriver<AndroidElement> driver){
         super(driver);
     }
@@ -164,5 +170,15 @@ public class NewsDetailsPage extends PageAppium {
      */
     public AndroidElement commentBtn() {
     	return waitAutoById(COMMENT_BTN_ID);
+    }
+    /**
+     * 新闻相关阅读
+     * @return
+     */
+    public By getOneReadingMoreNews() {
+    	return By.id(NEWS_READIND_MORE_ID);
+    }
+    public AndroidElement getFirstReadingMoreNews() {
+    	return waitAutoById(NEWS_READIND_MORE_ID);
     }
 }

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="testAll"
-           tests="4"
+           tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="49.204">
+           time="71.874">
   <properties />
   
   
-            <testcase name="imageSwitch" time="10.248" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="collect" time="9.155" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="like" time="12.710" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="comment" time="17.091" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+            <testcase name="comment" time="16.160" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="fontSize" time="25.084" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="like" time="13.023" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="imageSwitch" time="9.909" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="collect" time="7.698" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
       
 </testsuite>

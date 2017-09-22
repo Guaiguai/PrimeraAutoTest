@@ -1,8 +1,6 @@
 package com.yiibai.primera.testng.cases;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -31,38 +29,18 @@ public class HomeTest extends InitAppium {
     /**
      * 首页刷新验证
      */
-    @Test(enabled = false)
+    @Test(priority = 0,enabled = false)
 	public void refresh(){
-        boolean flag = homeOperate.refresh();
-        Assertion.verifyEquals(flag,false,"首页刷新验证");
-        System.out.println("首页刷新验证:"+ flag);
-    }
-    /**
-     * 首页菜单编辑验证
-     */
-    @Test(priority = 7,enabled = false)
-	public void autoMenuEdit(){
-        ResultUtil  result = homeOperate.AutoChannelMenusEdit();
+        ResultUtil result = homeOperate.refresh();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页菜单编辑验证:"+ result.getActual());
-    }
-    
-    /**
-     * 首页菜单编辑验证
-     */
-    @Test(priority = 8)
-	public void allMenusDroped(){
-        ResultUtil  result = homeOperate.channelMenusMoreThanThree();
-        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页菜单编辑验证:"+ result.getActual());
+        System.out.println("首页刷新验证:"+ result.getActual());
     }
 
-    
     /**
      * 首页是否显示晨报
      * @throws ParseException 
      */
-    @Test(priority = 2,enabled = false)
+    @Test(priority = 2)
 	public void morningPaper() throws ParseException{
 		ResultUtil result = homeOperate.MorningPaper();
 		Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
@@ -71,13 +49,13 @@ public class HomeTest extends InitAppium {
     /**
      * 首页搜索验证
      */
-    @Test(priority = 3,enabled = false)
+    @Test(priority = 3)
 	public void searchByInputChinese(){
     	ResultUtil result = homeOperate.searchByInput("测试");
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
     	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
     }
-    @Test(priority = 4,enabled = false)
+    @Test(priority = 4)
    	public void searchByInputEnglish(){
        	ResultUtil result = homeOperate.searchByInput("hello");
        	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
@@ -86,7 +64,7 @@ public class HomeTest extends InitAppium {
     /**
      * 首页搜索验证
      */
-    @Test(priority = 5,enabled = false)
+    @Test(priority = 5)
 	public void searchByHistory(){
     	ResultUtil result = homeOperate.searchByHistory();
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
@@ -96,10 +74,29 @@ public class HomeTest extends InitAppium {
     /**
      * 清空搜索历史
      */
-    @Test(priority=6,enabled = false,dependsOnMethods = {"searchByInputChinese","searchByInputEnglish"})
+    @Test(priority = 6,dependsOnMethods = {"searchByInputChinese","searchByInputEnglish"})
     public void clearSearchedHistory() {
     	ResultUtil result = homeOperate.clearSearchHistory();
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
     	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+    }
+
+    /**
+     * 首页菜单编辑验证
+     */
+    @Test(priority = 9)
+	public void autoMenuEdit(){
+        ResultUtil  result = homeOperate.AutoChannelMenusEdit();
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+        System.out.println("首页菜单编辑验证:"+ result.getActual());
+    }
+    /**
+     * 首页菜单编辑验证
+     */
+    @Test(enabled = false)
+	public void allMenusDroped(){
+        ResultUtil  result = homeOperate.channelMenusMoreThanThree();
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+        System.out.println("首页菜单编辑验证:"+ result.getActual());
     }
 }

@@ -46,16 +46,11 @@ public class ImageAppium {
 		// Now you can do whatever you need to do with it, for example copy
 		// somewhere
 		try {
-			System.out.println(
-					"save snapshot path is:" + currentPath + "/" + filename);
 			FileUtils.copyFile(scrFile,
 					new File(currentPath + "\\" + filename));
 		} catch (IOException e) {
-			System.out.println("Can't save screenshot");
 			e.printStackTrace();
 		} finally {
-			System.out.println(
-					"screen shot finished, it's in " + currentPath + " folder");
 		}
 	}
 	/**
@@ -86,8 +81,6 @@ public class ImageAppium {
 		try {
 			img = ImageIO.read(f);
 		} catch (IOException e) {
-			// if failed, then copy it to local path for later check:TBD
-			// FileUtils.copyFile(f, new File(p1));
 			e.printStackTrace();
 		}
 		return img;
@@ -101,8 +94,6 @@ public class ImageAppium {
 	 */
 	public static boolean sameAs(BufferedImage myImage,
 			BufferedImage otherImage, double percent) {
-		// BufferedImage otherImage = other.getBufferedImage();
-		// BufferedImage myImage = getBufferedImage();
 		if (otherImage.getWidth() != myImage.getWidth()) {
 			return false;
 		}

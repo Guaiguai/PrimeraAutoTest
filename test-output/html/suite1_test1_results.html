@@ -12,7 +12,7 @@
 <body>
 <h1>testAll</h1>
 <p>
-  Test duration: 643.962s
+  Test duration: 1865.896s
 </p>
 
 
@@ -20,15 +20,15 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.yiibai.primera.testng.cases.PersonalCenterTest</td>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.LoginTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  editAccountExited
+                  loginChinese
       </td>
   <td class="duration">
-    42.812s
+    38.858s
   </td>
   <td class="result">
         
@@ -37,6 +37,126 @@
 
         <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
     <div class="stackTrace" id="exception-0">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:loginChinese(<br/>
+报错类:LoginTest<br/>
+报错行号:52)<br />
+              com.yiibai.primera.testng.cases.LoginTest.loginChinese(LoginTest.java:52)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  loginConfim
+      </td>
+  <td class="duration">
+    41.769s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:loginConfim(<br/>
+报错类:LoginTest<br/>
+报错行号:73)<br />
+              com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:73)<br />
+              com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:74)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  loginErrorNum
+      </td>
+  <td class="duration">
+    38.566s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:loginErrorNum(<br/>
+报错类:LoginTest<br/>
+报错行号:41)<br />
+              com.yiibai.primera.testng.cases.LoginTest.loginErrorNum(LoginTest.java:41)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  loginErrorUser
+      </td>
+  <td class="duration">
+    46.941s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:loginErrorUser(<br/>
+报错类:LoginTest<br/>
+报错行号:31)<br />
+              com.yiibai.primera.testng.cases.LoginTest.loginErrorUser(LoginTest.java:31)<br />
+                </div>
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.PersonalCenterTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Logout
+      </td>
+  <td class="duration">
+    3.321s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-4">
+              <br/>
+报错信息: 请定位到APP个人中心界面！ expected [true] but found [false].<br/>
+报错方法名:Logout(<br/>
+报错类:PersonalCenterTest<br/>
+报错行号:145)<br />
+              com.yiibai.primera.testng.cases.PersonalCenterTest.Logout(PersonalCenterTest.java:145)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  editAccountExited
+      </td>
+  <td class="duration">
+    32.481s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-5">
               <br/>
 报错信息: 编辑用户登录账号失败; expected [true] but found [false].<br/>
 报错方法名:editAccountExited(<br/>
@@ -51,15 +171,15 @@
                   editAccountLessThanSixChars
       </td>
   <td class="duration">
-    37.828s
+    32.770s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
-    <div class="stackTrace" id="exception-1">
+        <a href="javascript:toggleElement('exception-6', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-6">
               <br/>
 报错信息: 编辑用户登录账号失败; expected [true] but found [false].<br/>
 报错方法名:editAccountLessThanSixChars(<br/>
@@ -74,15 +194,15 @@
                   editPasswordEqualOld
       </td>
   <td class="duration">
-    54.048s
+    44.788s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
-    <div class="stackTrace" id="exception-2">
+        <a href="javascript:toggleElement('exception-7', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-7">
               <br/>
 报错信息: 修改用户登录密码失败; expected [true] but found [false].<br/>
 报错方法名:editPasswordEqualOld(<br/>
@@ -97,15 +217,15 @@
                   editPasswordLessThanSixChars
       </td>
   <td class="duration">
-    52.352s
+    42.584s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
-    <div class="stackTrace" id="exception-3">
+        <a href="javascript:toggleElement('exception-8', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-8">
               <br/>
 报错信息: 修改用户登录密码失败; expected [true] but found [false].<br/>
 报错方法名:editPasswordLessThanSixChars(<br/>
@@ -120,15 +240,15 @@
                   editPasswordMoreThanTwentyFiveChars
       </td>
   <td class="duration">
-    57.920s
+    40.893s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
-    <div class="stackTrace" id="exception-4">
+        <a href="javascript:toggleElement('exception-9', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-9">
               <br/>
 报错信息: 修改用户登录密码失败; expected [true] but found [false].<br/>
 报错方法名:editPasswordMoreThanTwentyFiveChars(<br/>
@@ -143,15 +263,15 @@
                   editPasswordNotEqualWithConfirmed
       </td>
   <td class="duration">
-    53.892s
+    42.912s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
-    <div class="stackTrace" id="exception-5">
+        <a href="javascript:toggleElement('exception-10', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-10">
               <br/>
 报错信息: 修改用户登录密码失败; expected [true] but found [false].<br/>
 报错方法名:editPasswordNotEqualWithConfirmed(<br/>
@@ -166,15 +286,15 @@
                   editPasswordWrongOldPwd
       </td>
   <td class="duration">
-    49.591s
+    42.306s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-6', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
-    <div class="stackTrace" id="exception-6">
+        <a href="javascript:toggleElement('exception-11', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-11">
               <br/>
 报错信息: 修改用户登录密码失败; expected [true] but found [false].<br/>
 报错方法名:editPasswordWrongOldPwd(<br/>
@@ -189,15 +309,15 @@
                   editUsernameLessThanFourChars
       </td>
   <td class="duration">
-    41.090s
+    34.416s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-7', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
-    <div class="stackTrace" id="exception-7">
+        <a href="javascript:toggleElement('exception-12', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-12">
               <br/>
 报错信息: 编辑用户昵称失败;---(编辑前后用户昵称不一致); expected [true] but found [false].<br/>
 报错方法名:editUsernameLessThanFourChars(<br/>
@@ -207,21 +327,324 @@
                 </div>
       </td>
 </tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.RegisterTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  EmailAtEnd
+      </td>
+  <td class="duration">
+    53.716s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-13', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-13">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailAtEnd(<br/>
+报错类:RegisterTest<br/>
+报错行号:106)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailAtEnd(RegisterTest.java:106)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailMissKeyCharAit
+      </td>
+  <td class="duration">
+    55.367s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-14', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-14">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailMissKeyCharAit(<br/>
+报错类:RegisterTest<br/>
+报错行号:66)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyCharAit(RegisterTest.java:66)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailMissKeyCharSpot
+      </td>
+  <td class="duration">
+    52.959s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-15', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-15">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailMissKeyCharSpot(<br/>
+报错类:RegisterTest<br/>
+报错行号:56)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyCharSpot(RegisterTest.java:56)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailMissKeyChars
+      </td>
+  <td class="duration">
+    58.315s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-16', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-16">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailMissKeyChars(<br/>
+报错类:RegisterTest<br/>
+报错行号:46)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyChars(RegisterTest.java:46)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailOnlyCharAitEnd
+      </td>
+  <td class="duration">
+    53.638s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-17', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-17">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailOnlyCharAitEnd(<br/>
+报错类:RegisterTest<br/>
+报错行号:76)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailOnlyCharAitEnd(RegisterTest.java:76)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailOnlyCharSpotEnd
+      </td>
+  <td class="duration">
+    50.648s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-18', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-18">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailOnlyCharSpotEnd(<br/>
+报错类:RegisterTest<br/>
+报错行号:86)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailOnlyCharSpotEnd(RegisterTest.java:86)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailSpotEnd
+      </td>
+  <td class="duration">
+    52.632s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-19', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-19">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailSpotEnd(<br/>
+报错类:RegisterTest<br/>
+报错行号:96)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailSpotEnd(RegisterTest.java:96)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  EmailWrong
+      </td>
+  <td class="duration">
+    55.050s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-20', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-20">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:EmailWrong(<br/>
+报错类:RegisterTest<br/>
+报错行号:116)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.EmailWrong(RegisterTest.java:116)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  PwdIsChinese
+      </td>
+  <td class="duration">
+    48.446s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-21', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-21">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:PwdIsChinese(<br/>
+报错类:RegisterTest<br/>
+报错行号:146)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.PwdIsChinese(RegisterTest.java:146)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  PwdLessThanSix
+      </td>
+  <td class="duration">
+    51.192s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-22', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-22">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:PwdLessThanSix(<br/>
+报错类:RegisterTest<br/>
+报错行号:126)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.PwdLessThanSix(RegisterTest.java:126)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  PwdMoreThanTwentyFive
+      </td>
+  <td class="duration">
+    52.769s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-23', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-23">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:PwdMoreThanTwentyFive(<br/>
+报错类:RegisterTest<br/>
+报错行号:136)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.PwdMoreThanTwentyFive(RegisterTest.java:136)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  RegisterExited
+      </td>
+  <td class="duration">
+    50.043s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-24', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-24">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:RegisterExited(<br/>
+报错类:RegisterTest<br/>
+报错行号:169)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.RegisterExited(RegisterTest.java:169)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  RegisterOk
+      </td>
+  <td class="duration">
+    48.900s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-25', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable</b></a><br />
+    <div class="stackTrace" id="exception-25">
+              <br/>
+报错信息: expected [true] but found [false].<br/>
+报错方法名:RegisterOk(<br/>
+报错类:RegisterTest<br/>
+报错行号:36)<br />
+              com.yiibai.primera.testng.cases.RegisterTest.RegisterOk(RegisterTest.java:36)<br />
+                </div>
+      </td>
+</tr>
       </table>
 
 
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.yiibai.primera.testng.cases.PersonalCenterTest</td>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.HomeTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  Logout
+                  autoMenuEdit
       </td>
   <td class="duration">
-    16.718s
+    97.777s
   </td>
   <td class="result">
         
@@ -232,10 +655,176 @@
 </tr>
 <tr>
   <td class="method">
+                  clearSearchedHistory
+      </td>
+  <td class="duration">
+    13.069s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  morningPaper
+      </td>
+  <td class="duration">
+    10.721s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchByHistory
+      </td>
+  <td class="duration">
+    38.820s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchByInputChinese
+      </td>
+  <td class="duration">
+    40.622s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchByInputEnglish
+      </td>
+  <td class="duration">
+    47.786s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.LoginTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  loginConfim2
+      </td>
+  <td class="duration">
+    36.168s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.NewsDetailsTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  collect
+      </td>
+  <td class="duration">
+    7.698s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  comment
+      </td>
+  <td class="duration">
+    16.160s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  fontSize
+      </td>
+  <td class="duration">
+    25.084s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  imageSwitch
+      </td>
+  <td class="duration">
+    9.909s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  like
+      </td>
+  <td class="duration">
+    13.023s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.yiibai.primera.testng.cases.PersonalCenterTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
                   clearAllCollection
       </td>
   <td class="duration">
-    26.672s
+    7.589s
   </td>
   <td class="result">
         
@@ -249,7 +838,7 @@
                   clearCache
       </td>
   <td class="duration">
-    18.857s
+    12.579s
   </td>
   <td class="result">
         
@@ -263,7 +852,7 @@
                   clearFirstCollection
       </td>
   <td class="duration">
-    26.995s
+    24.187s
   </td>
   <td class="result">
         
@@ -277,7 +866,7 @@
                   editAccountConfirm
       </td>
   <td class="duration">
-    34.527s
+    29.128s
   </td>
   <td class="result">
         
@@ -291,7 +880,7 @@
                   editPasswordConfirm
       </td>
   <td class="duration">
-    49.992s
+    40.238s
   </td>
   <td class="result">
         
@@ -305,7 +894,7 @@
                   editUsernameConfirm
       </td>
   <td class="duration">
-    37.712s
+    26.481s
   </td>
   <td class="result">
         

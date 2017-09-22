@@ -351,12 +351,13 @@ public class PageAppium extends WaitAutoDriver{
 			List<AndroidElement> textFieldsList = driver.findElementsById(id);
 			List<AndroidElement> list = new ArrayList<AndroidElement>();
 			try {
+				if(num > textFieldsList.size())num = textFieldsList.size();
 				for (int i = 0; i < num; i++) {
 					list.add(textFieldsList.get(i));
 				}
 				return list;
 			} catch (Exception e) {
-				print("获取多个控件异常" + e.getMessage());
+				print("getManyElementById-获取多个控件异常：" + e.getMessage());
 			}
 		} else {
 			print("获取多个控件" + id + "时候driver为空");
@@ -396,6 +397,10 @@ public class PageAppium extends WaitAutoDriver{
 //		UiObject cl = new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textContains(
 //		cl.clickt();
 		AndroidElement element = driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector())");
+	}
+	
+	public String getPageSource() {
+		return driver.getPageSource();
 	}
 
 	/**

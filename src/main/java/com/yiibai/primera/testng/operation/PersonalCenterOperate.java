@@ -110,6 +110,7 @@ public class PersonalCenterOperate extends OperateAppium {
 			clickView(personalCenterPage.getAccountEditSaveBtn());
 			waitAuto();
 			press();
+			sleep(3000);
 			if(personalCenterPage.isEditedSuccessed()) {
 				result.setActual(ConstantUtil.ASSERT_TRUE);
 				message += "编辑用户登录账号成功;";
@@ -200,24 +201,29 @@ public class PersonalCenterOperate extends OperateAppium {
 	
 	/**
 	 * 5.APP分享
+	 * TODU
 	 * @return
 	 */
-	public boolean share() {
+	public ResultUtil share() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
-			return ConstantUtil.ASSERT_FALSE;
+			return result;
 		}
 		clickView(personalCenterPage.getShareBtn());
 		
-		return ConstantUtil.ASSERT_TRUE;
+		return result;
 	}
 	/**
 	 * 2.我的收藏
 	 * 用uiAutomator方式查找元素，不是很稳定，目前一直报错，该方法暂时搁置
 	 * @return
 	 */
-	public boolean myCollectionWithUiAutomator() {
+	public ResultUtil myCollectionWithUiAutomator() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
-			return ConstantUtil.ASSERT_FALSE;
+			return result;
 		}
 		clickView(personalCenterPage.getCollectionBtn());
 		//收藏的新闻的第一条
@@ -225,13 +231,15 @@ public class PersonalCenterOperate extends OperateAppium {
 		AndroidElement theEnd = uiAutomatorAppium.swipToElementAppear();
 		if(theEnd != null) {
 			System.out.println(theEnd.getText());
-			System.out.println("我的收藏里面没有收藏的新闻列表");
-			return ConstantUtil.ASSERT_TRUE;
+
+			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setMessage("我的收藏里面没有收藏的新闻列表");
+			return result;
 		}else {
-			System.out.println("出错啦~~~ ");
+			result.setMessage("出错啦~~~ ");
 		}
 		backHome();
-		return ConstantUtil.ASSERT_FALSE;
+		return result;
 	}
 	
 	/**
@@ -285,6 +293,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		if(firstCollection == null) {
 			result.setActual(ConstantUtil.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
+			backHome();
 			return result;
 		}
 		clickView(personalCenterPage.getCollectionEditBtn());
