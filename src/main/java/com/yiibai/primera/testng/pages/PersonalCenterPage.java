@@ -1,5 +1,7 @@
 package com.yiibai.primera.testng.pages;
 
+import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
+
 import com.yiibai.primera.testng.base.PageAppium;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -21,6 +23,7 @@ public class PersonalCenterPage extends PageAppium {
 	private final String COLLECTION_BTN_ID = "btn_center_collection";
 	private final String COLLECTION_NEWS_PARENT_ID = "lin_parent";//我的收藏新闻的最外层的id,作为是否有收藏的验证
 	private final String COLLECTION_PARENT_ID = "txt_newstitle1";//新闻正文的ID
+	private final String COLLECTION_NEWS_TITLE_ID = "video_detail_title";//收藏的新闻详情页面的title
 	private final String COLLECTION_EDIT_BTN_ID = "img_search";//我的收藏的编辑Btn
 	private final String COLLECTION_DELETE_ID = "img_delete";//新闻后面的取消收藏Btn
 	private final String COLLECTION_UPDATE_ID = "img_other";//我的收藏编辑之后的保存Btn
@@ -237,6 +240,15 @@ public class PersonalCenterPage extends PageAppium {
 	 */
 	public AndroidElement getClearCollectionSure() {
 		return findById(COLLECTION_CLEAR_ALL_SURE_ID);
+	}
+	
+	public String getNewsTitle() {
+		String title = null;
+		AndroidElement newsEl = findById(COLLECTION_NEWS_TITLE_ID);
+		if(newsEl != null) {
+			title = newsEl.getText();
+		}
+		return title;
 	}
 	/**
 	 * 3.联系我们

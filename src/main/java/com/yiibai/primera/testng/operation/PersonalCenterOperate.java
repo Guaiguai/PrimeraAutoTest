@@ -310,6 +310,35 @@ public class PersonalCenterOperate extends OperateAppium {
 		return result;
 	}
 	/**
+	 * 2.我的收藏
+	 * 2.3 进入第一条收藏的新闻的详情页面
+	 * @return
+	 */
+	public ResultUtil readFirstCollection() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
+		if(!isPersonalCenter()) {
+			return result;
+		}
+		clickView(personalCenterPage.getCollectionBtn());
+		//收藏的新闻的第一条
+		AndroidElement firstCollection = personalCenterPage.getCollectionParent();
+		if(firstCollection == null) {
+			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setMessage("我的收藏里面没有收藏的新闻列表");
+			return result;
+		}
+		//获得新闻标题
+		String text = firstCollection.getText();
+		clickView(firstCollection);
+		String title = personalCenterPage.getNewsTitle();
+		if(text.equals(title)) {
+			result.setActual(ConstantUtil.ASSERT_TRUE);
+		}
+		backHome();
+		return result;
+	}
+	/**
 	 * 对于登陆账号，密码做对应处理，方便测试
 	 * 如 登陆账号18091969298  进行+/-100，密码同理
 	 * @param base 测试用户的初始账号 18091969298

@@ -34,6 +34,57 @@ public class HomeOperate extends OperateAppium {
 		this.driver = initdriver;
 	}
 	/**
+	 * 首页下部分菜单验证，主要是Inicio 与 Videos的切换
+	 * @return
+	 */
+	public ResultUtil changeToVideo() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
+		if(!isHomePage()) {
+			result.setMessage("请定位到APP首页！");
+			return result;
+		}
+		clickView(homePage.getVideosMenu());
+		if(homePage.isVideoPage()) {
+			result.setActual(ConstantUtil.ASSERT_TRUE);
+		}
+		return result;
+	}
+	/**
+	 * 首页顶部的频道切换验证
+	 * @return
+	 */
+	public ResultUtil changeTopMenus() {
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
+		if(!isHomePage()) {
+			result.setMessage("请定位到APP首页！");
+			return result;
+		}
+		List<AndroidElement> list = homePage.getTopMenusList();
+		if(!list.isEmpty() && list.size() > 0) {
+			int total = list.size();
+			int num = 1;
+			for (int i = 0; i < list.size(); i++) {
+//				System.out.println(list.get(i).getText());
+				clickView(list.get(i));
+				waitAuto();
+				if(list.get(i).isSelected()) {
+					num++;
+				}
+			}
+			
+			if(total == num) {
+				result.setActual(ConstantUtil.ASSERT_TRUE);
+			}
+			//返回到首页
+			for (int j = 0; j < num; j++) {
+				swipeToRight(300);
+			}
+		}
+		return result;
+	}
+	/**
 	 * 首页右上角新闻菜单编辑
 	 * @return
 	 */
@@ -60,7 +111,6 @@ public class HomeOperate extends OperateAppium {
 			if(autoBtn != null) {
 				clickView(autoBtn);
 				clickView(homePage.getMenuEditBtn());
-				//TODU 需要开发配合修改，比如添加文字说明，已添加，未添加之类，根据该文字返回首页滑动菜单查找测试元素
 				//返回首页
 				clickView(homePage.getMenuBack());
 				//在菜单上滑动知道Auto菜单出现
@@ -272,7 +322,8 @@ public class HomeOperate extends OperateAppium {
 	 */
 	private void backHome() {
 		while (!isHomePage()) {
-			back();
+//			back();
+			clickView(homePage.getBack());
 		}
 	}
 

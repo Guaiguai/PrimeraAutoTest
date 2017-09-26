@@ -4,24 +4,9 @@
            failures="4"
            errors="0"
            skipped="0"
-           time="202.302">
+           time="206.247">
   <properties />
-            <testcase name="loginErrorNum" time="38.566" classname="com.yiibai.primera.testng.cases.LoginTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:loginErrorNum(
-报错类:LoginTest
-报错行号:41)
-  com.yiibai.primera.testng.cases.LoginTest.loginErrorNum(LoginTest.java:41)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="loginChinese" time="38.858" classname="com.yiibai.primera.testng.cases.LoginTest">
+            <testcase name="loginChinese" time="40.436" classname="com.yiibai.primera.testng.cases.LoginTest">
                 <failure type="java.lang.Throwable"
                   message="(null)"
               >
@@ -36,7 +21,23 @@
       </failure>
 
           </testcase>
-            <testcase name="loginErrorUser" time="46.941" classname="com.yiibai.primera.testng.cases.LoginTest">
+            <testcase name="loginConfim2" time="46.928" classname="com.yiibai.primera.testng.cases.LoginTest">
+                <failure type="java.lang.AssertionError"
+                  message="帐号密码对的情况登录 expected [true] but found [false]"
+              >
+<![CDATA[java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]
+  
+报错信息: expected [true] but found [false].
+报错方法名:loginConfim2(
+报错类:LoginTest
+报错行号:83)
+  com.yiibai.primera.testng.cases.LoginTest.loginConfim2(LoginTest.java:83)
+  com.yiibai.primera.testng.cases.LoginTest.loginConfim2(LoginTest.java:84)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="loginErrorUser" time="45.874" classname="com.yiibai.primera.testng.cases.LoginTest">
                 <failure type="java.lang.Throwable"
                   message="(null)"
               >
@@ -51,24 +52,23 @@
       </failure>
 
           </testcase>
-            <testcase name="loginConfim" time="41.769" classname="com.yiibai.primera.testng.cases.LoginTest">
-                <failure type="java.lang.AssertionError"
-                  message="帐号密码对的情况登录 expected [true] but found [false]"
+            <testcase name="loginErrorNum" time="38.266" classname="com.yiibai.primera.testng.cases.LoginTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
               >
-<![CDATA[java.lang.AssertionError: 帐号密码对的情况登录 expected [true] but found [false]
+<![CDATA[java.lang.Throwable
   
 报错信息: expected [true] but found [false].
-报错方法名:loginConfim(
+报错方法名:loginErrorNum(
 报错类:LoginTest
-报错行号:73)
-  com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:73)
-  com.yiibai.primera.testng.cases.LoginTest.loginConfim(LoginTest.java:74)
+报错行号:41)
+  com.yiibai.primera.testng.cases.LoginTest.loginErrorNum(LoginTest.java:41)
 ]]>
       </failure>
 
           </testcase>
   
   
-            <testcase name="loginConfim2" time="36.168" classname="com.yiibai.primera.testng.cases.LoginTest" />
+            <testcase name="loginConfim" time="34.743" classname="com.yiibai.primera.testng.cases.LoginTest" />
       
 </testsuite>

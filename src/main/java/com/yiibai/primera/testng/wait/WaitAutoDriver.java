@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 
-import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.wait.AndroidDriverWait;
 import com.yiibai.primera.testng.wait.ExpectedCondition;
 
@@ -60,8 +59,8 @@ public class WaitAutoDriver{
 						}
 					});
 		} catch (TimeoutException e) {
-			System.out.print(
-					"查找元素超时!! " + time + " 秒之后还没找到元素 [" + by.toString() + "]");
+//			System.out.print(
+//					this.getClass() + "-waitAuto:查找元素超时!! " + time + " 秒之后还没找到元素 [" + by.toString() + "]");
 			return null;
 		}
 	}

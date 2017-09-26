@@ -3,11 +3,12 @@
 <suite name="Suite"> <!--parallel="true" 并行 -->
 	<test name="testAll">
 		<classes>
-			<class name="com.yiibai.primera.testng.cases.HomeTest"/>
-			<!--<class name="com.yiibai.primera.testng.cases.NewsDetailsTest"/> 
+		    <class name="com.yiibai.primera.testng.cases.HomeTest"/>
+			<class name="com.yiibai.primera.testng.cases.VideoTest"/> 
+			<class name="com.yiibai.primera.testng.cases.NewsDetailsTest"/> 
 			<class name="com.yiibai.primera.testng.cases.PersonalCenterTest"/>
 			<class name="com.yiibai.primera.testng.cases.LoginTest"/>
-			<class name="com.yiibai.primera.testng.cases.RegisterTest"/>  -->
+			<class name="com.yiibai.primera.testng.cases.RegisterTest"/>
 		</classes>
 		<listeners>
 			<listener class-name="org.uncommons.reportng.HTMLReporter" />

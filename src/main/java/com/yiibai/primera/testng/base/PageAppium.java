@@ -116,6 +116,7 @@ public class PageAppium extends WaitAutoDriver{
 			}
 			return true;
 		} catch (Exception e) {
+			System.out.println(this.getClass() + "-isElementExist 报错：" + e.getMessage());
 			return false;
 		}
 	}
@@ -313,8 +314,6 @@ public class PageAppium extends WaitAutoDriver{
 	 * 
 	 * @param String
 	 *            className
-	 * @param num
-	 *            取第NUM个控件
 	 * @return
 	 */
 	public AndroidElement getLastOneElementByClassName(String className) {
@@ -366,14 +365,21 @@ public class PageAppium extends WaitAutoDriver{
 		return null;
 
 	}
-
+	/**
+	 * 取第一个元素
+	 * @param id
+	 * @return
+	 */
+	public AndroidElement getFirstElementById(String id) {
+		return getListOneElementById(id, 0);
+	}
 	/**
 	 * 获取同id的list的控件
 	 * 
 	 * @param id
 	 *            id
 	 * @param num
-	 *            取那一个控件
+	 *            取那一个控件  0-取第一个元素，即取第num-1个元素
 	 * @return
 	 */
 	public AndroidElement getListOneElementById(String id, int num) {

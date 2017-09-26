@@ -6,12 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.HomeOperate;
-import com.yiibai.primera.testng.util.ResultUtil;
-
-
 /**
  * 登录测试用例
  * Created by ChenXiaoGuai on 2017/08/15.
@@ -89,6 +85,20 @@ public class HomeTest extends InitAppium {
         ResultUtil  result = homeOperate.AutoChannelMenusEdit();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
         System.out.println("首页菜单编辑验证:"+ result.getActual());
+    }
+    
+    @Test(priority = 10)
+    public void changeTopMenus() {
+    	ResultUtil result = homeOperate.changeTopMenus();
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+        System.out.println("首页菜单顶部频道切换的验证:"+ result.getActual());
+    }
+    
+    @Test(priority = 11)
+    public void changeToVideos() {
+    	ResultUtil result = homeOperate.changeToVideo();
+        Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
+        System.out.println("首页菜单Inicio与Videos切换的验证:"+ result.getActual());
     }
     /**
      * 首页菜单编辑验证

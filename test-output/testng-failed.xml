@@ -7,24 +7,32 @@
   </listeners>
   <test name="testAll(failed)">
     <classes>
+      <class name="com.yiibai.primera.testng.cases.VideoTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="initDriver"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.VideoTest -->
+      <class name="com.yiibai.primera.testng.cases.NewsDetailsTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="like"/>
+          <include name="beforeSuite"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.yiibai.primera.testng.cases.NewsDetailsTest -->
       <class name="com.yiibai.primera.testng.cases.LoginTest">
         <methods>
           <include name="afterClass"/>
+          <include name="loginConfim2"/>
           <include name="beforeSuite"/>
-          <include name="loginErrorUser"/>
           <include name="loginChinese"/>
-          <include name="loginConfim"/>
+          <include name="loginErrorUser"/>
           <include name="initDriver"/>
           <include name="loginErrorNum"/>
         </methods>
       </class> <!-- com.yiibai.primera.testng.cases.LoginTest -->
-      <class name="com.yiibai.primera.testng.cases.HomeTest">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeSuite"/>
-          <include name="initDriver"/>
-        </methods>
-      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
       <class name="com.yiibai.primera.testng.cases.RegisterTest">
         <methods>
           <include name="EmailOnlyCharAitEnd"/>
@@ -36,8 +44,8 @@
           <include name="EmailMissKeyCharSpot"/>
           <include name="EmailOnlyCharSpotEnd"/>
           <include name="PwdLessThanSix"/>
-          <include name="EmailSpotEnd"/>
           <include name="PwdIsChinese"/>
+          <include name="EmailSpotEnd"/>
           <include name="afterClass"/>
           <include name="RegisterOk"/>
           <include name="RegisterExited"/>
@@ -52,8 +60,8 @@
           <include name="afterClass"/>
           <include name="beforeSuite"/>
           <include name="Logout"/>
-          <include name="editAccountLessThanSixChars"/>
           <include name="editPasswordMoreThanTwentyFiveChars"/>
+          <include name="editAccountLessThanSixChars"/>
           <include name="editPasswordWrongOldPwd"/>
           <include name="editUsernameLessThanFourChars"/>
           <include name="editPasswordLessThanSixChars"/>
@@ -61,13 +69,16 @@
           <include name="editPasswordEqualOld"/>
         </methods>
       </class> <!-- com.yiibai.primera.testng.cases.PersonalCenterTest -->
-      <class name="com.yiibai.primera.testng.cases.NewsDetailsTest">
+      <class name="com.yiibai.primera.testng.cases.HomeTest">
         <methods>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
           <include name="initDriver"/>
+          <include name="searchByInputChinese"/>
+          <include name="clearSearchedHistory"/>
+          <include name="searchByInputEnglish"/>
         </methods>
-      </class> <!-- com.yiibai.primera.testng.cases.NewsDetailsTest -->
+      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
     </classes>
   </test> <!-- testAll(failed) -->
 </suite> <!-- Failed suite [Suite] -->

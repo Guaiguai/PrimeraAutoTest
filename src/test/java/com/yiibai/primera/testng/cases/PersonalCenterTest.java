@@ -115,11 +115,21 @@ public class PersonalCenterTest extends InitAppium {
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
     	System.out.println("测试清空缓存信息，返回：" + result.getMessage());
     }
+
+    /**
+     * 浏览第一条我的收藏的新闻
+     */
+    @Test(priority = 13)
+    public void readFirstCollection(){
+        ResultUtil result = personalCenterOperate.readFirstCollection();
+        Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
+    	System.out.println("测试阅读第一条我的收藏的新闻，返回：" + result.getMessage());
+    }
     /**
      * 我的收藏的测试
 	 * 取消收藏的第一条新闻验证
      */
-    @Test(priority = 13)
+    @Test(priority = 14)
     public void clearFirstCollection(){
         ResultUtil result = personalCenterOperate.clearFirstCollection();
         Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
@@ -129,7 +139,7 @@ public class PersonalCenterTest extends InitAppium {
      * 我的收藏的测试
 	 * 取消全部收藏的新闻
      */
-    @Test(priority = 14)
+    @Test(priority = 15)
     public void clearAllCollection(){
         ResultUtil result = personalCenterOperate.clearAllCollection();
         Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
@@ -139,7 +149,7 @@ public class PersonalCenterTest extends InitAppium {
     /**
      * 用户退出登录APP
      */
-    @Test(priority = 15)
+    @Test(priority = 16)
     public void Logout() {
     	ResultUtil result = personalCenterOperate.logout();
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
