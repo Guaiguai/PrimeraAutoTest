@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="testAll"
            tests="8"
-           failures="1"
+           failures="0"
            errors="0"
            skipped="0"
-           time="354.308">
+           time="363.419">
   <properties />
-            <testcase name="clearSearchedHistory" time="14.052" classname="com.yiibai.primera.testng.cases.HomeTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: 暂时没有搜索历史！ expected [true] but found [false].
-报错方法名:clearSearchedHistory(
-报错类:HomeTest
-报错行号:80)
-  com.yiibai.primera.testng.cases.HomeTest.clearSearchedHistory(HomeTest.java:80)
-]]>
-      </failure>
-
-          </testcase>
   
   
-            <testcase name="changeToVideos" time="16.604" classname="com.yiibai.primera.testng.cases.HomeTest" />
-                <testcase name="searchByHistory" time="49.671" classname="com.yiibai.primera.testng.cases.HomeTest" />
-                <testcase name="changeTopMenus" time="28.483" classname="com.yiibai.primera.testng.cases.HomeTest" />
-                <testcase name="morningPaper" time="9.842" classname="com.yiibai.primera.testng.cases.HomeTest" />
-                <testcase name="searchByInputEnglish" time="64.005" classname="com.yiibai.primera.testng.cases.HomeTest" />
-                <testcase name="searchByInputChinese" time="45.397" classname="com.yiibai.primera.testng.cases.HomeTest" />
-                <testcase name="autoMenuEdit" time="126.254" classname="com.yiibai.primera.testng.cases.HomeTest" />
+            <testcase name="searchByInputChinese" time="40.671" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="searchByInputEnglish" time="55.644" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="searchByHistory" time="49.707" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="changeToVideos" time="13.750" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="changeTopMenus" time="27.293" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="clearSearchedHistory" time="32.716" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="morningPaper" time="11.533" classname="com.yiibai.primera.testng.cases.HomeTest" />
+                <testcase name="autoMenuEdit" time="132.105" classname="com.yiibai.primera.testng.cases.HomeTest" />
       
 </testsuite>

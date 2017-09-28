@@ -4,24 +4,9 @@
            failures="4"
            errors="0"
            skipped="0"
-           time="206.247">
+           time="223.882">
   <properties />
-            <testcase name="loginChinese" time="40.436" classname="com.yiibai.primera.testng.cases.LoginTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:loginChinese(
-报错类:LoginTest
-报错行号:52)
-  com.yiibai.primera.testng.cases.LoginTest.loginChinese(LoginTest.java:52)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="loginConfim2" time="46.928" classname="com.yiibai.primera.testng.cases.LoginTest">
+            <testcase name="loginConfim2" time="44.173" classname="com.yiibai.primera.testng.cases.LoginTest">
                 <failure type="java.lang.AssertionError"
                   message="帐号密码对的情况登录 expected [true] but found [false]"
               >
@@ -30,29 +15,14 @@
 报错信息: expected [true] but found [false].
 报错方法名:loginConfim2(
 报错类:LoginTest
-报错行号:83)
-  com.yiibai.primera.testng.cases.LoginTest.loginConfim2(LoginTest.java:83)
+报错行号:84)
   com.yiibai.primera.testng.cases.LoginTest.loginConfim2(LoginTest.java:84)
+  com.yiibai.primera.testng.cases.LoginTest.loginConfim2(LoginTest.java:85)
 ]]>
       </failure>
 
           </testcase>
-            <testcase name="loginErrorUser" time="45.874" classname="com.yiibai.primera.testng.cases.LoginTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:loginErrorUser(
-报错类:LoginTest
-报错行号:31)
-  com.yiibai.primera.testng.cases.LoginTest.loginErrorUser(LoginTest.java:31)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="loginErrorNum" time="38.266" classname="com.yiibai.primera.testng.cases.LoginTest">
+            <testcase name="loginErrorNum" time="45.731" classname="com.yiibai.primera.testng.cases.LoginTest">
                 <failure type="java.lang.Throwable"
                   message="(null)"
               >
@@ -61,14 +31,44 @@
 报错信息: expected [true] but found [false].
 报错方法名:loginErrorNum(
 报错类:LoginTest
-报错行号:41)
-  com.yiibai.primera.testng.cases.LoginTest.loginErrorNum(LoginTest.java:41)
+报错行号:42)
+  com.yiibai.primera.testng.cases.LoginTest.loginErrorNum(LoginTest.java:42)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="loginChinese" time="45.654" classname="com.yiibai.primera.testng.cases.LoginTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: expected [true] but found [false].
+报错方法名:loginChinese(
+报错类:LoginTest
+报错行号:53)
+  com.yiibai.primera.testng.cases.LoginTest.loginChinese(LoginTest.java:53)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="loginErrorUser" time="48.542" classname="com.yiibai.primera.testng.cases.LoginTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: expected [true] but found [false].
+报错方法名:loginErrorUser(
+报错类:LoginTest
+报错行号:32)
+  com.yiibai.primera.testng.cases.LoginTest.loginErrorUser(LoginTest.java:32)
 ]]>
       </failure>
 
           </testcase>
   
   
-            <testcase name="loginConfim" time="34.743" classname="com.yiibai.primera.testng.cases.LoginTest" />
+            <testcase name="loginConfim" time="39.782" classname="com.yiibai.primera.testng.cases.LoginTest" />
       
 </testsuite>

@@ -6,8 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.HomeOperate;
+import com.yiibai.primera.testng.util.MethodUtil;
+import com.yiibai.primera.testng.util.ResultUtil;
 /**
  * 登录测试用例
  * Created by ChenXiaoGuai on 2017/08/15.
@@ -29,7 +32,7 @@ public class HomeTest extends InitAppium {
 	public void refresh(){
         ResultUtil result = homeOperate.refresh();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页刷新验证:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "-首页刷新验证:"+ result.getActual());
     }
 
     /**
@@ -40,7 +43,7 @@ public class HomeTest extends InitAppium {
 	public void morningPaper() throws ParseException{
 		ResultUtil result = homeOperate.MorningPaper();
 		Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页验证晨报:"+ result.getActual() + ",提示信息为:" + result.getMessage());
+        System.out.println(MethodUtil.getFileLineMethod() + "-首页验证晨报:"+ result.getActual() + ",提示信息为:" + result.getMessage());
     }
     /**
      * 首页搜索验证
@@ -49,13 +52,13 @@ public class HomeTest extends InitAppium {
 	public void searchByInputChinese(){
     	ResultUtil result = homeOperate.searchByInput("测试");
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-    	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+    	System.out.println(MethodUtil.getFileLineMethod() + "-验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
     }
     @Test(priority = 4)
    	public void searchByInputEnglish(){
        	ResultUtil result = homeOperate.searchByInput("hello");
        	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-       	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+       	System.out.println(MethodUtil.getFileLineMethod() + "-验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
        }
     /**
      * 首页搜索验证
@@ -64,17 +67,17 @@ public class HomeTest extends InitAppium {
 	public void searchByHistory(){
     	ResultUtil result = homeOperate.searchByHistory();
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-    	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+    	System.out.println(MethodUtil.getFileLineMethod() + "-验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
     }
     
     /**
      * 清空搜索历史
      */
-    @Test(priority = 6,dependsOnMethods = {"searchByInputChinese","searchByInputEnglish"})
+    @Test(priority = 6)
     public void clearSearchedHistory() {
     	ResultUtil result = homeOperate.clearSearchHistory();
     	Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-    	System.out.println("验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
+    	System.out.println(MethodUtil.getFileLineMethod() + "-验证结果是：" + result.getActual() + ",返回信息是：" + result.getMessage());
     }
 
     /**
@@ -84,21 +87,21 @@ public class HomeTest extends InitAppium {
 	public void autoMenuEdit(){
         ResultUtil  result = homeOperate.AutoChannelMenusEdit();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页菜单编辑验证:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "-首页菜单编辑验证:"+ result.getActual());
     }
     
     @Test(priority = 10)
     public void changeTopMenus() {
     	ResultUtil result = homeOperate.changeTopMenus();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页菜单顶部频道切换的验证:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "-首页菜单顶部频道切换的验证:"+ result.getActual());
     }
     
     @Test(priority = 11)
     public void changeToVideos() {
     	ResultUtil result = homeOperate.changeToVideo();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页菜单Inicio与Videos切换的验证:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "-首页菜单Inicio与Videos切换的验证:"+ result.getActual());
     }
     /**
      * 首页菜单编辑验证
@@ -107,6 +110,6 @@ public class HomeTest extends InitAppium {
 	public void allMenusDroped(){
         ResultUtil  result = homeOperate.channelMenusMoreThanThree();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("首页菜单编辑验证:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "-首页菜单编辑验证:"+ result.getActual());
     }
 }

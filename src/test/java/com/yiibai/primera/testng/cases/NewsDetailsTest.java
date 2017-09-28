@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.NewsDetailsOperate;
+import com.yiibai.primera.testng.util.MethodUtil;
 import com.yiibai.primera.testng.util.ResultUtil;
 
 /**
@@ -36,7 +37,7 @@ public class NewsDetailsTest extends InitAppium {
 		System.out.println("getExcepted is:" + result.getExcepted());
 		System.out.println("message is:" + result.getMessage());
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-		print("验证文章配图查看:" + result.getMessage());
+		print(MethodUtil.getFileLineMethod() + "验证文章配图查看:" + result.getMessage());
 	}
 	/**
 	 * 验证文章收藏
@@ -45,7 +46,7 @@ public class NewsDetailsTest extends InitAppium {
 	public void collect() {
 		ResultUtil result = newsdetailsOperate.collect();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-		print("验证文章收藏:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "验证文章收藏:" + result.getActual());
 	}
 	/**
 	 * 验证文章点赞
@@ -54,7 +55,7 @@ public class NewsDetailsTest extends InitAppium {
 	public void like() {
 		ResultUtil result = newsdetailsOperate.like();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-		print("验证文章点赞:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "验证文章点赞:" + result.getActual());
 	}
 	/**
 	 * 验证新闻详情页的字体的设置
@@ -63,7 +64,7 @@ public class NewsDetailsTest extends InitAppium {
 	public void fontSize() {
 		ResultUtil result = newsdetailsOperate.fontSize();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-		print("验证文章字体设置:" + result.getMessage());
+		print(MethodUtil.getFileLineMethod() + "验证文章字体设置:" + result.getMessage());
 	}
 	/**
 	 * 验证文章评论
@@ -72,7 +73,7 @@ public class NewsDetailsTest extends InitAppium {
 	public void comment() {
 		ResultUtil result = newsdetailsOperate.comment("very good!");
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-		print("验证文章评论:" + result.getActual() + ",返回信息为:" + result.getMessage());
+		print(MethodUtil.getFileLineMethod() + "验证文章评论:" + result.getActual() + ",返回信息为:" + result.getMessage());
 	}
 	/**
 	 * 验证文章更多阅读
@@ -81,7 +82,7 @@ public class NewsDetailsTest extends InitAppium {
 	public void readingMore() {
 		ResultUtil result = newsdetailsOperate.readingsMore();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-		print("验证新闻更多阅读:" + result.getActual() + ",返回信息为:" + result.getMessage());
+		print(MethodUtil.getFileLineMethod() + "验证新闻更多阅读:" + result.getActual() + ",返回信息为:" + result.getMessage());
 	}
 	/**
 	 * 验证新闻详情页的字体的设置
@@ -90,6 +91,6 @@ public class NewsDetailsTest extends InitAppium {
 	public void share() {
 		ResultUtil result = newsdetailsOperate.share();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
-		print("验证文章分享:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "验证文章分享:" + result.getActual());
 	}
 }

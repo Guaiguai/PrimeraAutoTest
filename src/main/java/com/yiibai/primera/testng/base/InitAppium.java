@@ -30,7 +30,7 @@ public class InitAppium {
 	public static String platformVersion = "4.1";
 	//dirver的session的超时时间，默认是60秒
 	public static String commandTimeout = "6000";
-	//automationName表示appium使用的测试引擎，默认是appium，也可以是uiautomator
+	//automationName表示appium使用的测试引擎，默认是appium，也可以是selendroid,uiautomator,uiautomator2
 	public static String automationName = "appium";
 	// 不重置应用数据，如重新启动登录过的App时，仍然是登录状态，不需要重新登录
 	public static String noReset = "True";
@@ -103,6 +103,7 @@ public class InitAppium {
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, commandTimeout);
 		capabilities.setCapability(MobileCapabilityType.NO_RESET, noReset);
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, automationName);
+//		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
 		// 支持中文
 		capabilities.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, unicodeKeyboard);
 		capabilities.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD,resetKeyboard);

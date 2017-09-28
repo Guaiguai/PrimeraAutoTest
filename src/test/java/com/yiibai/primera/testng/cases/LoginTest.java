@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.LoginOperate;
+import com.yiibai.primera.testng.util.MethodUtil;
 import com.yiibai.primera.testng.util.ResultUtil;
 
 /**
@@ -29,7 +30,7 @@ public class LoginTest extends InitAppium {
     public void loginErrorUser(){
         ResultUtil result = loginOperate.login("18091969298","iuhihj");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("帐号密码不对情况登录:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码不对情况登录:"+ result.getActual());
     }
 
     /**
@@ -39,7 +40,7 @@ public class LoginTest extends InitAppium {
     public void loginErrorNum(){
         ResultUtil result = loginOperate.login("1319262asdfsddsa","dfgd#@$1234fgdfds");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("帐号密码格式不对情况登录:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码格式不对情况登录:"+ result.getActual());
     }
 
 
@@ -50,7 +51,7 @@ public class LoginTest extends InitAppium {
     public void loginChinese(){
         ResultUtil result = loginOperate.login("帐号","密码");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("帐号密码为中文情况登录:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码为中文情况登录:"+ result.getActual());
     }
 
 
@@ -62,7 +63,7 @@ public class LoginTest extends InitAppium {
     public void loginEmpty(){
         ResultUtil result = loginOperate.login("","");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println("帐号密码为空情况登录:"+ result.getActual());
+        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码为空情况登录:"+ result.getActual());
     }
     /**
      * 测试帐号密码正确情况

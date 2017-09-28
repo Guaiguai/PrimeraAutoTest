@@ -1,7 +1,5 @@
 package com.yiibai.primera.testng.base;
 
-import static com.yiibai.primera.testng.base.InitAppium.appPackage;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -177,9 +175,15 @@ public class OperateAppium extends WaitAutoDriver{
 	public void swipeToUp(int during, int percent) {
 		int width = getScreenWidth();
 		int height = getScreenHeight();
-		System.out.println("width:" + width + ",height:" + height);
-		driver.swipe(width / 2, height * (percent - 1) / percent, width / 2,
-				height / percent, during);
+//		System.out.println("width:" + width + ",height:" + height);
+//		TouchAction swipe = new TouchAction(driver)
+//				.press(width / 2, height * (percent - 1) / percent)
+//				.waitAction(Duration.ofSeconds(during))
+//				.moveTo(width / 2, height / percent)
+//				.waitAction(Duration.ofSeconds(during)).release();
+//		swipe.perform();
+		 driver.swipe(width / 2, height * (percent - 1) / percent, width / 2,
+		 height / percent, during);
 	}
 
 	public void swipeToDown(int during) {
@@ -195,8 +199,14 @@ public class OperateAppium extends WaitAutoDriver{
 	public void swipeToDown(int during, int percent) {
 		int width = getScreenWidth();
 		int height = getScreenHeight();
-		driver.swipe(width / 2, height / percent, width / 2,
-				height * (percent - 1) / percent, during);
+//		TouchAction swipe = new TouchAction(driver).press(width / 2, height / percent)
+//				.waitAction(Duration.ofSeconds(during))
+//				.moveTo(width / 2, height * (percent - 1) / percent)
+//				.waitAction(Duration.ofSeconds(during)).release();
+//		swipe.perform();
+
+		 driver.swipe(width / 2, height / percent, width / 2,
+		 height * (percent - 1) / percent, during);
 	}
 
 	public void swipeToLeft(int during) {
@@ -214,8 +224,24 @@ public class OperateAppium extends WaitAutoDriver{
 	public void swipeToLeft(int during, int percent) {
 		int width = getScreenWidth();
 		int height = getScreenHeight();
-		driver.swipe(width * (percent - 1) / percent, height / 2,
-				width / percent, height / 2, during);
+//		System.out.println("宽度：" + width + ",高度：" + height);
+//		// System.out.println("转化的second是：" + Duration.ofSeconds(during));
+//		System.out.println(
+//				"起始点坐标：" + width * (percent - 1) / percent + "，" + height / 2);
+//		System.out.println("滑动偏移量：" + width * (percent - 2) / percent + "，" + 0);
+//		TouchAction swipe = new TouchAction(driver)
+//				.press(width * (percent - 1) / percent, height / 2)
+//				.waitAction(Duration.ofSeconds(during))
+//				.moveTo(-width * (percent - 2) / percent, 0)
+//				.waitAction(Duration.ofSeconds(during)).release();
+//		swipe.perform();
+//		TouchAction swipe = new TouchAction(driver)
+//				.press(width / 2, height / 2)
+//				.waitAction(Duration.ofSeconds(2)).moveTo(-width / 4, 0)
+//				.waitAction(Duration.ofSeconds(2)).release();
+//		swipe.perform();
+		 driver.swipe(width * (percent - 1) / percent, height / 2,
+		 width / percent, height / 2, during);
 	}
 
 	public void swipeToRight(int during) {
@@ -233,8 +259,21 @@ public class OperateAppium extends WaitAutoDriver{
 	public void swipeToRight(int during, int percent) {
 		int width = getScreenWidth();
 		int height = getScreenHeight();
-		driver.swipe(width / percent, height / 2,
-				width * (percent - 1) / percent, height / 2, during);
+		System.out.println("width:" + width + ",height:" + height);
+//		TouchAction swipe = new TouchAction(driver)
+//				.press(width / percent, height / 2)
+//				.waitAction(Duration.ofSeconds(during))
+//				.moveTo(width * (percent - 1) / percent, height / 2)
+//				.waitAction(Duration.ofSeconds(during)).release();
+		
+//		TouchAction swipe = new TouchAction(driver)
+//				.press(width / 2, height / 2)
+//				.waitAction(Duration.ofSeconds(during))
+//				.moveTo(width / 4, 0)
+//				.waitAction(Duration.ofSeconds(during)).release();
+//		swipe.perform();
+		 driver.swipe(width / percent, height / 2,
+		 width * (percent - 1) / percent, height / 2, during);
 	}
 
 	/**
@@ -243,9 +282,9 @@ public class OperateAppium extends WaitAutoDriver{
 	 * @param activityName
 	 *            activity的名字
 	 */
-	public void startActivity(String activityName) {
-		driver.startActivity(appPackage, activityName);
-	}
+//	public void startActivity(String activityName) {
+//		driver.startActivity(appPackage, activityName);
+//	}
 
 	/**
 	 * 获取当前界面的所有EditText，并依次输入内容
@@ -308,9 +347,11 @@ public class OperateAppium extends WaitAutoDriver{
 	 */
 	public void press(int x, int y) {
 		try {
-			driver.tap(1, x, y, 500);
-			// getTouch().tap(x, y).perform();
-			print("tab点击位置(" + x + "," + y + ")");
+//			TouchAction swipe = new TouchAction(driver).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2))
+//					.moveTo(0, height / 4).waitAction(Duration.ofSeconds(2)).release();
+//			swipe.perform();
+//			driver.tap(1, x, y, 500);
+			 getTouch().tap(x, y).perform();
 		} catch (Exception e) {
 			print("tab点击元素位置异常" + e.getMessage());
 			e.printStackTrace();
@@ -368,7 +409,8 @@ public class OperateAppium extends WaitAutoDriver{
 	 *            方向，UP DOWN LEFT RIGHT
 	 */
 	public void swipOnElement(AndroidElement element, String direction,
-			int duration) {
+			int during) {
+//		TouchAction swipe = null;
 		// 获取元素的起初xy，在左上角
 		int x = element.getLocation().getX();
 		int y = element.getLocation().getY();
@@ -380,25 +422,50 @@ public class OperateAppium extends WaitAutoDriver{
 			case SWIP_UP :
 				int startX = x + width / 2;
 				// 在4/5的底部的中间向上滑动
+
+//				swipe = new TouchAction(driver)
+//						.press(startX, y + height * 4 / 5)
+//						.waitAction(Duration.ofSeconds(during))
+//						.moveTo(startX, y + height / 5)
+//						.waitAction(Duration.ofSeconds(during)).release();
+//				swipe.perform();
 				driver.swipe(startX, y + height * 4 / 5, startX, y + height / 5,
-						duration);
+						during);
 				break;
 			case SWIP_DOWN :
 				startX = x + width / 2;
 				// 在4/5的底部的中间向上滑动
+//				swipe = new TouchAction(driver)
+//						.press(startX, y + height / 5)
+//						.waitAction(Duration.ofSeconds(during))
+//						.moveTo(startX, y + height * 4 / 5)
+//						.waitAction(Duration.ofSeconds(during)).release();
+//				swipe.perform();
 				driver.swipe(startX, y + height / 5, startX, y + height * 4 / 5,
-						duration);
+						during);
 				break;
 
 			case SWIP_LEFT :
 				int startY = y + width / 2;
+//				swipe = new TouchAction(driver)
+//						.press(x + width * 4 / 5, startY)
+//						.waitAction(Duration.ofSeconds(during))
+//						.moveTo(x + width / 5, startY)
+//						.waitAction(Duration.ofSeconds(during)).release();
+//				swipe.perform();
 				driver.swipe(x + width * 4 / 5, startY, x + width / 5, startY,
-						duration);
+						during);
 				break;
 			case SWIP_RIGHT :
 				startY = y + width / 2;
+//				swipe = new TouchAction(driver)
+//						.press(x + width / 5, startY)
+//						.waitAction(Duration.ofSeconds(during))
+//						.moveTo(x + width * 4 / 5, startY)
+//						.waitAction(Duration.ofSeconds(during)).release();
+//				swipe.perform();
 				driver.swipe(x + width / 5, startY, x + width * 4 / 5, startY,
-						duration);
+						during);
 				break;
 		}
 	}
@@ -435,19 +502,32 @@ public class OperateAppium extends WaitAutoDriver{
 	 * @param duration
 	 *            持续时间
 	 */
-	public void swipAtTop(String direction,int duration) 
+	public void swipAtTop(String direction,int during) 
 	{
+//		TouchAction swipe = null;
 		int width = getScreenWidth();
 		int height = getScreenHeight();
 		int percent = SWIPE_DEFAULT_PERCENT;
 		switch (direction) {
 			case "LEFT" :
+//				swipe = new TouchAction(driver)
+//						.press(width * (percent - 1) / percent, height * 8 / 10)
+//						.waitAction(Duration.ofSeconds(during))
+//						.moveTo(width / percent, height * 8 / 10)
+//						.waitAction(Duration.ofSeconds(during)).release();
+//				swipe.perform();
 				driver.swipe(width * (percent - 1) / percent, height * 8 / 10,
-						width / percent, height * 8 / 10, duration);
+						width / percent, height * 8 / 10, during);
 				break;
 			case "RIGHT" :
+//				swipe = new TouchAction(driver)
+//						.press(width / percent, height * 8 / 10)
+//						.waitAction(Duration.ofSeconds(during))
+//						.moveTo(width * (percent - 1) / percent, height * 8 / 10)
+//						.waitAction(Duration.ofSeconds(during)).release();
+//				swipe.perform();
 				driver.swipe(width / percent, height * 8 / 10,
-						width * (percent - 1) / percent, height * 8 / 10, duration);
+						width * (percent - 1) / percent, height * 8 / 10, during);
 				break;
 		}	
 	}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testAll"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="81.916">
+  <properties />
+  
+  
+            <testcase name="like" time="13.937" classname="com.yiibai.primera.testng.cases.VideoTest" />
+                <testcase name="fontSize" time="23.420" classname="com.yiibai.primera.testng.cases.VideoTest" />
+                <testcase name="comment" time="35.976" classname="com.yiibai.primera.testng.cases.VideoTest" />
+                <testcase name="collect" time="8.583" classname="com.yiibai.primera.testng.cases.VideoTest" />
+      
+</testsuite>

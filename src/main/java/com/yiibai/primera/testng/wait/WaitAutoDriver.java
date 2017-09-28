@@ -8,6 +8,7 @@ import org.openqa.selenium.TimeoutException;
 import com.yiibai.primera.testng.wait.AndroidDriverWait;
 import com.yiibai.primera.testng.wait.ExpectedCondition;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -17,7 +18,7 @@ import io.appium.java_client.android.AndroidElement;
 
 public class WaitAutoDriver{
 
-	AndroidDriver<AndroidElement> driver;
+	AndroidDriver driver;
 
 	private static int WAIT_TIME = 3; // 默认的等待控件时间
 
@@ -51,7 +52,7 @@ public class WaitAutoDriver{
 //			System.out.println("元素所在的driver：" + driver);
 			return new AndroidDriverWait(driver, time)
 					.until(new ExpectedCondition<AndroidElement>() {
-						@Override
+						
 						public AndroidElement apply(
 								AndroidDriver androidDriver) {
 							return (AndroidElement) androidDriver

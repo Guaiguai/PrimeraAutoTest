@@ -13,6 +13,7 @@ import com.yiibai.primera.testng.util.MethodUtil;
 import com.yiibai.primera.testng.util.ConstantUtil;
 import com.yiibai.primera.testng.util.ResultUtil;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -28,10 +29,10 @@ public class HomeOperate extends OperateAppium {
 
 	AndroidDriver<AndroidElement> driver;
 	
-	public HomeOperate(AndroidDriver<AndroidElement> initdriver) {
-		super(initdriver);
-		homePage = new HomePage(initdriver);
-		this.driver = initdriver;
+	public HomeOperate(AndroidDriver<AndroidElement> driver2) {
+		super(driver2);
+		homePage = new HomePage(driver2);
+		this.driver = driver2;
 	}
 	/**
 	 * 首页下部分菜单验证，主要是Inicio 与 Videos的切换
@@ -251,6 +252,7 @@ public class HomeOperate extends OperateAppium {
 			result.setActual(ConstantUtil.ASSERT_TRUE);
 			result.setMessage("清空搜索历史成功！");
 		}
+		backHome();
 		return result;
 	}
 	
@@ -317,6 +319,29 @@ public class HomeOperate extends OperateAppium {
 		}
 		return result;
 	}
+	
+	/**
+	 * 返回上一级的测试
+	 * 主要是返回按钮的测试
+	 */
+	public ResultUtil backToPreviousMenu(){
+		ResultUtil result = new ResultUtil();
+		result.setActual(ConstantUtil.ASSERT_FALSE);
+		if(!isHomePage())  return result;
+		//1.搜索的返回
+		if(homePage.getHomeSearchBtn() != null)
+			clickView(homePage.getHomeSearchBtn());
+		inputManyText("previous menu");
+		clickView(homePage.getSearchBtn());
+		//对于搜索之后的结果的处理
+		if(!homePage.isSearchNoData()) {
+			clickView(homePage.getSearchAll());
+		}
+//		return result;
+		//2.频道编辑的返回
+		return result;
+	}
+	
 	/**
 	 * 测试完成之后返回到首页
 	 */

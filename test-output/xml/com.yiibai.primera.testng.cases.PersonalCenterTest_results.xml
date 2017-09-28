@@ -1,102 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="testAll"
            tests="16"
-           failures="9"
+           failures="8"
            errors="0"
            skipped="0"
-           time="542.684">
+           time="562.223">
   <properties />
-            <testcase name="editPasswordWrongOldPwd" time="50.322" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: 修改用户登录密码失败; expected [true] but found [false].
-报错方法名:editPasswordWrongOldPwd(
-报错类:PersonalCenterTest
-报错行号:82)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordWrongOldPwd(PersonalCenterTest.java:82)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="editPasswordLessThanSixChars" time="43.050" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: 修改用户登录密码失败; expected [true] but found [false].
-报错方法名:editPasswordLessThanSixChars(
-报错类:PersonalCenterTest
-报错行号:88)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordLessThanSixChars(PersonalCenterTest.java:88)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="editUsernameLessThanFourChars" time="38.790" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: 编辑用户昵称失败;---(编辑前后用户昵称不一致); expected [true] but found [false].
-报错方法名:editUsernameLessThanFourChars(
-报错类:PersonalCenterTest
-报错行号:44)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editUsernameLessThanFourChars(PersonalCenterTest.java:44)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="editAccountExited" time="36.914" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: 编辑用户登录账号失败; expected [true] but found [false].
-报错方法名:editAccountExited(
-报错类:PersonalCenterTest
-报错行号:54)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editAccountExited(PersonalCenterTest.java:54)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="editPasswordEqualOld" time="52.020" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: 修改用户登录密码失败; expected [true] but found [false].
-报错方法名:editPasswordEqualOld(
-报错类:PersonalCenterTest
-报错行号:76)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordEqualOld(PersonalCenterTest.java:76)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="Logout" time="3.559" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: 请定位到APP个人中心界面！ expected [true] but found [false].
-报错方法名:Logout(
-报错类:PersonalCenterTest
-报错行号:154)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.Logout(PersonalCenterTest.java:154)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="editPasswordMoreThanTwentyFiveChars" time="50.331" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+            <testcase name="editPasswordMoreThanTwentyFiveChars" time="50.690" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
                 <failure type="java.lang.Throwable"
                   message="(null)"
               >
@@ -105,13 +15,13 @@
 报错信息: 修改用户登录密码失败; expected [true] but found [false].
 报错方法名:editPasswordMoreThanTwentyFiveChars(
 报错类:PersonalCenterTest
-报错行号:94)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordMoreThanTwentyFiveChars(PersonalCenterTest.java:94)
+报错行号:95)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordMoreThanTwentyFiveChars(PersonalCenterTest.java:95)
 ]]>
       </failure>
 
           </testcase>
-            <testcase name="editPasswordNotEqualWithConfirmed" time="47.119" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+            <testcase name="editPasswordNotEqualWithConfirmed" time="49.268" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
                 <failure type="java.lang.Throwable"
                   message="(null)"
               >
@@ -120,13 +30,28 @@
 报错信息: 修改用户登录密码失败; expected [true] but found [false].
 报错方法名:editPasswordNotEqualWithConfirmed(
 报错类:PersonalCenterTest
-报错行号:100)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordNotEqualWithConfirmed(PersonalCenterTest.java:100)
+报错行号:101)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordNotEqualWithConfirmed(PersonalCenterTest.java:101)
 ]]>
       </failure>
 
           </testcase>
-            <testcase name="editAccountLessThanSixChars" time="38.531" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+            <testcase name="editAccountExited" time="38.250" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: 编辑用户登录账号失败; expected [true] but found [false].
+报错方法名:editAccountExited(
+报错类:PersonalCenterTest
+报错行号:55)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editAccountExited(PersonalCenterTest.java:55)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="editAccountLessThanSixChars" time="35.698" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
                 <failure type="java.lang.Throwable"
                   message="(null)"
               >
@@ -135,20 +60,81 @@
 报错信息: 编辑用户登录账号失败; expected [true] but found [false].
 报错方法名:editAccountLessThanSixChars(
 报错类:PersonalCenterTest
-报错行号:60)
-  com.yiibai.primera.testng.cases.PersonalCenterTest.editAccountLessThanSixChars(PersonalCenterTest.java:60)
+报错行号:61)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editAccountLessThanSixChars(PersonalCenterTest.java:61)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="editPasswordEqualOld" time="49.309" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordEqualOld(
+报错类:PersonalCenterTest
+报错行号:77)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordEqualOld(PersonalCenterTest.java:77)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="editPasswordWrongOldPwd" time="51.781" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordWrongOldPwd(
+报错类:PersonalCenterTest
+报错行号:83)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordWrongOldPwd(PersonalCenterTest.java:83)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="editUsernameLessThanFourChars" time="38.128" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: 编辑用户昵称失败; expected [true] but found [false].
+报错方法名:editUsernameLessThanFourChars(
+报错类:PersonalCenterTest
+报错行号:39)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editUsernameLessThanFourChars(PersonalCenterTest.java:39)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="editPasswordLessThanSixChars" time="50.087" classname="com.yiibai.primera.testng.cases.PersonalCenterTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: 修改用户登录密码失败; expected [true] but found [false].
+报错方法名:editPasswordLessThanSixChars(
+报错类:PersonalCenterTest
+报错行号:89)
+  com.yiibai.primera.testng.cases.PersonalCenterTest.editPasswordLessThanSixChars(PersonalCenterTest.java:89)
 ]]>
       </failure>
 
           </testcase>
   
   
-            <testcase name="readFirstCollection" time="8.099" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
-                <testcase name="editPasswordConfirm" time="49.276" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
-                <testcase name="clearFirstCollection" time="21.145" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
-                <testcase name="editUsernameConfirm" time="31.025" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
-                <testcase name="clearCache" time="14.385" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
-                <testcase name="editAccountConfirm" time="34.873" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
-                <testcase name="clearAllCollection" time="23.245" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+            <testcase name="clearAllCollection" time="20.350" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+                <testcase name="readFirstCollection" time="19.015" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+                <testcase name="Logout" time="13.823" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+                <testcase name="clearCache" time="14.016" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+                <testcase name="clearFirstCollection" time="20.494" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+                <testcase name="editPasswordConfirm" time="48.817" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+                <testcase name="editAccountConfirm" time="32.649" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
+                <testcase name="editUsernameConfirm" time="29.848" classname="com.yiibai.primera.testng.cases.PersonalCenterTest" />
       
 </testsuite>

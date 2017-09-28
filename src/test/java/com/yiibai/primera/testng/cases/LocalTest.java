@@ -1,16 +1,8 @@
 package com.yiibai.primera.testng.cases;
 
-import java.net.MalformedURLException;
-
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 
 import com.yiibai.primera.testng.base.InitAppium;
-import com.yiibai.primera.testng.operation.LocalOperate;
-import com.yiibai.primera.testng.operation.NewsDetailsOperate;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 
 /**
  * Local频道测试用例
@@ -21,7 +13,7 @@ import io.appium.java_client.android.AndroidElement;
  */
 public class LocalTest extends InitAppium{
 
-	private LocalOperate localOperate;
+	
 	
 	
 }

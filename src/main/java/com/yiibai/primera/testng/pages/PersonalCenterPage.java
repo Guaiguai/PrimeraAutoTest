@@ -1,7 +1,5 @@
 package com.yiibai.primera.testng.pages;
 
-import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
-
 import com.yiibai.primera.testng.base.PageAppium;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -23,7 +21,7 @@ public class PersonalCenterPage extends PageAppium {
 	private final String COLLECTION_BTN_ID = "btn_center_collection";
 	private final String COLLECTION_NEWS_PARENT_ID = "lin_parent";//我的收藏新闻的最外层的id,作为是否有收藏的验证
 	private final String COLLECTION_PARENT_ID = "txt_newstitle1";//新闻正文的ID
-	private final String COLLECTION_NEWS_TITLE_ID = "video_detail_title";//收藏的新闻详情页面的title
+	private final String COLLECTION_NEWS_TITLE_ID = "local_title";//收藏的新闻详情页面的title
 	private final String COLLECTION_EDIT_BTN_ID = "img_search";//我的收藏的编辑Btn
 	private final String COLLECTION_DELETE_ID = "img_delete";//新闻后面的取消收藏Btn
 	private final String COLLECTION_UPDATE_ID = "img_other";//我的收藏编辑之后的保存Btn
@@ -48,15 +46,15 @@ public class PersonalCenterPage extends PageAppium {
 	private final String PERSONAL_EDIT_SUCCESSFUL = "title_name";
 	private final String PERSONAL_EDIT_SUCCESSFUL_TEXT = "Perfil";
 	
-	private final String PERSONAL_IMAGE_EDIT_ID = "btn_center_head";//头像
-	private final String PERSONAL_IMAPE_CAMERA_ID = "tv_take_picture";//选择系统相机ID
-	private final String PERSONAL_IMAGE_PIC_ID = "tv_choose_gallery";//选择系统图片ID
+//	private final String PERSONAL_IMAGE_EDIT_ID = "btn_center_head";//头像
+//	private final String PERSONAL_IMAPE_CAMERA_ID = "tv_take_picture";//选择系统相机ID
+//	private final String PERSONAL_IMAGE_PIC_ID = "tv_choose_gallery";//选择系统图片ID
 	
 	private final String PERSONAL_NAME_EDIT_ID = "btn_center_name";//用户昵称
 	private final String PERSONAL_NAME_OLD_ID = "my_center_name_txt";//编辑之前的用户昵称
 	private final String NAME_EDIT_SAVE_ID = "btn_save_name";
 	
-	private final String PERSONAL_EMAIL_EDIT_ID = "btn_center_email";//邮箱
+//	private final String PERSONAL_EMAIL_EDIT_ID = "btn_center_email";//邮箱
 	
 	private final String PERSONAL_ACCOUNT_EDIT_ID = "btn_center_accout";//登录账号
 	private final String PERSONAL_ACCOUNT_OLD_ID = "txt_center_accout";//编辑之前的用户登录账号
@@ -99,7 +97,7 @@ public class PersonalCenterPage extends PageAppium {
 			return 0;
 		}
 		String size = cacheSizeText.substring(0, cacheSizeText.length()-2);
-		System.out.println("字符串截取之后的新字符串为：" + size);
+//		System.out.println("字符串截取之后的新字符串为：" + size);
 		return Double.valueOf(size);
 	}
 	

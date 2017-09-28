@@ -41,16 +41,16 @@ public class HomePage extends PageAppium {
 	private final String MENU_AUTO_TEXT = "Auto";
 	private final String AUTO_BTN_XPATH = "//android.widget.TextView[@text='Auto']/following-sibling::android.widget.ImageView";
 	private final String MENU_BACK_BTN_ID = "img_back";
-	private final String MENU_ADD_MORE_ID = "txt_addmore";
-	private final String MENU_CHANNAL_TEXT_ID = "txt_name";
+//	private final String MENU_ADD_MORE_ID = "txt_addmore";
+//	private final String MENU_CHANNAL_TEXT_ID = "txt_name";
 	private final String MENU_CHANNAL_ADDED = "channel_list_top";
-	private final String MENU_CHANNAL_DROPED = "channel_list_bottom";
+//	private final String MENU_CHANNAL_DROPED = "channel_list_bottom";
 	// 获得所有的已经加入的频道
-	private final String ALL_ADDED_MENUS_XPATH = "//android.support.v7.widget.RecyclerView[contains(@resource-id,'"
-			+ MENU_CHANNAL_ADDED + "')]/android.widget.LinearLayout/";
+//	private final String ALL_ADDED_MENUS_XPATH = "//android.support.v7.widget.RecyclerView[contains(@resource-id,'"
+//			+ MENU_CHANNAL_ADDED + "')]/android.widget.LinearLayout/";
 	// 4.新闻刷新
 	// 首页新闻刷新的测试
-	private final String REFRESH_BTN_ID = "btn_refresh";
+//	private final String REFRESH_BTN_ID = "btn_refresh";
 	private final String REFRESH_NEWS_COUNT_ID = "news_new_count";// 刷新的新闻的总数量控件（3秒消失）
 	
 	//5.video的切换验证

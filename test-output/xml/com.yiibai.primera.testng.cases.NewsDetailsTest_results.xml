@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="testAll"
            tests="5"
-           failures="1"
+           failures="0"
            errors="0"
            skipped="0"
-           time="77.042">
+           time="78.362">
   <properties />
-            <testcase name="like" time="13.662" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:like(
-报错类:NewsDetailsTest
-报错行号:56)
-  com.yiibai.primera.testng.cases.NewsDetailsTest.like(NewsDetailsTest.java:56)
-]]>
-      </failure>
-
-          </testcase>
   
   
-            <testcase name="fontSize" time="26.065" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="comment" time="18.195" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="collect" time="8.578" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="imageSwitch" time="10.542" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+            <testcase name="fontSize" time="26.512" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="comment" time="18.148" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="like" time="13.464" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="collect" time="9.294" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
+                <testcase name="imageSwitch" time="10.944" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
       
 </testsuite>

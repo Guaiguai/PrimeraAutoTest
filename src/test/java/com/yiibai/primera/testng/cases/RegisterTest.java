@@ -7,6 +7,7 @@ import com.yiibai.primera.testng.base.Assertion;
 
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.RegisterOperate;
+import com.yiibai.primera.testng.util.MethodUtil;
 import com.yiibai.primera.testng.util.ResultUtil;
 
 /**
@@ -34,7 +35,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("15906651240@qq.com",
 				"15906651240", "15906651240");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱和密码均符合规则的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱和密码均符合规则的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱缺失关键字符'@'和'.',注册失败
@@ -44,7 +45,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱缺失关键字符'@'和'.'的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱缺失关键字符'@'和'.'的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'@'，注册失败
@@ -54,7 +55,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298@qqcom",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱只包含'@'的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱只包含'@'的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'.'，注册失败
@@ -64,7 +65,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298qq.com",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱只包含'.'的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱只包含'.'的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'@',且以其结尾，注册失败
@@ -74,7 +75,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298@",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱只包含'@',且以其结尾的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱只包含'@',且以其结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱只包含'.',且以其结尾，注册失败
@@ -84,7 +85,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298qq.",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱只包含'.',且以其结尾的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱只包含'.',且以其结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱包含'@','.',且以'.'结尾，注册失败
@@ -94,7 +95,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298@qq.",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱包含'@','.',且以'.'结尾的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱包含'@','.',且以'.'结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱包含'@','.',且以'@'结尾，注册失败
@@ -104,7 +105,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298.qq@",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱包含'@','.',且以'@'结尾的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱包含'@','.',且以'@'结尾的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * 邮箱包含'@','.',且符号位置交换，注册失败
@@ -114,7 +115,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298.qq@com",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("邮箱包含'@','.',且符号位置交换的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "邮箱包含'@','.',且符号位置交换的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 长度小于6，注册失败
@@ -124,7 +125,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"12345", "12345");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("pass 长度小于6的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "pass 长度小于6的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 长度大于25，注册失败
@@ -134,7 +135,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"123456789123456789123456789", "123456789123456789123456789");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("pass 长度大于25的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "pass 长度大于25的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 是中文，注册失败
@@ -144,7 +145,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"测试测试测试测试", "测试测试测试测试");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("pass 是中文的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "pass 是中文的情况下是否注册成功:" + result.getActual());
 	}
 	/**
 	 * pass 是空格，注册失败
@@ -154,7 +155,7 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("18091969298@qq.com",
 				"", "");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("pass 是空格的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "pass 是空格的情况下是否注册成功:" + result.getActual());
 	}
 	
 
@@ -167,6 +168,6 @@ public class RegisterTest extends InitAppium {
 		ResultUtil result = registerOperate.register("550881764@qq.com",
 				"18091969298", "18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-		print("用户已经存在的情况下是否注册成功:" + result.getActual());
+		print(MethodUtil.getFileLineMethod() + "用户已经存在的情况下是否注册成功:" + result.getActual());
 	}
 }

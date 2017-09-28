@@ -17,9 +17,9 @@ import io.appium.java_client.android.AndroidElement;
 public class NewsDetailsPage extends PageAppium {
 
     //app打开时是否有可滑动的广告图
-    private final String APP_WELCOME_ELEMENTS_ID = "img_coopen";
+//    private final String APP_WELCOME_ELEMENTS_ID = "img_coopen";
     //app主页的文字（主要是顶部显示的文字）
-    private final String APP_HOME_PAGE_TEXT = "Para ti";
+//    private final String APP_HOME_PAGE_TEXT = "Para ti";
     //新闻首页定位带图片的新闻
     private final String NEWS_IMAGE_RIGHT_ID = "img_one_left";
     private final String NEWS_IMAGE_FILL_ID = "img_one_fill";
@@ -30,7 +30,7 @@ public class NewsDetailsPage extends PageAppium {
     //点赞的BTN
     private final String LIKE_BTN_ID = "btn_like";
     //评论支持的BTN(给别人的评论点赞)
-    private final String COMMENT_SUPP_BTN_ID = "img_com_supp";
+//    private final String COMMENT_SUPP_BTN_ID = "img_com_supp";
     //评论的BTN
     private final String COMMENT_BTN_ID = "btn_comment";
     private final String COMMENT_SEND_BTN_ID = "btn_send";
@@ -91,8 +91,8 @@ public class NewsDetailsPage extends PageAppium {
     	List<AndroidElement> list = getManyElementByClassName(FONTSIZE_RADIO_CLASS,4);
     	System.out.println("list size is:" + list.size());
     	for (int i = 0; i < list.size(); i++) {
-    		System.out.println("radio text is:" + list.get(i).getText());
-    		System.out.println("radio checked is:" + list.get(i).getAttribute("checked"));
+//    		System.out.println("radio text is:" + list.get(i).getText());
+//    		System.out.println("radio checked is:" + list.get(i).getAttribute("checked"));
 			if(list.get(i).getAttribute("checked").equals("false")) {
 				radio = list.get(i);
 				break;

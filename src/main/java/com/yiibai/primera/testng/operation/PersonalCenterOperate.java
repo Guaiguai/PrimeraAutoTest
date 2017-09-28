@@ -7,6 +7,7 @@ import com.yiibai.primera.testng.pages.PersonalCenterPage;
 import com.yiibai.primera.testng.util.ConstantUtil;
 import com.yiibai.primera.testng.util.ResultUtil;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -25,11 +26,11 @@ public class PersonalCenterOperate extends OperateAppium {
 
 	AndroidDriver<AndroidElement> driver;
 
-	public PersonalCenterOperate(AndroidDriver<AndroidElement> driver) {
-		super(driver);
-		personalCenterPage = new PersonalCenterPage(driver);
-		homePage = new HomePage(driver);
-		this.driver = driver;
+	public PersonalCenterOperate(AndroidDriver<AndroidElement> driver2) {
+		super(driver2);
+		personalCenterPage = new PersonalCenterPage(driver2);
+		homePage = new HomePage(driver2);
+		this.driver = driver2;
 	}
 	/**
 	 * 系统设置中，清除缓存
@@ -79,7 +80,6 @@ public class PersonalCenterOperate extends OperateAppium {
 		clickView(personalCenterPage.getPersonalEdit());
 		//修改用户昵称信息  昵称限制在4-25个字符
 		if(username != null && !username.isEmpty() && username != "") {
-			String oldUsername = personalCenterPage.getUsernameText();
 			clickView(personalCenterPage.getUsername());
 			inputManyText(username);
 			clickView(personalCenterPage.getNameEditSaveBtn());
@@ -92,20 +92,20 @@ public class PersonalCenterOperate extends OperateAppium {
 				message += "编辑用户昵称失败;";
 			}
 			result.setMessage(message);
-			if(oldUsername.equals(username)) {
-				message += "---(编辑前后用户昵称一致);";
-			}else {
-				message += "---(编辑前后用户昵称不一致);";
-			}
+//			if(oldUsername.equals(username)) {
+//				message += "---(编辑前后用户昵称一致);";
+//			}else {
+//				message += "---(编辑前后用户昵称不一致);";
+//			}
 		}
 		//修改用户登录账号   登录账号唯一性验证 6-20个字符
 		if(account != null && !account.isEmpty() && account != "") {
 			String oldAccount = personalCenterPage.getOldAccountText();
-			System.out.println("之前的account为：" + oldAccount);
+//			System.out.println("之前的account为：" + oldAccount);
 			clickView(personalCenterPage.getAccount());
 			if(account.equals(BASE_ACCOUNT))
 				account = getValue(Long.parseLong(BASE_ACCOUNT),oldAccount);
-			System.out.println("写入的account为：" + account);
+//			System.out.println("写入的account为：" + account);
 			inputManyText(account);
 			clickView(personalCenterPage.getAccountEditSaveBtn());
 			waitAuto();
@@ -121,7 +121,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		result.setMessage(message);
 		sleep(3000);
 		backHome();
-		System.out.println("已经返回到首页！！！");
+//		System.out.println("已经返回到首页！！！");
 		return result;
 	}
 	/**
@@ -156,7 +156,7 @@ public class PersonalCenterOperate extends OperateAppium {
 				newPassword = account;
 				newPwdConfirm = newPassword;
 			}
-			System.out.println("oldpwd is:" + oldPassword + ",newpwd is:" + newPassword + ",newpwdconfirm is:" + newPwdConfirm);
+//			System.out.println("oldpwd is:" + oldPassword + ",newpwd is:" + newPassword + ",newpwdconfirm is:" + newPwdConfirm);
 			inputManyText(oldPassword,newPassword,newPwdConfirm);
 			clickView(personalCenterPage.getPasswordSaveBtn());
 			waitAuto();
@@ -183,7 +183,7 @@ public class PersonalCenterOperate extends OperateAppium {
 			result.setMessage("请定位到APP个人中心界面！");
 			return result;
 		}
-		System.out.println("该用户是否已经退出：" + personalCenterPage.isLogout());
+//		System.out.println("该用户是否已经退出：" + personalCenterPage.isLogout());
 		if(!personalCenterPage.isLogout()) {
 			clickView(personalCenterPage.getLogoutBtn());
 			clickView(personalCenterPage.getLogoutConfirmBtn());
@@ -230,7 +230,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		UiAutomatorAppium uiAutomatorAppium = new UiAutomatorAppium(driver);
 		AndroidElement theEnd = uiAutomatorAppium.swipToElementAppear();
 		if(theEnd != null) {
-			System.out.println(theEnd.getText());
+//			System.out.println(theEnd.getText());
 
 			result.setActual(ConstantUtil.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
@@ -259,6 +259,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		if(firstCollection == null) {
 			result.setActual(ConstantUtil.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
+			backHome();
 			return result;
 		}
 		clickView(personalCenterPage.getCollectionEditBtn());
@@ -326,14 +327,19 @@ public class PersonalCenterOperate extends OperateAppium {
 		if(firstCollection == null) {
 			result.setActual(ConstantUtil.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
+			backHome();
 			return result;
 		}
 		//获得新闻标题
 		String text = firstCollection.getText();
+//		System.out.println("text is:" + text);
 		clickView(firstCollection);
+		waitAuto();
 		String title = personalCenterPage.getNewsTitle();
+//		System.out.println("title is:" + title);
 		if(text.equals(title)) {
 			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setMessage("成功！");
 		}
 		backHome();
 		return result;
@@ -358,7 +364,7 @@ public class PersonalCenterOperate extends OperateAppium {
 			default :
 				break;
 		}
-		System.out.println("处理过后的数据为：" + editAccount);
+//		System.out.println("处理过后的数据为：" + editAccount);
 		return editAccount;
 	}
 	/**
