@@ -31,7 +31,7 @@ public class NewsDetailsTest extends InitAppium {
 	 * 验证文章配图查看
 	 */
 	@Test(priority = 1)
-	public void imageSwitch() {
+	public void imageSwitchtest() {
 		ResultUtil result = newsdetailsOperate.imageSwitcher();
 		System.out.println("getActual is:" + result.getActual());
 		System.out.println("getExcepted is:" + result.getExcepted());
@@ -43,7 +43,7 @@ public class NewsDetailsTest extends InitAppium {
 	 * 验证文章收藏
 	 */
 	@Test(priority = 2)
-	public void collect() {
+	public void testCollect() {
 		ResultUtil result = newsdetailsOperate.collect();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
 		print(MethodUtil.getFileLineMethod() + "验证文章收藏:" + result.getActual());
@@ -52,7 +52,7 @@ public class NewsDetailsTest extends InitAppium {
 	 * 验证文章点赞
 	 */
 	@Test(priority = 3)
-	public void like() {
+	public void liketest() {
 		ResultUtil result = newsdetailsOperate.like();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
 		print(MethodUtil.getFileLineMethod() + "验证文章点赞:" + result.getActual());
@@ -61,7 +61,7 @@ public class NewsDetailsTest extends InitAppium {
 	 * 验证新闻详情页的字体的设置
 	 */
 	@Test(priority = 4)
-	public void fontSize() {
+	public void fontSizetest() {
 		ResultUtil result = newsdetailsOperate.fontSize();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
 		print(MethodUtil.getFileLineMethod() + "验证文章字体设置:" + result.getMessage());
@@ -70,7 +70,7 @@ public class NewsDetailsTest extends InitAppium {
 	 * 验证文章评论
 	 */
 	@Test(priority = 5)
-	public void comment() {
+	public void commenttest() {
 		ResultUtil result = newsdetailsOperate.comment("very good!");
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
 		print(MethodUtil.getFileLineMethod() + "验证文章评论:" + result.getActual() + ",返回信息为:" + result.getMessage());
@@ -79,7 +79,7 @@ public class NewsDetailsTest extends InitAppium {
 	 * 验证文章更多阅读
 	 */
 	@Test(enabled = false)
-	public void readingMore() {
+	public void readingMoretest() {
 		ResultUtil result = newsdetailsOperate.readingsMore();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
 		print(MethodUtil.getFileLineMethod() + "验证新闻更多阅读:" + result.getActual() + ",返回信息为:" + result.getMessage());
@@ -88,7 +88,7 @@ public class NewsDetailsTest extends InitAppium {
 	 * 验证新闻详情页的字体的设置
 	 */
 	@Test(enabled = false)
-	public void share() {
+	public void sharetest() {
 		ResultUtil result = newsdetailsOperate.share();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(), result.getMessage());
 		print(MethodUtil.getFileLineMethod() + "验证文章分享:" + result.getActual());

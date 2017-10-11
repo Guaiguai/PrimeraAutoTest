@@ -2,15 +2,12 @@ package com.yiibai.primera.testng.operation;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.List;
-import java.util.Set;
 
 import org.openqa.selenium.TakesScreenshot;
 
 import com.yiibai.primera.testng.base.ImageAppium;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
-import com.yiibai.primera.testng.pages.NewsDetailsPage;
 import com.yiibai.primera.testng.pages.VideoPage;
 import com.yiibai.primera.testng.util.ConstantUtil;
 import com.yiibai.primera.testng.util.ResultUtil;

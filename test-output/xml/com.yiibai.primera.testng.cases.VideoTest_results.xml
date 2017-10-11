@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testAll"
-           tests="4"
+<testsuite name="test_android_V170928"
+           tests="10"
            failures="0"
            errors="0"
-           skipped="0"
-           time="81.916">
+           skipped="10"
+           time="0.004">
   <properties />
   
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="collect" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="comment" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="fontSize" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
+            <testcase name="like" time="0.0" classname="com.yiibai.primera.testng.cases.VideoTest">
+          <skipped />
+    </testcase>
   
-            <testcase name="like" time="13.937" classname="com.yiibai.primera.testng.cases.VideoTest" />
-                <testcase name="fontSize" time="23.420" classname="com.yiibai.primera.testng.cases.VideoTest" />
-                <testcase name="comment" time="35.976" classname="com.yiibai.primera.testng.cases.VideoTest" />
-                <testcase name="collect" time="8.583" classname="com.yiibai.primera.testng.cases.VideoTest" />
-      
+  
 </testsuite>

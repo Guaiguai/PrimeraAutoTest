@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testAll"
-           tests="5"
+<testsuite name="test_android_V170928"
+           tests="12"
            failures="0"
            errors="0"
-           skipped="0"
-           time="78.362">
+           skipped="12"
+           time="0.003">
   <properties />
   
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="fontSizetest" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="imageSwitchtest" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="liketest" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="commenttest" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
+            <testcase name="testCollect" time="0.0" classname="com.yiibai.primera.testng.cases.NewsDetailsTest">
+          <skipped />
+    </testcase>
   
-            <testcase name="fontSize" time="26.512" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="comment" time="18.148" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="like" time="13.464" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="collect" time="9.294" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-                <testcase name="imageSwitch" time="10.944" classname="com.yiibai.primera.testng.cases.NewsDetailsTest" />
-      
+  
 </testsuite>

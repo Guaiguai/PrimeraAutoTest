@@ -1,85 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="404168" started-at="2017-09-28T06:05:39Z" finished-at="2017-09-28T06:12:23Z">
+  <suite name="Suite" duration-ms="1760250" started-at="2017-10-10T01:53:53Z" finished-at="2017-10-10T02:23:13Z">
     <groups>
     </groups>
-    <test name="testAll" duration-ms="404168" started-at="2017-09-28T06:05:39Z" finished-at="2017-09-28T06:12:23Z">
-      <class name="com.yiibai.primera.testng.cases.HomeTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="beforeSuite" is-config="true" duration-ms="39150" started-at="2017-09-28T14:05:39Z" finished-at="2017-09-28T14:06:18Z">
+    <test name="test_android_V170928" duration-ms="1760250" started-at="2017-10-10T01:53:53Z" finished-at="2017-10-10T02:23:13Z">
+      <class name="com.yiibai.primera.testng.cases.LocalTest">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="beforeClass" is-config="true" duration-ms="40090" started-at="2017-10-10T09:53:53Z" finished-at="2017-10-10T09:54:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4723]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fd47af2d7d42]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="17" started-at="2017-09-28T14:06:18Z" finished-at="2017-09-28T14:06:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="morningPaper()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="morningPaper" duration-ms="11533" started-at="2017-09-28T14:06:18Z" finished-at="2017-09-28T14:06:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- morningPaper -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="23" started-at="2017-09-28T14:06:29Z" finished-at="2017-09-28T14:06:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="searchByInputChinese()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="searchByInputChinese" duration-ms="40671" started-at="2017-09-28T14:06:29Z" finished-at="2017-09-28T14:07:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByInputChinese -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="27" started-at="2017-09-28T14:07:10Z" finished-at="2017-09-28T14:07:10Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="initDriver" is-config="true" duration-ms="34" started-at="2017-10-10T09:54:33Z" finished-at="2017-10-10T09:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="searchByInputEnglish()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="searchByInputEnglish" duration-ms="55644" started-at="2017-09-28T14:07:10Z" finished-at="2017-09-28T14:08:06Z">
+        <test-method status="PASS" signature="location()[pri:1, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="location" duration-ms="21307" started-at="2017-10-10T09:54:33Z" finished-at="2017-10-10T09:54:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchByInputEnglish -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="11" started-at="2017-09-28T14:08:06Z" finished-at="2017-09-28T14:08:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="searchByHistory()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="searchByHistory" duration-ms="49707" started-at="2017-09-28T14:08:06Z" finished-at="2017-09-28T14:08:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByHistory -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="12" started-at="2017-09-28T14:08:55Z" finished-at="2017-09-28T14:08:55Z">
+        </test-method> <!-- location -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="initDriver" is-config="true" duration-ms="23" started-at="2017-10-10T09:54:54Z" finished-at="2017-10-10T09:54:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="clearSearchedHistory()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="clearSearchedHistory" duration-ms="32716" started-at="2017-09-28T14:08:55Z" finished-at="2017-09-28T14:09:28Z">
+        <test-method status="FAIL" signature="dislike()[pri:2, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="dislike" duration-ms="1521802" started-at="2017-10-10T09:54:54Z" finished-at="2017-10-10T10:20:16Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: expected [true] but found [false].
+报错方法名:dislike(
+报错类:LocalTest
+报错行号:51)
+	at com.yiibai.primera.testng.cases.LocalTest.dislike(LocalTest.java:51)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clearSearchedHistory -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="9" started-at="2017-09-28T14:09:28Z" finished-at="2017-09-28T14:09:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="autoMenuEdit()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="autoMenuEdit" duration-ms="132105" started-at="2017-09-28T14:09:28Z" finished-at="2017-09-28T14:11:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- autoMenuEdit -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="14" started-at="2017-09-28T14:11:40Z" finished-at="2017-09-28T14:11:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="changeTopMenus()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="changeTopMenus" duration-ms="27293" started-at="2017-09-28T14:11:40Z" finished-at="2017-09-28T14:12:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- changeTopMenus -->
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="initDriver" is-config="true" duration-ms="17" started-at="2017-09-28T14:12:07Z" finished-at="2017-09-28T14:12:07Z">
+        </test-method> <!-- dislike -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="initDriver" is-config="true" duration-ms="39" started-at="2017-10-10T10:20:16Z" finished-at="2017-10-10T10:20:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="changeToVideos()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="changeToVideos" duration-ms="13750" started-at="2017-09-28T14:12:07Z" finished-at="2017-09-28T14:12:21Z">
+        <test-method status="FAIL" signature="refreshByKeyword()[pri:3, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="refreshByKeyword" duration-ms="132641" started-at="2017-10-10T10:20:16Z" finished-at="2017-10-10T10:22:28Z">
+          <exception class="java.lang.Throwable">
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable
+	at 
+报错信息: Local频道的新闻列表中没有出现'Acaba de cargar hasta aquí, haga clic en actualizar'! expected [true] but found [false].
+报错方法名:refreshByKeyword(
+报错类:LocalTest
+报错行号:63)
+	at com.yiibai.primera.testng.cases.LocalTest.refreshByKeyword(LocalTest.java:63)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- changeToVideos -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.HomeTest@68bbe345]" name="afterClass" is-config="true" duration-ms="1444" started-at="2017-09-28T14:12:21Z" finished-at="2017-09-28T14:12:23Z">
+        </test-method> <!-- refreshByKeyword -->
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="initDriver" is-config="true" duration-ms="23" started-at="2017-10-10T10:22:28Z" finished-at="2017-10-10T10:22:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="readingMore()[pri:4, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="readingMore" duration-ms="42917" started-at="2017-10-10T10:22:29Z" finished-at="2017-10-10T10:23:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readingMore -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.yiibai.primera.testng.cases.LocalTest@396f6598]" name="afterClass" is-config="true" duration-ms="1359" started-at="2017-10-10T10:23:11Z" finished-at="2017-10-10T10:23:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
-    </test> <!-- testAll -->
+      </class> <!-- com.yiibai.primera.testng.cases.LocalTest -->
+    </test> <!-- test_android_V170928 -->
   </suite> <!-- Suite -->
 </testng-results>

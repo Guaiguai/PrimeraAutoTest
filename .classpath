@@ -12,18 +12,25 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/testng/testng/6.8.7/testng-6.8.7.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/testng/testng/6.9.9/testng-6.9.9.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/4.10/junit-4.10.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.48/jcommander-1.48.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/ant/ant/1.7.0/ant-1.7.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.15/snakeyaml-1.15.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar"/>
-	<classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.27/jcommander-1.27.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/uncommons/reportng/1.1.4/reportng-1.1.4.jar"/>
 	<classpathentry kind="var" path="M2_REPO/velocity/velocity/1.4/velocity-1.4.jar"/>
 	<classpathentry kind="var" path="M2_REPO/velocity/velocity-dep/1.4/velocity-dep-1.4.jar"/>
@@ -31,7 +38,7 @@
 	<classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/google/guava/guava/21.0/guava-21.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
-	<classpathentry kind="var" path="M2_REPO/io/appium/java-client/4.1.2/java-client-4.1.2.jar" sourcepath="M2_REPO/io/appium/java-client/4.1.2/java-client-4.1.2-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/io/appium/java-client/4.1.2/java-client-4.1.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-java/2.44.0/selenium-java-2.44.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-chrome-driver/2.44.0/selenium-chrome-driver-2.44.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-remote-driver/3.3.1/selenium-remote-driver-3.3.1.jar"/>
@@ -39,7 +46,7 @@
 	<classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
-	<classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.9/commons-codec-1.9.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.9/commons-codec-1.9-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.9/commons-codec-1.9.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar"/>

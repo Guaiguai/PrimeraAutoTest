@@ -7,7 +7,6 @@ import com.yiibai.primera.testng.pages.PersonalCenterPage;
 import com.yiibai.primera.testng.util.ConstantUtil;
 import com.yiibai.primera.testng.util.ResultUtil;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 

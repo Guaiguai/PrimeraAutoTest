@@ -1,207 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testAll"
-           tests="13"
-           failures="13"
+<testsuite name="test_android_V170928"
+           tests="28"
+           failures="0"
            errors="0"
-           skipped="0"
-           time="772.532">
+           skipped="28"
+           time="0.006">
   <properties />
-            <testcase name="PwdLessThanSix" time="63.539" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
   
-报错信息: expected [true] but found [false].
-报错方法名:PwdLessThanSix(
-报错类:RegisterTest
-报错行号:127)
-  com.yiibai.primera.testng.cases.RegisterTest.PwdLessThanSix(RegisterTest.java:127)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="PwdIsChinese" time="53.780" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:PwdIsChinese(
-报错类:RegisterTest
-报错行号:147)
-  com.yiibai.primera.testng.cases.RegisterTest.PwdIsChinese(RegisterTest.java:147)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailWrong" time="64.440" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailWrong(
-报错类:RegisterTest
-报错行号:117)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailWrong(RegisterTest.java:117)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailOnlyCharAitEnd" time="58.573" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailOnlyCharAitEnd(
-报错类:RegisterTest
-报错行号:77)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailOnlyCharAitEnd(RegisterTest.java:77)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailSpotEnd" time="57.854" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailSpotEnd(
-报错类:RegisterTest
-报错行号:97)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailSpotEnd(RegisterTest.java:97)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailMissKeyCharSpot" time="60.406" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailMissKeyCharSpot(
-报错类:RegisterTest
-报错行号:57)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyCharSpot(RegisterTest.java:57)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailOnlyCharSpotEnd" time="54.457" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailOnlyCharSpotEnd(
-报错类:RegisterTest
-报错行号:87)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailOnlyCharSpotEnd(RegisterTest.java:87)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="RegisterExited" time="58.376" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:RegisterExited(
-报错类:RegisterTest
-报错行号:170)
-  com.yiibai.primera.testng.cases.RegisterTest.RegisterExited(RegisterTest.java:170)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailMissKeyCharAit" time="59.657" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailMissKeyCharAit(
-报错类:RegisterTest
-报错行号:67)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyCharAit(RegisterTest.java:67)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="RegisterOk" time="57.049" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:RegisterOk(
-报错类:RegisterTest
-报错行号:37)
-  com.yiibai.primera.testng.cases.RegisterTest.RegisterOk(RegisterTest.java:37)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailMissKeyChars" time="65.889" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailMissKeyChars(
-报错类:RegisterTest
-报错行号:47)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailMissKeyChars(RegisterTest.java:47)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="EmailAtEnd" time="56.558" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:EmailAtEnd(
-报错类:RegisterTest
-报错行号:107)
-  com.yiibai.primera.testng.cases.RegisterTest.EmailAtEnd(RegisterTest.java:107)
-]]>
-      </failure>
-
-          </testcase>
-            <testcase name="PwdMoreThanTwentyFive" time="61.954" classname="com.yiibai.primera.testng.cases.RegisterTest">
-                <failure type="java.lang.Throwable"
-                  message="(null)"
-              >
-<![CDATA[java.lang.Throwable
-  
-报错信息: expected [true] but found [false].
-报错方法名:PwdMoreThanTwentyFive(
-报错类:RegisterTest
-报错行号:137)
-  com.yiibai.primera.testng.cases.RegisterTest.PwdMoreThanTwentyFive(RegisterTest.java:137)
-]]>
-      </failure>
-
-          </testcase>
-  
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="initDriver" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailMissKeyCharSpot" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailMissKeyChars" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="PwdLessThanSix" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="PwdMoreThanTwentyFive" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailAtEnd" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="RegisterOk" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailMissKeyCharAit" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailWrong" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailOnlyCharAitEnd" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailOnlyCharSpotEnd" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="EmailSpotEnd" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="PwdIsChinese" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
+            <testcase name="RegisterExited" time="0.0" classname="com.yiibai.primera.testng.cases.RegisterTest">
+          <skipped />
+    </testcase>
   
   
 </testsuite>

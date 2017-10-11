@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="port" value="4723"/>
+  <parameter name="udid" value="fd47af2d7d42"/>
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="testAll(failed)">
+  <test name="test_android_V170928(failed)">
     <classes>
-      <class name="com.yiibai.primera.testng.cases.HomeTest">
+      <class name="com.yiibai.primera.testng.cases.LocalTest">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeSuite"/>
+          <include name="location"/>
+          <include name="readingMore"/>
+          <include name="dislike"/>
+          <include name="refreshByKeyword"/>
+          <include name="beforeClass"/>
           <include name="initDriver"/>
-          <include name="changeTopMenus"/>
         </methods>
-      </class> <!-- com.yiibai.primera.testng.cases.HomeTest -->
+      </class> <!-- com.yiibai.primera.testng.cases.LocalTest -->
     </classes>
-  </test> <!-- testAll(failed) -->
+  </test> <!-- test_android_V170928(failed) -->
 </suite> <!-- Failed suite [Suite] -->

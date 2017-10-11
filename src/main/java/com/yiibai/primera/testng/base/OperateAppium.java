@@ -31,7 +31,7 @@ public class OperateAppium extends WaitAutoDriver{
 
 	private final int SWIPE_DEFAULT_PERCENT = 5; // 默认滑动百分比
 	
-	private final int MAXSWIPNUM = 5; //屏幕滑动的最多的次数
+	private final int MAXSWIPNUM = 20; //屏幕滑动的最多的次数
 
 	public final String SWIP_UP = "UP", SWIP_DOWN = "DOWN", SWIP_LEFT = "LEFT",
 			SWIP_RIGHT = "RIGHT";
@@ -630,7 +630,7 @@ public class OperateAppium extends WaitAutoDriver{
 				element = driver.findElement(by);
 				flag = false;
 			} catch (Exception e) {
-				System.out.println("还有"+swipNum + "次滑动！");
+//				System.out.println("还有"+swipNum + "次滑动！");
 				swipNum--;
 				swip(direction, duration);
 			}

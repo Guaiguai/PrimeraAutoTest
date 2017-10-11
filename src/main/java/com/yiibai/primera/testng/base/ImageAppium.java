@@ -8,7 +8,7 @@ import java.util.Date;
 
 import javax.imageio.ImageIO;
 
-import org.apache.commons.io.FileUtils;
+import org.aspectj.util.FileUtil;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import io.appium.java_client.android.AndroidDriver;
@@ -46,7 +46,7 @@ public class ImageAppium {
 		// Now you can do whatever you need to do with it, for example copy
 		// somewhere
 		try {
-			FileUtils.copyFile(scrFile,
+			FileUtil.copyFile(scrFile,
 					new File(currentPath + "\\" + filename));
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testAll"
-           tests="1"
-           failures="0"
+<testsuite name="test_android_V170928"
+           tests="4"
+           failures="2"
            errors="0"
-           skipped="1"
-           time="0.000">
+           skipped="0"
+           time="1718.667">
   <properties />
+            <testcase name="dislike" time="1521.802" classname="com.yiibai.primera.testng.cases.LocalTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
   
-            <testcase name="afterTest" time="0.0" classname="com.yiibai.primera.testng.cases.LocalTest">
-          <skipped />
-    </testcase>
+报错信息: expected [true] but found [false].
+报错方法名:dislike(
+报错类:LocalTest
+报错行号:51)
+  com.yiibai.primera.testng.cases.LocalTest.dislike(LocalTest.java:51)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="refreshByKeyword" time="132.641" classname="com.yiibai.primera.testng.cases.LocalTest">
+                <failure type="java.lang.Throwable"
+                  message="(null)"
+              >
+<![CDATA[java.lang.Throwable
+  
+报错信息: Local频道的新闻列表中没有出现'Acaba de cargar hasta aquí, haga clic en actualizar'! expected [true] but found [false].
+报错方法名:refreshByKeyword(
+报错类:LocalTest
+报错行号:63)
+  com.yiibai.primera.testng.cases.LocalTest.refreshByKeyword(LocalTest.java:63)
+]]>
+      </failure>
+
+          </testcase>
   
   
+            <testcase name="location" time="21.307" classname="com.yiibai.primera.testng.cases.LocalTest" />
+                <testcase name="readingMore" time="42.917" classname="com.yiibai.primera.testng.cases.LocalTest" />
+      
 </testsuite>
