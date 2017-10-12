@@ -16,7 +16,6 @@
           <include name="dislike"/>
           <include name="refreshByKeyword"/>
           <include name="beforeClass"/>
-          <include name="initDriver"/>
         </methods>
       </class> <!-- com.yiibai.primera.testng.cases.LocalTest -->
     </classes>

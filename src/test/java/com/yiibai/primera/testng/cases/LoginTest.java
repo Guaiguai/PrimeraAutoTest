@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.LoginOperate;
-import com.yiibai.primera.testng.util.MethodUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.MethodUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 /**
  * 登录测试用例
@@ -28,9 +28,9 @@ public class LoginTest extends InitAppium {
      */
     @Test(priority = 0)
     public void loginErrorUser(){
-        ResultUtil result = loginOperate.login("18091969298","iuhihj");
+        ResultUtils result = loginOperate.login("18091969298","iuhihj");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码不对情况登录:"+ result.getActual());
+        System.out.println(MethodUtils.getFileLineMethod() + "帐号密码不对情况登录:"+ result.getActual());
     }
 
     /**
@@ -38,9 +38,9 @@ public class LoginTest extends InitAppium {
      */
     @Test(priority = 1)
     public void loginErrorNum(){
-        ResultUtil result = loginOperate.login("1319262asdfsddsa","dfgd#@$1234fgdfds");
+        ResultUtils result = loginOperate.login("1319262asdfsddsa","dfgd#@$1234fgdfds");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码格式不对情况登录:"+ result.getActual());
+        System.out.println(MethodUtils.getFileLineMethod() + "帐号密码格式不对情况登录:"+ result.getActual());
     }
 
 
@@ -49,9 +49,9 @@ public class LoginTest extends InitAppium {
      */
     @Test(priority = 2)
     public void loginChinese(){
-        ResultUtil result = loginOperate.login("帐号","密码");
+        ResultUtils result = loginOperate.login("帐号","密码");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码为中文情况登录:"+ result.getActual());
+        System.out.println(MethodUtils.getFileLineMethod() + "帐号密码为中文情况登录:"+ result.getActual());
     }
 
 
@@ -61,16 +61,16 @@ public class LoginTest extends InitAppium {
      */
     @Test(priority = 3,enabled = false)
     public void loginEmpty(){
-        ResultUtil result = loginOperate.login("","");
+        ResultUtils result = loginOperate.login("","");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
-        System.out.println(MethodUtil.getFileLineMethod() + "帐号密码为空情况登录:"+ result.getActual());
+        System.out.println(MethodUtils.getFileLineMethod() + "帐号密码为空情况登录:"+ result.getActual());
     }
     /**
      * 测试帐号密码正确情况
      */
     @Test(priority = 4)
     public void loginConfim() {
-        ResultUtil result = loginOperate.login("18091969298","18091969298");
+        ResultUtils result = loginOperate.login("18091969298","18091969298");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
         Assert.assertTrue(result.getActual(),"帐号密码对的情况登录");
 
@@ -80,7 +80,7 @@ public class LoginTest extends InitAppium {
      */
     @Test(priority = 5)
     public void loginConfim2() {
-        ResultUtil result = loginOperate.login("18091969398","18091969398");
+        ResultUtils result = loginOperate.login("18091969398","18091969398");
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
         Assert.assertTrue(result.getActual(),"帐号密码对的情况登录");
 

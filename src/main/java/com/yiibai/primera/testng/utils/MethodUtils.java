@@ -1,4 +1,4 @@
-package com.yiibai.primera.testng.util;
+package com.yiibai.primera.testng.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,7 +11,7 @@ import bsh.This;
  * @author ChenXiaoGuai
  *
  */
-public class MethodUtil {
+public class MethodUtils {
 
 	/**
 	 * 中文判断--正则形式

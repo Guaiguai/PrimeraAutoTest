@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.LocalPage;
-import com.yiibai.primera.testng.util.ConstantUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -33,9 +33,9 @@ public class LocalOperate extends OperateAppium {
 		this.driver = driver;
 	}
 	
-	public ResultUtil readingMore() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils readingMore() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 
 		if (!isLocalPage()) {
 			result.setMessage("请定位到Local频道！");
@@ -63,7 +63,7 @@ public class LocalOperate extends OperateAppium {
 		String readingMoreTitle = localPage.getNewsTitle();
 		System.out.println("更多阅读的新闻标题：" + readingMoreTitle);
 		if(!newsTitle.equals(readingMoreTitle)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 		}
 		if(!isLocalPage()) {
 			back();
@@ -76,9 +76,9 @@ public class LocalOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public ResultUtil location() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils location() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 
 		if (!isLocalPage()) {
 			result.setMessage("请定位到Local频道！");
@@ -93,7 +93,7 @@ public class LocalOperate extends OperateAppium {
 			String areaNameAfter = localPage.getAreaNameText();
 			if (!areaNameBefore.equals(areaNameAfter)
 					&& Arrays.asList(autoAreaList).contains(areaNameAfter)) {
-				result.setActual(ConstantUtil.ASSERT_TRUE);
+				result.setActual(ConstantUtils.ASSERT_TRUE);
 				result.setMessage("自动定位成功！");
 			}
 		} else{
@@ -104,7 +104,7 @@ public class LocalOperate extends OperateAppium {
 			String areaNameAfter = localPage.getAreaNameText();
 			if (!areaNameBefore.equals(areaNameAfter) && areaNameAfter
 					.equals(localPage.AREA_SELECT_LIST_OAXACA_TEXT)) {
-				result.setActual(ConstantUtil.ASSERT_TRUE);
+				result.setActual(ConstantUtils.ASSERT_TRUE);
 				result.setMessage("选择定位成功！");
 			}
 		}
@@ -117,9 +117,9 @@ public class LocalOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public ResultUtil cancleUnlikednews() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils cancleUnlikednews() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 
 		if (!isLocalPage()) {
 			result.setMessage("请定位到Local频道！");
@@ -139,7 +139,7 @@ public class LocalOperate extends OperateAppium {
 		System.out.println("前：" + firstTitleBefore);
 		System.out.println("后：" + firstTitleAfter);
 		if (!firstTitleBefore.equals(firstTitleAfter)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("测试通过！");
 		}
 		return result;
@@ -150,9 +150,9 @@ public class LocalOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public ResultUtil refreshByKeyword() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils refreshByKeyword() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 
 		if (!isLocalPage()) {
 			result.setMessage("请定位到Local频道！");
@@ -169,7 +169,7 @@ public class LocalOperate extends OperateAppium {
 		//2.点击文字，刷新页面
 		clickView(localPage.getRefreshedTextEl());
 		sleep(3000);
-		result.setActual(ConstantUtil.ASSERT_TRUE);
+		result.setActual(ConstantUtils.ASSERT_TRUE);
 		return result;
 	}
 

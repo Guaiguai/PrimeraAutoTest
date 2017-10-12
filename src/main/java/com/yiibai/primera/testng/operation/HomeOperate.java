@@ -9,9 +9,9 @@ import java.util.List;
 
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
-import com.yiibai.primera.testng.util.MethodUtil;
-import com.yiibai.primera.testng.util.ConstantUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
+import com.yiibai.primera.testng.utils.MethodUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -38,16 +38,16 @@ public class HomeOperate extends OperateAppium {
 	 * 首页下部分菜单验证，主要是Inicio 与 Videos的切换
 	 * @return
 	 */
-	public ResultUtil changeToVideo() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils changeToVideo() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isHomePage()) {
 			result.setMessage("请定位到APP首页！");
 			return result;
 		}
 		clickView(homePage.getVideosMenu());
 		if(homePage.isVideoPage()) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 		}
 		return result;
 	}
@@ -55,9 +55,9 @@ public class HomeOperate extends OperateAppium {
 	 * 首页顶部的频道切换验证
 	 * @return
 	 */
-	public ResultUtil changeTopMenus() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils changeTopMenus() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isHomePage()) {
 			result.setMessage("请定位到APP首页！");
 			return result;
@@ -76,7 +76,7 @@ public class HomeOperate extends OperateAppium {
 			}
 			
 			if(total == num) {
-				result.setActual(ConstantUtil.ASSERT_TRUE);
+				result.setActual(ConstantUtils.ASSERT_TRUE);
 			}
 			//返回到首页
 			for (int j = 0; j < num; j++) {
@@ -89,10 +89,10 @@ public class HomeOperate extends OperateAppium {
 	 * 首页右上角新闻菜单编辑
 	 * @return
 	 */
-	public ResultUtil AutoChannelMenusEdit() {
-		ResultUtil result = new ResultUtil();
+	public ResultUtils AutoChannelMenusEdit() {
+		ResultUtils result = new ResultUtils();
 		if(!isHomePage()) {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setActual(ConstantUtils.ASSERT_FALSE);
 			result.setMessage("请定位到APP首页！");
 			return result;
 		}
@@ -121,7 +121,7 @@ public class HomeOperate extends OperateAppium {
 		}
 		if ((isDisappearedBeforeEdit && !isDisappearedAfterEdit)
 				|| (!isDisappearedBeforeEdit && isDisappearedAfterEdit)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("AUTO频道编辑：添加/取消成功！");
 		}
 		back();
@@ -136,10 +136,10 @@ public class HomeOperate extends OperateAppium {
 	 * TODU
 	 * @return
 	 */
-	public ResultUtil channelMenusMoreThanThree() {
-		ResultUtil result = new ResultUtil();
+	public ResultUtils channelMenusMoreThanThree() {
+		ResultUtils result = new ResultUtils();
 		if(!isHomePage()) {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setActual(ConstantUtils.ASSERT_FALSE);
 			result.setMessage("请定位到APP首页！");
 			return result;
 		}
@@ -161,7 +161,7 @@ public class HomeOperate extends OperateAppium {
 			}
 		}
 		//TODU
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		return result;
 	}
 	/**
@@ -169,16 +169,16 @@ public class HomeOperate extends OperateAppium {
 	 * 两种方式搜索
 	 * @return
 	 */
-	public ResultUtil searchByInput(String searchedKeyword) {
-		ResultUtil result = new ResultUtil();
+	public ResultUtils searchByInput(String searchedKeyword) {
+		ResultUtils result = new ResultUtils();
 		if(!isHomePage()) {
 			result.setMessage("请定位到APP首页");
-			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setActual(ConstantUtils.ASSERT_FALSE);
 			return result;
 		}
 		//如果搜索关键字是中文，则正常是搜索不到新闻的
-		if(MethodUtil.isContainChinese(searchedKeyword)) {
-			result.setExcepted(ConstantUtil.ASSERT_FALSE);
+		if(MethodUtils.isContainChinese(searchedKeyword)) {
+			result.setExcepted(ConstantUtils.ASSERT_FALSE);
 		}
 		
 		if(homePage.getHomeSearchBtn() != null)
@@ -194,9 +194,9 @@ public class HomeOperate extends OperateAppium {
 	 * 两种方式搜索
 	 * @return
 	 */
-	public ResultUtil searchByHistory() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils searchByHistory() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isHomePage()) {
 			result.setMessage("请定位到APP首页");
 			return result;
@@ -206,7 +206,7 @@ public class HomeOperate extends OperateAppium {
 			result.setMessage("暂时没有搜索历史！");
 			return result;
 		}
-		result.setActual(ConstantUtil.ASSERT_TRUE);
+		result.setActual(ConstantUtils.ASSERT_TRUE);
 		clickView(homePage.getSearchHistoryBtn());
 		waitAuto();
 		//对于搜索之后的结果的处理
@@ -214,14 +214,14 @@ public class HomeOperate extends OperateAppium {
 		return result;
 	}
 	
-	private void SearchedData(ResultUtil result) {
+	private void SearchedData(ResultUtils result) {
 		//根据内容判断是否有搜索到信息
 		if(!homePage.isSearchNoData()) {
 			result.setMessage("搜索到新闻，可以查看新闻详情！");
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			clickView(homePage.getSearchAll());
 		}else {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setActual(ConstantUtils.ASSERT_FALSE);
 			result.setMessage("没有搜索结果！！");
 		}
 		//操作完成之后返回主页
@@ -232,16 +232,16 @@ public class HomeOperate extends OperateAppium {
 	 * 清空搜索记录
 	 * @return
 	 */
-	public ResultUtil clearSearchHistory() {
-		ResultUtil result = new ResultUtil();
+	public ResultUtils clearSearchHistory() {
+		ResultUtils result = new ResultUtils();
 		if(!isHomePage()) {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setActual(ConstantUtils.ASSERT_FALSE);
 			result.setMessage("请定位到APP首页");
 			return result;
 		}
 		clickView(homePage.getHomeSearchBtn());
 		if(homePage.getSearchHistoryBtn() == null) {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setActual(ConstantUtils.ASSERT_FALSE);
 			result.setMessage("暂时没有搜索历史！");
 			return result;
 		}
@@ -249,7 +249,7 @@ public class HomeOperate extends OperateAppium {
 		clickView(homePage.getClearSearchHistoryBtn());
 		//验证是否清空
 		if(homePage.getSearchHistoryBtn() == null) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("清空搜索历史成功！");
 		}
 		backHome();
@@ -260,9 +260,9 @@ public class HomeOperate extends OperateAppium {
 	 * 首页刷新
 	 * @return
 	 */
-	public ResultUtil refresh() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils refresh() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isHomePage()) {
 			return result;
 		}
@@ -279,10 +279,10 @@ public class HomeOperate extends OperateAppium {
 	 * @return
 	 * @throws ParseException 
 	 */
-	public ResultUtil MorningPaper() throws ParseException {
+	public ResultUtils MorningPaper() throws ParseException {
 
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isHomePage())  return result;
 //		是否应该显示早报
 		Boolean morningPaperShouldExist = false;
@@ -303,7 +303,7 @@ public class HomeOperate extends OperateAppium {
 		}
 		//应该显示+显示了 或者 不应该显示+没有显示则通过
 		if((morningPaperShouldExist && morningPaperIsExist) || (!morningPaperShouldExist && !morningPaperIsExist)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("测试通过!");
 			if(morningPaperIsExist) {
 				clickView(element);
@@ -314,7 +314,7 @@ public class HomeOperate extends OperateAppium {
 		}
 		//应该显示+没有显示 或者 不应该显示+显示则测试不通过
 		if((morningPaperShouldExist && !morningPaperIsExist) || (!morningPaperShouldExist && morningPaperIsExist)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("应该显示+没有显示 或者 不应该显示+显示,则该条测试是不通过的");
 		}
 		return result;
@@ -324,9 +324,9 @@ public class HomeOperate extends OperateAppium {
 	 * 返回上一级的测试
 	 * 主要是返回按钮的测试
 	 */
-	public ResultUtil backToPreviousMenu(){
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils backToPreviousMenu(){
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isHomePage())  return result;
 		//1.搜索的返回
 		if(homePage.getHomeSearchBtn() != null)

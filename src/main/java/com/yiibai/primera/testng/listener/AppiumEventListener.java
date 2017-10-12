@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.yiibai.primera.testng.util.ConstantUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
 
 import io.appium.java_client.events.api.general.AppiumWebDriverEventListener;
 
@@ -51,10 +51,10 @@ public class AppiumEventListener implements AppiumWebDriverEventListener {
                     + driver.findElement(by));  
         } catch (Exception e) {  
             try {  
-                log.error("beforeFindBy监听" + ConstantUtil.LISTENER_WAIT_SECONDS  
+                log.error("beforeFindBy监听" + ConstantUtils.LISTENER_WAIT_SECONDS  
                         + "秒" + " " + splitBy(by) + "不可见");  
             } catch (Exception e2) {  
-                log.error("beforeFindBy监听" + ConstantUtil.LISTENER_WAIT_SECONDS  
+                log.error("beforeFindBy监听" + ConstantUtils.LISTENER_WAIT_SECONDS  
                         + "秒,by不能按格式切割！");  
             }  
         }  

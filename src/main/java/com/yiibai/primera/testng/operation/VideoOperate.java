@@ -9,8 +9,8 @@ import com.yiibai.primera.testng.base.ImageAppium;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.VideoPage;
-import com.yiibai.primera.testng.util.ConstantUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
@@ -40,9 +40,9 @@ public class VideoOperate extends OperateAppium {
 	 * TODU 此处测试有问题，因为视频是动态的，截图下来的结果会始终不相同的
 	 * @return 是否设置成功
 	 */
-	public ResultUtil fontSize() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils fontSize() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isVideoDetailsPage()) {
 			result.setMessage(This.class + ":fontSize---没有在视频详情页面！！！");
 			return result;
@@ -69,7 +69,7 @@ public class VideoOperate extends OperateAppium {
 		result.setMessage(
 				"字体设置前后对比结果为：" + ImageAppium.sameAs(before, after, 1.0));
 		if (!ImageAppium.sameAs(before, after, 1.0)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 		}
 
 		return result;
@@ -80,9 +80,9 @@ public class VideoOperate extends OperateAppium {
 	 * 
 	 * @return 是否点赞成功
 	 */
-	public ResultUtil like() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils like() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isVideoDetailsPage()) {
 			result.setMessage(This.class + ":like---没有在视频详情页面！！！");
 			return result;
@@ -101,9 +101,9 @@ public class VideoOperate extends OperateAppium {
 	 * 
 	 * @return 是否收藏成功
 	 */
-	public ResultUtil collect() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils collect() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isVideoDetailsPage()) {
 			result.setMessage(This.class + ":collect---没有在视频详情页面！！！");
 			return result;
@@ -120,9 +120,9 @@ public class VideoOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public ResultUtil comment(String details) {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils comment(String details) {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isVideoDetailsPage()) {
 			result.setMessage(this.getClass() + ":comment---没有在视频详情页面！！！");
 			return result;
@@ -142,7 +142,7 @@ public class VideoOperate extends OperateAppium {
 				&& firstInCommentList.getText().equals(details)
 				&& firstInCommentDetail != null
 				&& firstInCommentDetail.getText().equals(details)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 		} else {
 			result.setMessage("用户提交评论，但是没有看到用户的评论内容，测试不通过!");
 		}

@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.ITestContext;
 
-import com.yiibai.primera.testng.util._AppiumUtil;
+import com.yiibai.primera.testng.utils._AppiumUtils;
 
 import io.appium.java_client.AppiumDriver;
 /**
@@ -62,7 +62,7 @@ public class _SelectDriver {
 	public static Logger logger = Logger.getLogger(_SelectDriver.class);
 
 	public AppiumDriver<WebElement> selectDriver(ITestContext context,
-			_AppiumUtil appiumUtil) {
+			_AppiumUtils appiumUtil) {
 		// 通过testng的xml文件获取serverURL参数值，并赋给 serverURL变量
 		serverURL = context.getCurrentXmlTest().getParameter("serverURL");
 		// 通过testng的xml文件获取automationName参数值，并赋给 automationName变量

@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 import com.yiibai.primera.testng.base.Assertion;
 import com.yiibai.primera.testng.base.InitAppium;
 import com.yiibai.primera.testng.operation.LocalOperate;
-import com.yiibai.primera.testng.util.MethodUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.MethodUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 
 /**
@@ -33,11 +33,11 @@ public class LocalTest extends InitAppium{
      */
 	@Test(priority = 1)
 	public void location() {
-		ResultUtil result = localOperate.location();
+		ResultUtils result = localOperate.location();
 		Assertion.verifyEquals(result.getActual(), result.getExcepted(),
 				result.getMessage());
 		if (result.getActual() != result.getExcepted()) {
-			System.out.println(MethodUtil.getFileLineMethod() + "local频道定位:"
+			System.out.println(MethodUtils.getFileLineMethod() + "local频道定位:"
 					+ result.getActual() + ",提示信息是：" + result.getMessage());
 		}
 
@@ -47,10 +47,10 @@ public class LocalTest extends InitAppium{
      */
     @Test(priority = 2)
     public void dislike(){
-        ResultUtil result = localOperate.cancleUnlikednews();
+        ResultUtils result = localOperate.cancleUnlikednews();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
         if (result.getActual() != result.getExcepted()) {
-			System.out.println(MethodUtil.getFileLineMethod() + "local频道不再有兴趣:"
+			System.out.println(MethodUtils.getFileLineMethod() + "local频道不再有兴趣:"
 					+ result.getActual() + ",提示信息是：" + result.getMessage());
 		}
     }
@@ -59,10 +59,10 @@ public class LocalTest extends InitAppium{
      */
     @Test(priority = 3)
     public void refreshByKeyword(){
-        ResultUtil result = localOperate.refreshByKeyword();
+        ResultUtils result = localOperate.refreshByKeyword();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
         if (result.getActual() != result.getExcepted()) {
-			System.out.println(MethodUtil.getFileLineMethod() + "local频道页面新闻点击关键字刷新:"
+			System.out.println(MethodUtils.getFileLineMethod() + "local频道页面新闻点击关键字刷新:"
 					+ result.getActual() + ",提示信息是：" + result.getMessage());
 		}
     }
@@ -71,10 +71,10 @@ public class LocalTest extends InitAppium{
      */
     @Test(priority = 4)
     public void readingMore(){
-        ResultUtil result = localOperate.readingMore();
+        ResultUtils result = localOperate.readingMore();
         Assertion.verifyEquals(result.getActual(),result.getExcepted(),result.getMessage());
         if (result.getActual() != result.getExcepted()) {
-			System.out.println(MethodUtil.getFileLineMethod() + "local新闻阅读更多:"
+			System.out.println(MethodUtils.getFileLineMethod() + "local新闻阅读更多:"
 					+ result.getActual() + ",提示信息是：" + result.getMessage());
 		}
     }

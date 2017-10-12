@@ -1,6 +1,6 @@
-package com.yiibai.primera.testng.util;
+package com.yiibai.primera.testng.utils;
 
-public class ResultUtil {
+public class ResultUtils {
 	public boolean excepted = true;
 	public boolean actual;
 	public String message;

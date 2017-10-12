@@ -3,8 +3,8 @@ package com.yiibai.primera.testng.operation;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.RegisterPage;
-import com.yiibai.primera.testng.util.ConstantUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -35,9 +35,9 @@ public class RegisterOperate extends OperateAppium {
 	 * @return 是否注册成功
 	 * @throws Exception
 	 */
-	public ResultUtil register(String email, String name, String pass) {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils register(String email, String name, String pass) {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		// 是否在欢迎页面---广告动态切换的SWIPE
 		sleep(1000);
 		if(!homePage.isHomePage()) {

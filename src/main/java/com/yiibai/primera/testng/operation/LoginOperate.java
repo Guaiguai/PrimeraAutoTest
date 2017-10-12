@@ -3,8 +3,8 @@ package com.yiibai.primera.testng.operation;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.LoginPage;
-import com.yiibai.primera.testng.util.ConstantUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -37,9 +37,9 @@ public class LoginOperate extends OperateAppium {
 	 *            密码
 	 * @return 是否成功登录到主页
 	 */
-	public ResultUtil login(String name, String pass) {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils login(String name, String pass) {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		System.out.println(this.getClass() + ":login----");
 		sleep(1000);
 		if(!homePage.isHomePage()) {

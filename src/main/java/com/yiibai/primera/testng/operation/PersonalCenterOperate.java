@@ -4,8 +4,8 @@ import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.base.UiAutomatorAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.PersonalCenterPage;
-import com.yiibai.primera.testng.util.ConstantUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -35,9 +35,9 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * 系统设置中，清除缓存
 	 * @return
 	 */
-	public ResultUtil clearCache() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils clearCache() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		
 		if(!isPersonalCenter()) {
 			result.setMessage("请定位到APP个人中心界面！");
@@ -52,7 +52,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		}
 		double cacheSizeAfterClear = personalCenterPage.getCacheSize();
 		if(cacheSizeAfterClear == 0) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("清空缓存成功！");
 		}else {
 			result.setMessage("清空缓存失败！");
@@ -68,10 +68,10 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * @param account
 	 * @return
 	 */
-	public ResultUtil personalEditNameAndAccount(String username,String account) {
+	public ResultUtils personalEditNameAndAccount(String username,String account) {
 		String message = "";
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			result.setMessage("请定位到APP个人中心界面！");
 			return result;
@@ -85,7 +85,7 @@ public class PersonalCenterOperate extends OperateAppium {
 			waitAuto();
 			press();
 			if(personalCenterPage.isEditedSuccessed()) {
-				result.setActual(ConstantUtil.ASSERT_TRUE);
+				result.setActual(ConstantUtils.ASSERT_TRUE);
 				message += "编辑用户昵称成功;";
 			}else {
 				message += "编辑用户昵称失败;";
@@ -111,7 +111,7 @@ public class PersonalCenterOperate extends OperateAppium {
 			press();
 			sleep(3000);
 			if(personalCenterPage.isEditedSuccessed()) {
-				result.setActual(ConstantUtil.ASSERT_TRUE);
+				result.setActual(ConstantUtils.ASSERT_TRUE);
 				message += "编辑用户登录账号成功;";
 			}else {
 				message += "编辑用户登录账号失败;";
@@ -130,10 +130,10 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * @param newPwdConfirm
 	 * @return
 	 */
-	public ResultUtil personalEditPwd(String oldPassword,String newPassword,String newPwdConfirm) {
+	public ResultUtils personalEditPwd(String oldPassword,String newPassword,String newPwdConfirm) {
 		String message = "";
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			result.setMessage("请定位到APP个人中心界面！");
 			return result;
@@ -161,7 +161,7 @@ public class PersonalCenterOperate extends OperateAppium {
 			waitAuto();
 			press();
 			if(personalCenterPage.isEditedSuccessed()) {
-				result.setActual(ConstantUtil.ASSERT_TRUE);
+				result.setActual(ConstantUtils.ASSERT_TRUE);
 				message += "修改用户登录密码成功;";
 			}else {
 				message += "修改用户登录密码失败;";
@@ -175,9 +175,9 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * 6.用户退出
 	 * @return
 	 */
-	public ResultUtil logout() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils logout() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			result.setMessage("请定位到APP个人中心界面！");
 			return result;
@@ -191,7 +191,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		if(!personalCenterPage.isLogout()) {
 			result.setMessage("出错！！！");
 		}else {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("验证用户退出登录成功");
 		}
 		backHome();
@@ -203,9 +203,9 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * TODU
 	 * @return
 	 */
-	public ResultUtil share() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils share() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			return result;
 		}
@@ -218,9 +218,9 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * 用uiAutomator方式查找元素，不是很稳定，目前一直报错，该方法暂时搁置
 	 * @return
 	 */
-	public ResultUtil myCollectionWithUiAutomator() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils myCollectionWithUiAutomator() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			return result;
 		}
@@ -231,7 +231,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		if(theEnd != null) {
 //			System.out.println(theEnd.getText());
 
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
 			return result;
 		}else {
@@ -246,9 +246,9 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * 2.1 取消我的收藏的第一条收藏的新闻验证
 	 * @return
 	 */
-	public ResultUtil clearFirstCollection() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils clearFirstCollection() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			return result;
 		}
@@ -256,7 +256,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		//收藏的新闻的第一条
 		AndroidElement firstCollection = personalCenterPage.getCollectionParent();
 		if(firstCollection == null) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
 			backHome();
 			return result;
@@ -268,7 +268,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		if(firstNews != null && firstCollection.getText() == firstNews.getText()) {
 			result.setMessage("我的收藏---取消收藏的第一条新闻---结果失败");
 		}else {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("我的收藏---取消收藏的第一条新闻---结果成功");
 		}
 		sleep(3000);
@@ -280,9 +280,9 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * 2.2 清空我的收藏的验证
 	 * @return
 	 */
-	public ResultUtil clearAllCollection() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils clearAllCollection() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			result.setMessage("请定位到个人中心主页！");
 			return result;
@@ -291,7 +291,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		//收藏的新闻的第一条
 		AndroidElement firstCollection = personalCenterPage.getCollectionParent();
 		if(firstCollection == null) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
 			backHome();
 			return result;
@@ -303,7 +303,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		if(personalCenterPage.hasCollections()) {
 			result.setMessage("我的收藏---清空我的收藏失败");
 		}else {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("我的收藏---清空我的收藏成功");
 		}
 		backHome();
@@ -314,9 +314,9 @@ public class PersonalCenterOperate extends OperateAppium {
 	 * 2.3 进入第一条收藏的新闻的详情页面
 	 * @return
 	 */
-	public ResultUtil readFirstCollection() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils readFirstCollection() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if(!isPersonalCenter()) {
 			return result;
 		}
@@ -324,7 +324,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		//收藏的新闻的第一条
 		AndroidElement firstCollection = personalCenterPage.getCollectionParent();
 		if(firstCollection == null) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("我的收藏里面没有收藏的新闻列表");
 			backHome();
 			return result;
@@ -337,7 +337,7 @@ public class PersonalCenterOperate extends OperateAppium {
 		String title = personalCenterPage.getNewsTitle();
 //		System.out.println("title is:" + title);
 		if(text.equals(title)) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("成功！");
 		}
 		backHome();
@@ -380,10 +380,10 @@ public class PersonalCenterOperate extends OperateAppium {
 	 */
 	private boolean isPersonalCenter() {
 		if(!homePage.isHomePage()) {
-			return ConstantUtil.ASSERT_FALSE;
+			return ConstantUtils.ASSERT_FALSE;
 		}
 		clickView(personalCenterPage.getCuentaBtn());
-		return ConstantUtil.ASSERT_TRUE;
+		return ConstantUtils.ASSERT_TRUE;
 	}
 
 }

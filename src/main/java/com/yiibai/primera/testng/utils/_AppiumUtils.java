@@ -1,4 +1,4 @@
-package com.yiibai.primera.testng.util;
+package com.yiibai.primera.testng.utils;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -31,12 +31,12 @@ import io.appium.java_client.ios.IOSDriver;
  * @description appium api封装
  */
 
-public class _AppiumUtil {
+public class _AppiumUtils {
 
 	public AppiumDriver<WebElement> driver;
 	public ITestResult it;
 	/** 定义日志输出对象 */
-	public static Logger logger = Logger.getLogger(_AppiumUtil.class);
+	public static Logger logger = Logger.getLogger(_AppiumUtils.class);
 
 	/**
 	 * 获取driver

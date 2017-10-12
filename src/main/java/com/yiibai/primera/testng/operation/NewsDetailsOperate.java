@@ -12,8 +12,8 @@ import com.yiibai.primera.testng.base.ImageAppium;
 import com.yiibai.primera.testng.base.OperateAppium;
 import com.yiibai.primera.testng.pages.HomePage;
 import com.yiibai.primera.testng.pages.NewsDetailsPage;
-import com.yiibai.primera.testng.util.ConstantUtil;
-import com.yiibai.primera.testng.util.ResultUtil;
+import com.yiibai.primera.testng.utils.ConstantUtils;
+import com.yiibai.primera.testng.utils.ResultUtils;
 
 import bsh.This;
 import io.appium.java_client.android.AndroidDriver;
@@ -60,9 +60,9 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public ResultUtil share() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils share() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isNewsDetailsPage()) {
 			result.setMessage(This.class + ":share---没有在新闻详情页面！！！");
 			return result;
@@ -91,7 +91,7 @@ public class NewsDetailsOperate extends OperateAppium {
 			Error.printStackTrace();
 		}
 		sleep(10000);
-		result.setActual(ConstantUtil.ASSERT_TRUE);
+		result.setActual(ConstantUtils.ASSERT_TRUE);
 		return result;
 	}
 	
@@ -101,9 +101,9 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return 是否设置成功
 	 */
-	public ResultUtil fontSize() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils fontSize() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isNewsDetailsPage()) {
 			result.setMessage(This.class + ":fontSize---没有在新闻详情页面！！！");
 			return result;
@@ -125,7 +125,7 @@ public class NewsDetailsOperate extends OperateAppium {
         
         result.setMessage("字体设置前后对比结果为：" + ImageAppium.sameAs(before,after,0.9));
         if(!ImageAppium.sameAs(before,after,0.9)) {
-        	result.setActual(ConstantUtil.ASSERT_TRUE);
+        	result.setActual(ConstantUtils.ASSERT_TRUE);
         }
         
 		return result;
@@ -135,16 +135,16 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return 是否查看成功
 	 */
-	public ResultUtil imageSwitcher() {
-		ResultUtil result = new ResultUtil();
+	public ResultUtils imageSwitcher() {
+		ResultUtils result = new ResultUtils();
 //		result.setExcepted(true);
 		if (!isNewsDetailsPage()) {
-			result.setActual(ConstantUtil.ASSERT_FALSE);
+			result.setActual(ConstantUtils.ASSERT_FALSE);
 			result.setMessage("没有在新闻详情页面！！！");
 		}
 		// 如果有配图，则点击查看 如果有多张图片的话，则向左滑动  图片下载
 		if(newsDetailsPage.imageElement() == null) {
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 			result.setMessage("新闻详情页面没有配图！！！");
 		}
 		clickView(newsDetailsPage.imageElement());
@@ -157,7 +157,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		}
 		ImageAppium.snapshot((TakesScreenshot) driver, "newsDetail_imageSwitcher");
 		//点击下载图片 有问题下载之后本地查看不到
-		result.setActual(ConstantUtil.ASSERT_TRUE);
+		result.setActual(ConstantUtils.ASSERT_TRUE);
 		result.setMessage("新闻详情页面---已截图保存配图！！！");
 		back();
 		return result;
@@ -167,9 +167,9 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 详情页面下面的相关阅读
 	 * @return
 	 */
-	public ResultUtil readingsMore() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils readingsMore() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isNewsDetailsPage()) {
 			result.setMessage(This.class + ":readingsMore---没有在新闻详情页面！！！");
 			return result;
@@ -178,7 +178,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		AndroidElement moreNews = swipTilElementAppear(newsDetailsPage.getOneReadingMoreNews(), "UP", 300);
 		if(moreNews != null) {
 			clickView(newsDetailsPage.getFirstReadingMoreNews());
-			result.setActual(ConstantUtil.ASSERT_TRUE);
+			result.setActual(ConstantUtils.ASSERT_TRUE);
 		}
 		
 		return result;
@@ -188,9 +188,9 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return 是否点赞成功
 	 */
-	public ResultUtil like() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils like() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isNewsDetailsPage()) {
 			result.setMessage(This.class + ":like---没有在新闻详情页面！！！");
 			return result;
@@ -207,9 +207,9 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return 是否收藏成功
 	 */
-	public ResultUtil collect() {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils collect() {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isNewsDetailsPage()) {
 			result.setMessage(This.class + ":collect---没有在新闻详情页面！！！");
 			return result;
@@ -225,9 +225,9 @@ public class NewsDetailsOperate extends OperateAppium {
 	 * 
 	 * @return
 	 */
-	public ResultUtil comment(String details) {
-		ResultUtil result = new ResultUtil();
-		result.setActual(ConstantUtil.ASSERT_FALSE);
+	public ResultUtils comment(String details) {
+		ResultUtils result = new ResultUtils();
+		result.setActual(ConstantUtils.ASSERT_FALSE);
 		if (!isNewsDetailsPage()) {
 			result.setMessage(this.getClass() + ":comment---没有在新闻详情页面！！！");
 			return result;
@@ -240,7 +240,7 @@ public class NewsDetailsOperate extends OperateAppium {
 		if(commentList != null && !commentList.isEmpty()) {
 			String firstCommentText = commentList.get(0).getText();
 			if(firstCommentText.equals(details)) {
-				result.setActual(ConstantUtil.ASSERT_TRUE);
+				result.setActual(ConstantUtils.ASSERT_TRUE);
 			}
 //			for (int i = 0; i < commentList.size(); i++) {
 //				String text = commentList.get(i).getText();

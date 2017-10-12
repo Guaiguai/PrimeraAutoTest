@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,45 +90,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">4 methods,  4 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LocalTest" hash-for-method="dislike">dislike</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LocalTest" hash-for-method="refreshByKeyword">refreshByKeyword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LocalTest" hash-for-method="location">location</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LocalTest" hash-for-method="readingMore">readingMore</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.yiibai.primera.testng.cases.LocalTest" hash-for-method="refreshByKeyword">refreshByKeyword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -140,9 +131,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.yiibai.primera.testng.cases.LocalTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -151,15 +142,6 @@
                   <a name="dislike">
                   </a> <!-- dislike -->
                   <span class="method-name">dislike</span>
-                  <div class="stack-trace">java.lang.Throwable
-	at 
-报错信息: expected [true] but found [false].
-报错方法名:dislike(
-报错类:LocalTest
-报错行号:51)
-	at com.yiibai.primera.testng.cases.LocalTest.dislike(LocalTest.java:51)
-
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -181,19 +163,10 @@
                   <a name="refreshByKeyword">
                   </a> <!-- refreshByKeyword -->
                   <span class="method-name">refreshByKeyword</span>
-                  <div class="stack-trace">java.lang.Throwable
-	at 
-报错信息: Local频道的新闻列表中没有出现&apos;Acaba de cargar hasta aquí, haga clic en actualizar&apos;! expected [true] but found [false].
-报错方法名:refreshByKeyword(
-报错类:LocalTest
-报错行号:63)
-	at com.yiibai.primera.testng.cases.LocalTest.refreshByKeyword(LocalTest.java:63)
-
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -254,26 +227,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'dislike')
+data.setCell(0, 1, 'location')
 data.setCell(0, 2, 'com.yiibai.primera.testng.cases.LocalTest')
-data.setCell(0, 3, 1521802);
+data.setCell(0, 3, 3);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'refreshByKeyword')
+data.setCell(1, 1, 'dislike')
 data.setCell(1, 2, 'com.yiibai.primera.testng.cases.LocalTest')
-data.setCell(1, 3, 132641);
+data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'readingMore')
 data.setCell(2, 2, 'com.yiibai.primera.testng.cases.LocalTest')
-data.setCell(2, 3, 42917);
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'location')
+data.setCell(3, 1, 'refreshByKeyword')
 data.setCell(3, 2, 'com.yiibai.primera.testng.cases.LocalTest')
-data.setCell(3, 3, 21307);
+data.setCell(3, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 minutes</span>
+              <span class="suite-total-time">Total running time: 6 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -301,49 +274,27 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.yiibai.primera.testng.cases.LocalTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">beforeClass(4723, fd47af2d7d42)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">initDriver</span>
-                <span class="method-start">40092 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">location</span>
-                <span class="method-start">40126 ms</span>
+                <span class="method-start">5084 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initDriver</span>
-                <span class="method-start">61434 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">dislike</span>
-                <span class="method-start">61457 ms</span>
+                <span class="method-start">5093 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initDriver</span>
-                <span class="method-start">1583261 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">refreshByKeyword</span>
-                <span class="method-start">1583300 ms</span>
+                <span class="method-start">5098 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initDriver</span>
-                <span class="method-start">1715943 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">readingMore</span>
-                <span class="method-start">1715966 ms</span>
+                <span class="method-start">5101 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">1758884 ms</span>
-              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

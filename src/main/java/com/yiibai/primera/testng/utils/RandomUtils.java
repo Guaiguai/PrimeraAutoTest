@@ -1,8 +1,8 @@
-package com.yiibai.primera.testng.util;
+package com.yiibai.primera.testng.utils;
 
 import java.util.Random;  
 
-public class RandomUtil {  
+public class RandomUtils {  
     public static final String ALLCHAR = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";  
     public static final String LETTERCHAR = "abcdefghijkllmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";  
     public static final String NUMBERCHAR = "0123456789";  

@@ -12,8 +12,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
-import com.yiibai.primera.testng.util._AppiumUtil;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -142,6 +140,7 @@ public class InitAppium {
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:"+ InitAppium.port +"/wd/hub"),
 				capabilities);
 		System.out.println("beforeSuite over----");
+		logger.info("beforeSuite over----");
 	}
 
 	// @AfterSuite
